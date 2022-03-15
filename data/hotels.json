@@ -1,0 +1,17 @@
+[
+    {
+        "hotelID": "c636521d-d96b-4cfa-9eca-ae1c742ffeca",
+        "hotelRating": 5,
+        "capacity": 10,
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Rd, Clifton AK, 12345",
+        "airCode": "ATL"
+    },{
+        "hotelID": "26e20f5b-2f9f-40fa-884b-4e130834fda1",
+        "hotelRating": 2,
+        "capacity": 50,
+        "hotelName": "Hilton Garden Inn",
+        "location": "Hotel Ct, Columbia GA, 54321",
+        "airCode": "LAX"
+    }
+]

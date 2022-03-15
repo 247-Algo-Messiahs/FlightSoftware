@@ -1,0 +1,29 @@
+[
+    {
+        "flightID": "abe1a726-3135-4f43-89a0-bd7a73c69719",
+        "departureCode": "ATL",
+        "arrivalCode": "CLT",
+        "departureDate": "2/22/2022",
+        "arrivalDate": "2/22/2022",
+        "departureTime": "18:06",
+        "arrivalTime": "19:50",
+        "firstSeats": 3,
+        "businessSeats": 1,
+        "economySeats": 4,
+        "isFull": false,
+        "isInternational": false
+    },{
+        "flightID": "cb9830c4-a2b4-43e4-86d4-9547d8f619c0",
+        "departureCode": "ATL",
+        "arrivalCode": "SXF",
+        "departureDate": "3/15/2022",
+        "arrivalDate": "3/16/2022",
+        "departureTime": "06:07",
+        "arrivalTime": "15:29",
+        "firstSeats": 0,
+        "businessSeats": 0,
+        "economySeats": 2,
+        "isFull": true,
+        "isInternational": true
+    }
+]

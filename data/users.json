@@ -1,0 +1,35 @@
+[
+    {
+        "userID": "74432d6e-394c-4ea7-bb77-ed3c53ac5226",
+        "username": "jackisback",
+        "password": "kungfupanda",
+        "firstName": "Jack",
+        "lastName": "Black",
+        "age": 52,
+        "address": "456 Panda Lane",
+        "email": "jackisback@gmail.com",
+        "phone": "860-867-5309",
+        "frequentFlier": true,
+        "passport": true,
+        "seatType": "WINDOW",
+        "seatClass": "FIRST",
+        "hotelRoom": "KING",
+        "airportCode": "LAX"
+    },{
+        "userID": "47fec419-9e02-4f75-8e97-811734e2e573",
+        "username": "rickrulez",
+        "password": "plumbus123$",
+        "firstName": "Rick",
+        "lastName": "Sanchez",
+        "age": 70,
+        "address": "789 Birdperson Road",
+        "email": "ihatemorty@aol.com",
+        "phone": "111-222-3333",
+        "frequentFlier": true,
+        "passport": false,
+        "seatType": "AISLE",
+        "seatClass": "ECONOMY",
+        "hotelRoom": "DOUBLE",
+        "airportCode": "DEN"
+    }
+]
