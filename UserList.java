@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class UserList {
-    private UserList userList;
+    private static UserList userList;
     private ArrayList<User> users;
 
     private UserList(){

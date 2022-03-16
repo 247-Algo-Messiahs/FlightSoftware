@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class FlightList {
-    private FlightList flightList;
+    private static FlightList flightList;
     private ArrayList<Flight> flights;
 
     private FlightList(){

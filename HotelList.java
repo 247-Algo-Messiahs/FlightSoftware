@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class HotelList {
-    private HotelList hotelList;
+    private static HotelList hotelList;
     private ArrayList<Hotel> hotels;
 
     private HotelList(){
