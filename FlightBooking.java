@@ -33,7 +33,7 @@ public class FlightBooking {
     }
 
     public ArrayList<String> getSeats(){
-
+        
     }
 
     public void confirmBooking(){

@@ -9,10 +9,10 @@ public class FlightList {
     }
 
     public FlightList getInstance(){
-
+        return null;
     }
 
     public Flight getFlights(String keyword){
-
+        return null;
     }
 }
