@@ -1,12 +1,12 @@
 [
     {
-        "userID": "74432d6e-394c-4ea7-bb77-ed3c53ac5226",
+        "userID": "00b8ec49-0018-481a-864a-0ea05b6bd7e4",
         "guestInfo": [{ "name": "Bob", "age": 15, "seatID": "1b2b7a21-975d-4a82-a400-5fa694f93861"}],
         "flightID": "abe1a726-3135-4f43-89a0-bd7a73c69719",
         "seatID": "bae9aa77-87ed-4673-a57c-e7b8c3196a72",
         "numCheckedBags": 2
     },{
-        "userID": "47fec419-9e02-4f75-8e97-811734e2e573",
+        "userID": "e2d8f42e-6faf-4c6b-b539-99daa46d490a",
         "guestInfo": [{ "name": "Jane", "age": 12, "seatID": "0b017928-d0fc-4497-8c0b-fb33bfeab0de"},
              {"name": "Ronald", "age": 43, "seatID": "4574c7de-3f16-4984-b78e-0695fc7ebff0"}, 
              {"name": "Lucky", "age": -1, "seatID": "257ed387-7bd3-40c2-8064-8c75c8d4cd7d"}],
