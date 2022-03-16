@@ -13,7 +13,7 @@ public class FlightFilter {
     }
 
     public Flight getBestFlight(){
-        
+        return null;
     }
     
 }

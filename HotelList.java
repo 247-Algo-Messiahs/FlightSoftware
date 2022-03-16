@@ -9,11 +9,11 @@ public class HotelList {
     }
 
     public HotelList getInstance(){
-
+        return null;
     }
 
     public Hotel getHotel(int id){
-
+        return null;
     }
     
 }

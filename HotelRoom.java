@@ -11,22 +11,22 @@ public class HotelRoom {
     }
 
     public String getHotel(){
-
-    }
-
-    public Boolean isSmoking(){
-
-    }
-
-    public RoomType getBedType(){
         return null;
     }
 
-    public Boolean hasBalcony(){
-
+    public boolean isSmoking(){
+        return false;
     }
 
-    public Boolean hasPulloutCouch(){
+    public RoomTrait getBedType(){
+        return null;
+    }
 
+    public boolean hasBalcony(){
+        return false;
+    }
+
+    public boolean hasPulloutCouch(){
+        return false;
     }
 }

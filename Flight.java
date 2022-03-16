@@ -26,6 +26,6 @@ public class Flight {
     }
 
     public boolean getIsFull(){
-        
+        return false;
     }
 }

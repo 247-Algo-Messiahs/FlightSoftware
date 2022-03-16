@@ -1,3 +1,5 @@
+package data.FlightGenerator;
+
 import java.time.*;
 import java.util.Random;
 import java.util.UUID;
