@@ -28,9 +28,9 @@ public class FlightGenerator {
                     LocalTime departureTime = genDepartTime(rand);
                     Duration flightDuration = genFlightDuration(rand);
                     LocalTime arrivalTime = genArrivalTime(departureTime, flightDuration);
-                    int firstSeats = rand.nextInt(2, 7);
-                    int businessSeats = rand.nextInt(2, 7);
-                    int economySeats = rand.nextInt(2, 7);
+                    int firstSeats = rand.nextInt(2, 5);
+                    int businessSeats = rand.nextInt(2, 5);
+                    int economySeats = rand.nextInt(2, 5);
                     boolean isInternational = (departureCode.equals("LHR") || departureCode.equals("HND") || arrivalCode.equals("LHR") || arrivalCode.equals("HND"));
 
                     System.out.print(FormatObject(UUID, departureCode, arrivalCode, departureTime, arrivalTime, 

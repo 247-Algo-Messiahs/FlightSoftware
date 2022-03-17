@@ -155,4 +155,19 @@ public class Flight {
         if (this.numAvailFirstSeats < 1 && this.numAvailBusinessSeats < 1 && this.numAvailEconomySeats < 1) this.isFull = true;
         else this.isFull = false;
     }
+
+    public void removeOneFirstSeat() {
+        if (this.numAvailFirstSeats < 1) return;
+        this.numAvailFirstSeats--;
+    }
+
+    public void removeOneBusinessSeat() {
+        if (this.numAvailBusinessSeats < 1) return;
+        this.numAvailBusinessSeats--;
+    }
+
+    public void removeOneEconomySeat() {
+        if (this.numAvailEconomySeats < 1) return;
+        this.numAvailEconomySeats--;
+    }
 }
