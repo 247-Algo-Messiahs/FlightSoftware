@@ -32,6 +32,22 @@ public class Flight {
         this.isInternational = isInternational;
     }
 
+    public Flight(String flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalDate departureDate, LocalTime arrivalTime, LocalDate arrivalDate,
+     int numAvailFirstSeats, int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational) {
+        this.flightID = UUID.fromString(flightID);
+        this.departureCode = departureCode;
+        this.arrivalCode = arrivalCode;
+        this.departureTime = departureTime;
+        this.departureDate = departureDate;
+        this.arrivalTime = arrivalTime;
+        this.arrivalDate = arrivalDate;
+        this.numAvailFirstSeats = numAvailFirstSeats;
+        this.numAvailBusinessSeats = numAvailBusinessSeats;
+        this.numAvailEconomySeats = numAvailEconomySeats;
+        this.isFull = isFull;
+        this.isInternational = isInternational;
+    }
+
     public boolean getIsFull() {
         return this.isFull;
     }
