@@ -9,7 +9,8 @@ public class HotelList {
     }
 
     public HotelList getInstance(){
-        return null;
+        if (this.hotelList == null) this.hotelList = new HotelList();
+        return this.hotelList;
     }
 
     public Hotel getHotel(int id){
