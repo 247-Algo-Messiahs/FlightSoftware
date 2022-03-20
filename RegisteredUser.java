@@ -95,7 +95,4 @@ public class RegisteredUser extends User{
     public void setHotelHistory(ArrayList<HotelBooking> hotelHistory){
         this.hotelHistory = hotelHistory;
     }
-    
-
-
 }

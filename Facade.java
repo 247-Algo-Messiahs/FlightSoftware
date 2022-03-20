@@ -12,11 +12,11 @@ public class Facade {
 
 
     private Facade() {
-        this.userList = userList.getInstance();
-        this.flightList = flightList.getInstance();
-        this.hotelList = hotelList.getInstance();
-        this.dataLoader = dataLoader.getInstance();
-        this.dataWriter = dataWriter.getInstance();
+        this.userList = UserList.getInstance();
+        this.flightList = FlightList.getInstance();
+        this.hotelList = HotelList.getInstance();
+        this.dataLoader = DataLoader.getInstance();
+        this.dataWriter = DataWriter.getInstance();
     }
 
     public static Facade getInstance() {
