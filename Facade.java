@@ -24,8 +24,12 @@ public class Facade {
         return facade;
     }
 
+    public void loadAllUsers() {
+        userList.setUsers(dataLoader.loadUsers());
+    }
+
     public User getUserByUUID(UUID uuid) {
-        return null;
+        return userList.getUserByUUID(uuid);
     }
 
     public Flight getFlightByUUID(UUID uuid) {

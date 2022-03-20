@@ -13,8 +13,20 @@ public class RegisteredUser extends User{
     private ArrayList<FlightBooking> flightHistory;
     private ArrayList<HotelBooking> hotelHistory;
 
-    public RegisteredUser(String firstName, String lastName, String address, String phoneNumber, String username, String password, boolean passport, int age, String emailAddress){
-
+    public RegisteredUser(String userID, String firstName, String lastName, String address, String phoneNumber, 
+    String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier, Preferences preferences){
+        this.userID = UUID.fromString(userID);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.username = username;
+        this.password = password;
+        this.passport = passport;
+        this.age = age;
+        this.emailAddress = emailAddress;
+        this.frequentFlyer = frequentFlier;
+        this.preferences = preferences;
     }
 
     public UUID getUserID(){
@@ -94,5 +106,10 @@ public class RegisteredUser extends User{
 
     public void setHotelHistory(ArrayList<HotelBooking> hotelHistory){
         this.hotelHistory = hotelHistory;
+    }
+
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
 }

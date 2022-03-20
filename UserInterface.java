@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.UUID;
 
 public class UserInterface {
     private UserInterface userInterface;
@@ -16,6 +17,7 @@ public class UserInterface {
     }
 
     public void run() {
+        facade.loadAllUsers();
 
     }
 

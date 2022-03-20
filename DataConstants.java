@@ -1,4 +1,21 @@
 public abstract class DataConstants {
+    protected static final String USERS_FILE_NAME = "users.json";
+    protected static final String USERS_USER_ID = "userID";
+    protected static final String USERS_USERNAME = "username";
+    protected static final String USERS_PASSWORD = "password";
+    protected static final String USERS_FIRST_NAME = "firstName";
+    protected static final String USERS_LAST_NAME = "lastName";
+    protected static final String USERS_AGE = "age";
+    protected static final String USERS_ADDRESS = "address";
+    protected static final String USERS_EMAIL = "email";
+    protected static final String USERS_PHONE = "phone";
+    protected static final String USERS_FREQUENT_FLIER = "frequentFlier";
+    protected static final String USERS_PASSPORT = "passport";
+    protected static final String USERS_SEAT_TYPE = "seatType";
+    protected static final String USERS_SEAT_CLASS = "seatClass";
+    protected static final String USERS_HOTEL_ROOM = "hotelRoom";
+    protected static final String USERS_AIRPORT_CODE = "airportCode";
+
     protected static final String FLIGHTS_FILE_NAME = "flights.json";
     protected static final String FLIGHTS_FLIGHT_ID = "flightID";
     protected static final String FLIGHTS_ARRIVAL_CODE = "arrivalCode";

@@ -1,8 +1,8 @@
 public class User {
-    private int age;
-    private String firstName;
-    private String lastName;
-    private Preferences preferences;
+    protected int age;
+    protected String firstName;
+    protected String lastName;
+    protected Preferences preferences;
 
     public User() {
         this.firstName = "NONE_GIVEN";
