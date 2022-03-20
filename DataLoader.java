@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.UUID;
+import java.time.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -58,7 +60,40 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
-    public ArrayList<Flight> getAllFlights() {
+    public ArrayList<Flight> loadFlights() {
+        ArrayList<Flight> flights = new ArrayList<Flight>();
+
+        try {
+            FileReader reader = new FileReader("data/" + FLIGHTS_FILE_NAME);
+            JSONParser parser = new JSONParser();
+			JSONArray allFlightsJSON = (JSONArray)parser.parse(reader);
+
+            for (int i = 0; i < allFlightsJSON.size(); i++) {
+                JSONObject FlightJSON = (JSONObject)allFlightsJSON.get(i);
+
+                UUID flightID = UUID.fromString((String)FlightJSON.get(FLIGHTS_FLIGHT_ID));
+                String departureCode = (String)FlightJSON.get(FLIGHTS_DEPARTURE_CODE);
+                String arrivalCode = (String)FlightJSON.get(FLIGHTS_ARRIVAL_CODE);
+                LocalTime departureTime = LocalTime.parse((String)FlightJSON.get(FLIGHTS_DEPARTURE_TIME));
+                LocalDate departureDate = null;
+                LocalTime arrivalTime = LocalTime.parse((String)FlightJSON.get(FLIGHTS_ARRIVAL_TIME));
+                LocalDate arrivalDate = null;
+                long numAvailFirstSeats = (long)FlightJSON.get(FLIGHTS_FIRST_SEATS);
+                long numAvailBusinessSeats = (long)FlightJSON.get(FLIGHTS_BUSINESS_SEATS);
+                long numAvailEconomySeats = (long)FlightJSON.get(FLIGHTS_ECONOMY_SEATS);
+                boolean isFull = (boolean)FlightJSON.get(FLIGHTS_IS_FULL);
+                boolean isInternational = (boolean) FlightJSON.get(FLIGHTS_IS_INTERNATIONAL);
+
+                flights.add(new Flight(flightID, departureCode, arrivalCode, departureTime, arrivalTime, 
+                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational));
+            }            
+            
+            return flights;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 

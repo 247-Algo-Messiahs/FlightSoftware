@@ -28,12 +28,17 @@ public class Facade {
         userList.setUsers(dataLoader.loadUsers());
     }
 
+    public void loadAllFlights() {
+        flightList.setFlights(dataLoader.loadFlights());
+
+    }
+
     public User getUserByUUID(UUID uuid) {
         return userList.getUserByUUID(uuid);
     }
 
     public Flight getFlightByUUID(UUID uuid) {
-        return null;
+        return flightList.getFlightByUUID(uuid);
     }
 
     public Hotel getHotelByUUID(UUID uuid) {

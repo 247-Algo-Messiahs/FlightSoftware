@@ -18,7 +18,7 @@ public class UserInterface {
 
     public void run() {
         facade.loadAllUsers();
-
+        facade.loadAllFlights();
     }
 
     private int getUserSelection(int numCommands) {

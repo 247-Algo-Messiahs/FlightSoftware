@@ -18,9 +18,9 @@ public class Flight {
     private boolean isInternational;
     private ArrayList<Seat> seats;
     
-    public Flight(String flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
+    public Flight(UUID flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
      int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational) {
-        this.flightID = UUID.fromString(flightID);
+        this.flightID = flightID;
         this.departureCode = departureCode;
         this.arrivalCode = arrivalCode;
         this.departureTime = departureTime;
@@ -169,5 +169,10 @@ public class Flight {
     public void removeOneEconomySeat() {
         if (this.numAvailEconomySeats < 1) return;
         this.numAvailEconomySeats--;
+    }
+
+    @Override
+    public String toString() {
+        return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + "\nArriving at: " + this.arrivalTime;
     }
 }

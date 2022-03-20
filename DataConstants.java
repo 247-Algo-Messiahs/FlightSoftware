@@ -18,6 +18,7 @@ public abstract class DataConstants {
 
     protected static final String FLIGHTS_FILE_NAME = "flights.json";
     protected static final String FLIGHTS_FLIGHT_ID = "flightID";
+    protected static final String FLIGHTS_DEPARTURE_CODE = "departureCode";
     protected static final String FLIGHTS_ARRIVAL_CODE = "arrivalCode";
     protected static final String FLIGHTS_DEPARTURE_TIME = "departureTime";
     protected static final String FLIGHTS_ARRIVAL_TIME = "arrivalTime";
