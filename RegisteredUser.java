@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class RegisteredUser {
+public class RegisteredUser extends User{
     private UUID userID;
     private String phoneNumber;
     private String username;
@@ -9,7 +9,6 @@ public class RegisteredUser {
     private boolean passport;
     private String emailAddress;
     private String address;
-    private Preferences preferences;
     private boolean frequentFlyer;
     private ArrayList<FlightBooking> flightHistory;
     private ArrayList<HotelBooking> hotelHistory;
@@ -44,10 +43,6 @@ public class RegisteredUser {
 
     public String getAddress(){
         return this.address;
-    }
-
-    public Preferences getPreferences(){
-        return this.preferences;
     }
 
     public boolean getFrequentFlyer(){
@@ -87,10 +82,6 @@ public class RegisteredUser {
 
     public void setAddress(String address){
         this.address = address;
-    }
-
-    public void setPreferences(Preferences preferences){
-        this.preferences = preferences;
     }
 
     public void setFrequentFlyer(boolean frequentFlyer){
