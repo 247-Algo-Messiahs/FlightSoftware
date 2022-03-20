@@ -19,8 +19,8 @@ public class DataWriter {
         
     }
 
-    public DataWriter getInstance() {
-        if (this.dataWriter == null) this.dataWriter = new DataWriter();
-        return this.dataWriter;
+    public static DataWriter getInstance() {
+        if (dataWriter == null) dataWriter = new DataWriter();
+        return dataWriter;
     }
 }

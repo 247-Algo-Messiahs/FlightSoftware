@@ -19,8 +19,8 @@ public class DataLoader {
         return null;
     }
 
-    public DataLoader getInstance() {
-        if (this.dataLoader == null) this.dataLoader = new DataLoader();
-        return this.dataLoader;
+    public static DataLoader getInstance() {
+        if (dataLoader == null) dataLoader = new DataLoader();
+        return dataLoader;
     }
 }

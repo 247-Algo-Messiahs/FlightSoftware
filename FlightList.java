@@ -8,9 +8,9 @@ public class FlightList {
 
     }
 
-    public FlightList getInstance(){
-        if (this.flightList == null) this.flightList = new FlightList();
-        return this.flightList;
+    public static FlightList getInstance(){
+        if (flightList == null) flightList = new FlightList();
+        return flightList;
     }
 
     public Flight getFlights(String keyword){

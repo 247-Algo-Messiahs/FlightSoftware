@@ -8,9 +8,9 @@ public class HotelList {
 
     }
 
-    public HotelList getInstance(){
-        if (this.hotelList == null) this.hotelList = new HotelList();
-        return this.hotelList;
+    public static HotelList getInstance(){
+        if (hotelList == null) hotelList = new HotelList();
+        return hotelList;
     }
 
     public Hotel getHotel(int id){

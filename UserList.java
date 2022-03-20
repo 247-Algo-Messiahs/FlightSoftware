@@ -8,9 +8,9 @@ public class UserList {
 
     }
 
-    public UserList getInstance(){
-        if (this.userList == null) this.userList = new UserList();
-        return this.userList;
+    public static UserList getInstance(){
+        if (userList == null) userList = new UserList();
+        return userList;
 
     }
 
