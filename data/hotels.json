@@ -2,16 +2,647 @@
     {
         "hotelID": "c636521d-d96b-4cfa-9eca-ae1c742ffeca",
         "hotelRating": 5,
-        "capacity": 10,
+        "capacity": 5,
         "hotelName": "Motel 5",
-        "location": "Over Yonder Rd, Clifton AK, 12345",
-        "airCode": "ATL"
+        "location": "Over Yonder Rd, Atlanta GA, 12345",
+        "airCode": "ATL",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
     },{
-        "hotelID": "26e20f5b-2f9f-40fa-884b-4e130834fda1",
-        "hotelRating": 2,
-        "capacity": 50,
-        "hotelName": "Hilton Garden Inn",
-        "location": "Hotel Ct, Columbia GA, 54321",
-        "airCode": "LAX"
+        "hotelID": "c6a8b332-2d21-4fbe-b793-e503cbd8e1d4",
+        "hotelRating": 3,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Howitzer Drive, Atlanta GA, 12345",
+        "airCode": "ATL",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "847b6bae-eda9-434d-bad4-6d18c00d2dd3",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Bully Boulevard, Atlanta GA, 12345",
+        "airCode": "ATL",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "27df4f15-0b1d-4502-b9a0-6a7bb49c48a8",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "airCode": "LAX",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "6c45cb05-4d89-4a19-8c34-587df350ced6",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "airCode": "LAX",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c4559f0c-71d2-4b61-b6ab-1baa224c4d4c",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "airCode": "LAX",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "2e7aca93-f184-4e4e-b4f1-cafe6e7a1cbe",
+        "hotelRating": 3,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, Dallas TX, 54321",
+        "airCode": "DFW",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "ee249563-8ac3-4c94-9fd3-b6ea0a4b8f53",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Hotel Ct, Dallas TX, 54321",
+        "airCode": "DFW",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "50b38dc8-d94a-472f-8b39-603229b0a00f",
+        "hotelRating": 5,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, Dallas TX, 54321",
+        "airCode": "DFW",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c3f6c596-2aad-4f52-8591-422f8e0a006d",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, New York NY, 54321",
+        "airCode": "JFK",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c13abee5-756b-4865-9e88-2084ef657d30",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, New York NY, 54321",
+        "airCode": "JFK",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "0d7b3a6b-d4f8-4d1f-b965-cfe88bd479d0",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, New York NY, 54321",
+        "airCode": "JFK",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, Tokya Japan, 54321",
+        "airCode": "HND",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, Tokyo Japan, 54321",
+        "airCode": "HND",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Hilton Guarding Inn",
+        "location": "Hotel Ct, Tokyo Japan, 54321",
+        "airCode": "HND",
+        "rooms": [{
+            "roomID": "1",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "2",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "3",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": "4",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": "5",
+            "notAvail": ["12/17/2022", "12/18/2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
     }
 ]
