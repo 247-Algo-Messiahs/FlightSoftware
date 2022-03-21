@@ -19,7 +19,7 @@ public class Flight {
     private ArrayList<Seat> seats;
     
     public Flight(UUID flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
-     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational) {
+     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats) {
         this.flightID = flightID;
         this.departureCode = departureCode;
         this.arrivalCode = arrivalCode;
@@ -30,6 +30,7 @@ public class Flight {
         this.numAvailEconomySeats = numAvailEconomySeats;
         this.isFull = isFull;
         this.isInternational = isInternational;
+        this.seats = seats;
     }
 
     public Flight(String flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalDate departureDate, LocalTime arrivalTime, LocalDate arrivalDate,

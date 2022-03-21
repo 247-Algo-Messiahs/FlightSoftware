@@ -75,17 +75,29 @@ public class DataLoader extends DataConstants{
                 String departureCode = (String)FlightJSON.get(FLIGHTS_DEPARTURE_CODE);
                 String arrivalCode = (String)FlightJSON.get(FLIGHTS_ARRIVAL_CODE);
                 LocalTime departureTime = LocalTime.parse((String)FlightJSON.get(FLIGHTS_DEPARTURE_TIME));
-                LocalDate departureDate = null;
                 LocalTime arrivalTime = LocalTime.parse((String)FlightJSON.get(FLIGHTS_ARRIVAL_TIME));
-                LocalDate arrivalDate = null;
                 long numAvailFirstSeats = (long)FlightJSON.get(FLIGHTS_FIRST_SEATS);
                 long numAvailBusinessSeats = (long)FlightJSON.get(FLIGHTS_BUSINESS_SEATS);
                 long numAvailEconomySeats = (long)FlightJSON.get(FLIGHTS_ECONOMY_SEATS);
                 boolean isFull = (boolean)FlightJSON.get(FLIGHTS_IS_FULL);
                 boolean isInternational = (boolean) FlightJSON.get(FLIGHTS_IS_INTERNATIONAL);
 
+                ArrayList<Seat> seats = new ArrayList<Seat>();
+                JSONArray allSeatsJSON = (JSONArray)FlightJSON.get(FLIGHTS_SEATS);
+                //add embedded seats objects
+                for (int k = 0; k < 12; k++) {
+                    JSONObject seatJSON = (JSONObject)allSeatsJSON.get(k);
+                    long seatID = (long)seatJSON.get(SEATS_SEAT_ID);
+                    String seatNum = (String)seatJSON.get(SEATS_SEAT_NUM);
+                    String seatClass = (String)seatJSON.get(SEATS_SEAT_CLASS);
+                    String seatType = (String)seatJSON.get(SEATS_TYPE);
+                    boolean booked = (boolean)seatJSON.get(SEATS_BOOKED);
+
+                    seats.add(new Seat((int)seatID, seatType, seatClass, seatNum, flightID, booked));
+                }
+
                 flights.add(new Flight(flightID, departureCode, arrivalCode, departureTime, arrivalTime, 
-                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational));
+                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational, seats));
             }            
             
             return flights;
