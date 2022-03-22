@@ -1,27 +1,70 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class FlightBooking {
-    private String userID;
+    private UUID userID;
     private RegisteredUser user;
     private ArrayList<Flight> flights;
     private ArrayList<Guest> guests;
     private int numCheckedBags;
-    private String seatID;
+    private ArrayList<UUID> seatID;
 
-    public FlightBooking(ArrayList<Flight> flight, ArrayList<Guest> guests, int numCheckedBags){
-
-    }
-
-    public void setSeats(){
+    public FlightBooking(UUID userID, RegisteredUser user, ArrayList<Flight> flight, ArrayList<Guest> guests, int numCheckedBags, ArrayList<UUID> seatID){
 
     }
 
-    public void setBags(){
-
+    public UUID getUserID(){
+        return this.userID;
     }
 
-    public void addGuests(){
+    public RegisteredUser getRegisteredUser(){
+        return this.user;
+    }
 
+    public ArrayList<Flight> getFlights(){
+        return this.flights;
+    }
+
+    public ArrayList<Guest> getGuests(){
+        return this.guests;
+    }
+
+    public int getBags(){
+        return this.numCheckedBags;
+    }
+
+    public ArrayList<UUID> getSeats(){
+        return this.seatID;
+    }
+
+    public void setUserID(UUID userID){
+        this.userID = userID;
+    }
+
+    public void setRegisteredUser(RegisteredUser user){
+        this.user = user;
+    }
+
+    public void setFlights(ArrayList<Flight> flights){
+        this.flights = flights;
+    }
+
+    public void setGuests(ArrayList<Guest> guests){
+        this.guests = guests;
+    }
+
+    public void setBags(int numCheckedBags){
+        this.numCheckedBags = numCheckedBags;
+    }
+
+    public void setSeats(ArrayList<UUID> seatID){
+        this.seatID = seatID;
+    }
+
+    
+
+    public void addGuests(ArrayList<Guest> guests){
+        this.guests = guests;
     }
 
     public void assignSeats(){
@@ -32,9 +75,7 @@ public class FlightBooking {
 
     }
 
-    public ArrayList<String> getSeats(){
-        return null;
-    }
+   
 
     public void confirmBooking(){
 
