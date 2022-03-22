@@ -14,8 +14,8 @@ public class FlightList {
         return flightList;
     }
 
-    public Flight getFlights(String keyword){
-        return null;
+    public ArrayList<Flight> getFlights(){
+        return this.flights;
     }
 
     public void setFlights(ArrayList<Flight> flights) {

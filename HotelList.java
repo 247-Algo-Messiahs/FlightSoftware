@@ -8,6 +8,14 @@ public class HotelList {
 
     }
 
+    public ArrayList<Hotel> getHotels(){
+        return this.hotels;
+    }
+
+    public void setFlights(ArrayList<Hotel> hotels) {
+        this.hotels = hotels;
+    }
+
     public static HotelList getInstance(){
         if (hotelList == null) hotelList = new HotelList();
         return hotelList;
