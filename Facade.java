@@ -16,7 +16,6 @@ public class Facade {
         this.flightList = FlightList.getInstance();
         this.hotelList = HotelList.getInstance();
         this.dataLoader = DataLoader.getInstance();
-        this.dataWriter = DataWriter.getInstance();
     }
 
     public static Facade getInstance() {
@@ -61,22 +60,6 @@ public class Facade {
         return null;
     }
 
-    public Preferences viewPreferences() {
-        return currentUser.getPreferences();
-    }
-
-    public void updatePreferences(Preferences preferences) {
-        currentUser.setPreferences(preferences);
-    }
-
-    public void giveQuestionnaire() {
-
-    }
-
-    public ArrayList<Flight> searchForFlight(Preferences pref) {
-        return null;
-    }
-
     public ArrayList<Flight> searchForFlight(String departureCode, String arrivalCode) {
         return null;
     }
@@ -85,7 +68,4 @@ public class Facade {
         return null;
     }
 
-    public ArrayList<Hotel> searchForHotel(String arrivalCode, Preferences pref) {
-        return null;
-    }
 }

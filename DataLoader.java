@@ -41,14 +41,8 @@ public class DataLoader extends DataConstants{
                 String phone = (String)userJSON.get(USERS_PHONE);
                 boolean frequentFlier = (boolean)userJSON.get(USERS_FREQUENT_FLIER);
                 boolean passport = (boolean)userJSON.get(USERS_PASSPORT);
-                String seatType = (String)userJSON.get(USERS_SEAT_TYPE);
-                String seatClass = (String)userJSON.get(USERS_SEAT_CLASS);
-                String hotelRoom = (String)userJSON.get(USERS_HOTEL_ROOM);
-                String airportCode = (String)userJSON.get(USERS_AIRPORT_CODE);
 
-                Preferences preferences = new Preferences(seatType, seatClass, hotelRoom, airportCode);
-
-                users.add(new RegisteredUser(userID, firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier, preferences));
+                users.add(new RegisteredUser(userID, firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier));
             }            
             
             return users;

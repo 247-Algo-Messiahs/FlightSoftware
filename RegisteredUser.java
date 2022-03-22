@@ -14,7 +14,7 @@ public class RegisteredUser extends User{
     private ArrayList<HotelBooking> hotelHistory;
 
     public RegisteredUser(String userID, String firstName, String lastName, String address, String phoneNumber, 
-    String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier, Preferences preferences){
+    String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier){
         this.userID = UUID.fromString(userID);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,7 +26,6 @@ public class RegisteredUser extends User{
         this.age = age;
         this.emailAddress = emailAddress;
         this.frequentFlyer = frequentFlier;
-        this.preferences = preferences;
     }
 
     public UUID getUserID(){

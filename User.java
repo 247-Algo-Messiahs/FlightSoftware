@@ -2,7 +2,6 @@ public class User {
     protected int age;
     protected String firstName;
     protected String lastName;
-    protected Preferences preferences;
 
     public User() {
         this.firstName = "NONE_GIVEN";
@@ -28,10 +27,6 @@ public class User {
         return this.lastName;
     }
 
-    public Preferences getPreferences() {
-        return this.preferences;
-    }
-
     public void setAge(int age) {
         this.age = age;
     }
@@ -42,9 +37,5 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public void setPreferences(Preferences preferences) {
-        this.preferences = preferences;
     }
 }
