@@ -6,9 +6,9 @@ public class FlightList {
     private ArrayList<Flight> flights;
 
     private FlightList(){
-
+        //call dataloader.getallfights
     }
-
+    
     public static FlightList getInstance(){
         if (flightList == null) flightList = new FlightList();
         return flightList;

@@ -46,8 +46,8 @@
         "hotelID": "c6a8b332-2d21-4fbe-b793-e503cbd8e1d4",
         "hotelRating": 3,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Howitzer Drive, Atlanta GA, 12345",
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Banana Rd, Atlanta GA, 12345",
         "airCode": "ATL",
         "rooms": [{
             "roomID": "1",
@@ -90,7 +90,7 @@
         "hotelRating": 4,
         "capacity": 5,
         "hotelName": "Maryacht Suites",
-        "location": "Bully Boulevard, Atlanta GA, 12345",
+        "location": "Bouncing Boulevard, Atlanta GA, 12345",
         "airCode": "ATL",
         "rooms": [{
             "roomID": "1",
@@ -132,8 +132,8 @@
         "hotelID": "27df4f15-0b1d-4502-b9a0-6a7bb49c48a8",
         "hotelRating": 4,
         "capacity": 5,
-        "hotelName": "Maryacht Suites",
-        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Rd, Los Angeles CA, 12345",
         "airCode": "LAX",
         "rooms": [{
             "roomID": "1",
@@ -176,7 +176,7 @@
         "hotelRating": 4,
         "capacity": 5,
         "hotelName": "Maryacht Suites",
-        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "location": "Right There Blvd, Los Angeles CA, 12345",
         "airCode": "LAX",
         "rooms": [{
             "roomID": "1",
@@ -218,8 +218,8 @@
         "hotelID": "c4559f0c-71d2-4b61-b6ab-1baa224c4d4c",
         "hotelRating": 4,
         "capacity": 5,
-        "hotelName": "Maryacht Suites",
-        "location": "Bully Boulevard, Los Angeles CA, 12345",
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Somewhere Dr, Los Angeles CA, 12345",
         "airCode": "LAX",
         "rooms": [{
             "roomID": "1",
@@ -261,7 +261,7 @@
         "hotelID": "2e7aca93-f184-4e4e-b4f1-cafe6e7a1cbe",
         "hotelRating": 3,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
+        "hotelName": "Hilton Guardian Inn",
         "location": "Hotel Ct, Dallas TX, 54321",
         "airCode": "DFW",
         "rooms": [{
@@ -305,7 +305,7 @@
         "hotelRating": 4,
         "capacity": 5,
         "hotelName": "Maryacht Suites",
-        "location": "Hotel Ct, Dallas TX, 54321",
+        "location": "Hotel Rd, Dallas TX, 54321",
         "airCode": "DFW",
         "rooms": [{
             "roomID": "1",
@@ -347,8 +347,8 @@
         "hotelID": "50b38dc8-d94a-472f-8b39-603229b0a00f",
         "hotelRating": 5,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Hotel Ct, Dallas TX, 54321",
+        "hotelName": "Motel 5",
+        "location": "Behind Rd, Dallas TX, 54321",
         "airCode": "DFW",
         "rooms": [{
             "roomID": "1",
@@ -390,7 +390,7 @@
         "hotelID": "c3f6c596-2aad-4f52-8591-422f8e0a006d",
         "hotelRating": 1,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
+        "hotelName": "Hilton Guardian Inn",
         "location": "Hotel Ct, New York NY, 54321",
         "airCode": "JFK",
         "rooms": [{
@@ -433,8 +433,8 @@
         "hotelID": "c13abee5-756b-4865-9e88-2084ef657d30",
         "hotelRating": 1,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Hotel Ct, New York NY, 54321",
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Dr, New York NY, 54321",
         "airCode": "JFK",
         "rooms": [{
             "roomID": "1",
@@ -476,8 +476,8 @@
         "hotelID": "0d7b3a6b-d4f8-4d1f-b965-cfe88bd479d0",
         "hotelRating": 1,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Hotel Ct, New York NY, 54321",
+        "hotelName": "Maryacht Suites",
+        "location": "Banana Rd, New York NY, 54321",
         "airCode": "JFK",
         "rooms": [{
             "roomID": "1",
@@ -519,7 +519,7 @@
         "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
         "hotelRating": 4,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
+        "hotelName": "Hilton Guardian Inn",
         "location": "Hotel Ct, Tokya Japan, 54321",
         "airCode": "HND",
         "rooms": [{
@@ -562,8 +562,8 @@
         "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
         "hotelRating": 4,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Hotel Ct, Tokyo Japan, 54321",
+        "hotelName": "Motel 5",
+        "location": "First Dr, Tokyo Japan, 54321",
         "airCode": "HND",
         "rooms": [{
             "roomID": "1",
@@ -605,8 +605,8 @@
         "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
         "hotelRating": 4,
         "capacity": 5,
-        "hotelName": "Hilton Guarding Inn",
-        "location": "Hotel Ct, Tokyo Japan, 54321",
+        "hotelName": "Maryacht Suites",
+        "location": "Over Yonder Ct, Tokyo Japan, 54321",
         "airCode": "HND",
         "rooms": [{
             "roomID": "1",

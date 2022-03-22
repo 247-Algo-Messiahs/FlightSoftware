@@ -6,6 +6,7 @@ public class Hotel {
     private int capacity;
     private String hotelName;
     private String location;
+    private String airportCode;
     private HotelRoom[] rooms;
 
     public Hotel(){
@@ -31,6 +32,10 @@ public class Hotel {
         return this.location;
     }
 
+    public String getAirCode(){
+        return this.airportCode;
+    }
+
     public HotelRoom[] getRooms(){
         return this.rooms;
     }
@@ -54,6 +59,10 @@ public class Hotel {
 
     public void setLocation(String location){
         this.location = location;
+    }
+
+    public void setAirportCode(String airCode){
+        this.airportCode = airCode;
     }
 
     public void getRooms(HotelRoom[] rooms){
