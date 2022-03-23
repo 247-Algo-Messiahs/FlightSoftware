@@ -2,27 +2,16 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class FlightBooking {
-    private UUID userID;
-    private RegisteredUser user;
-    private ArrayList<Flight> flights;
+    private UUID flightID;
     private ArrayList<Guest> guests;
     private int numCheckedBags;
-    private ArrayList<UUID> seatID;
+    private int seatID;
 
-    public FlightBooking(UUID userID, RegisteredUser user, ArrayList<Flight> flight, ArrayList<Guest> guests, int numCheckedBags, ArrayList<UUID> seatID){
-
-    }
-
-    public UUID getUserID(){
-        return this.userID;
-    }
-
-    public RegisteredUser getRegisteredUser(){
-        return this.user;
-    }
-
-    public ArrayList<Flight> getFlights(){
-        return this.flights;
+    public FlightBooking(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags){
+        this.guests = guests;
+        this.flightID = flightID;
+        this.numCheckedBags = numCheckedBags;
+        this.seatID = seatID;
     }
 
     public ArrayList<Guest> getGuests(){
@@ -33,20 +22,12 @@ public class FlightBooking {
         return this.numCheckedBags;
     }
 
-    public ArrayList<UUID> getSeats(){
+    public int getSeats(){
         return this.seatID;
     }
 
-    public void setUserID(UUID userID){
-        this.userID = userID;
-    }
-
-    public void setRegisteredUser(RegisteredUser user){
-        this.user = user;
-    }
-
-    public void setFlights(ArrayList<Flight> flights){
-        this.flights = flights;
+    public UUID getFlightID() {
+        return this.flightID;
     }
 
     public void setGuests(ArrayList<Guest> guests){
@@ -57,12 +38,14 @@ public class FlightBooking {
         this.numCheckedBags = numCheckedBags;
     }
 
-    public void setSeats(ArrayList<UUID> seatID){
+    public void setSeats(int seatID){
         this.seatID = seatID;
     }
 
+    public void setFlightID(UUID flightID) {
+        this.flightID = flightID;
+    }
     
-
     public void addGuests(ArrayList<Guest> guests){
         this.guests = guests;
     }
@@ -75,8 +58,6 @@ public class FlightBooking {
 
     }
 
-   
-
     public void confirmBooking(){
 
     }
@@ -84,5 +65,21 @@ public class FlightBooking {
     public void displayBooking(){
         
     }
-    
+
+    public String getListOfGuests(){
+        String list = "";
+
+        for (int i = 0; i < guests.size(); i++) {
+            list += i+1 + ") " + guests.get(i).getFirstName() + " " + guests.get(i).getLastName() + "\n";
+        }
+
+        return list;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight Booking\nFlight ID: " + this.flightID + 
+        "\nSeat ID: " + this.seatID +
+        "\nGuests:\n" + getListOfGuests();
+    }
 }

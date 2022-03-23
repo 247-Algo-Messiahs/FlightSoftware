@@ -56,6 +56,39 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
+    public ArrayList<FlightBooking> loadUserFlightBookings(RegisteredUser user) {
+        ArrayList<FlightBooking> bookings = new ArrayList<FlightBooking>();
+        
+        JSONArray flightBookingArray = user.getFlightBooking();
+
+        for (int i = 0; i < flightBookingArray.size(); i++) {
+            JSONObject flightBookingJSON = (JSONObject)flightBookingArray.get(i);
+
+            JSONArray guestInfoArray = (JSONArray)flightBookingJSON.get(FLIGHT_BOOKINGS_GUEST_INFO);
+            ArrayList<Guest> guests = new ArrayList<Guest>();
+
+            for (int k = 0; k < guestInfoArray.size(); k++) {
+                JSONObject guestJSON = (JSONObject) guestInfoArray.get(k);
+
+                String firstName = (String)guestJSON.get(GUESTS_FIRST_NAME);
+                String lastName = (String)guestJSON.get(GUESTS_LAST_NAME);
+                long age = (long)guestJSON.get(GUESTS_AGE);
+
+                Guest guest = new Guest((int)age, firstName, lastName);
+                guests.add(guest);
+            }
+
+            UUID flightID = UUID.fromString((String)flightBookingJSON.get(FLIGHT_BOOKINGS_FLIGHT_ID));
+            long seatID = (long)flightBookingJSON.get(FLIGHT_BOOKINGS_SEAT_ID);
+            long numCheckedBags = (long)flightBookingJSON.get(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS);
+
+            FlightBooking booking = new FlightBooking(guests, flightID, (int)seatID, (int)numCheckedBags);
+            bookings.add(booking);
+        }
+
+        return bookings;
+    }
+
     public ArrayList<Flight> loadFlights() {
         ArrayList<Flight> flights = new ArrayList<Flight>();
 
@@ -108,4 +141,5 @@ public class DataLoader extends DataConstants{
     public ArrayList<Hotel> getAllHotels() {
         return null;
     }
+
 }

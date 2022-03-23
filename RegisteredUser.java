@@ -108,4 +108,8 @@ public class RegisteredUser extends User{
     public String toString() {
         return this.firstName + " " + this.lastName;
     }
+
+    public void setFlightBookings(ArrayList<FlightBooking> flightBookings) {
+
+    }
 }

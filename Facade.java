@@ -32,8 +32,12 @@ public class Facade {
 
     }
 
-    public User getUserByUUID(UUID uuid) {
-        return userList.getUserByUUID(uuid);
+    public RegisteredUser getRegisteredUserByUUID(UUID uuid) {
+        return UserList.getUserByUUID(uuid);
+    }
+
+    public ArrayList<FlightBooking> getUserFlightBookings(RegisteredUser user) {
+        return dataLoader.loadUserFlightBookings(user);
     }
 
     public Flight getFlightByUUID(UUID uuid) {

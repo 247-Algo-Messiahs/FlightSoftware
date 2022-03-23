@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.json.simple.JSONArray;
+
 public class UserList {
     private static UserList userList;
-    private ArrayList<RegisteredUser> users;
+    private static ArrayList<RegisteredUser> users;
 
     private UserList(){
 
@@ -27,7 +29,7 @@ public class UserList {
         return this.users;
     }
 
-    public RegisteredUser getUserByUUID(UUID uuid) {
+    public static RegisteredUser getUserByUUID(UUID uuid) {
         for (int i = 0; i < users.size(); i++) {
             RegisteredUser selectedUser = users.get(i);
             if (selectedUser.getUserID().equals(uuid)) return selectedUser;

@@ -1,24 +1,24 @@
 import java.util.UUID;
 
-public class Guest {
-    private String name;
-    private int age;
-    private UUID seatID;
+public class Guest extends User{
+    private int seatID;
     private boolean needSeat;
 
     public Guest(int age, String firstName, String lastName){
-
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     public String getName(){
-        return this.name;
+        return this.firstName + " " + this.lastName;
     }
 
     public int getAge(){
         return this.age;
     }
 
-    public UUID getSeatID(){
+    public int getSeatID(){
         return this.seatID;
     }
 
@@ -26,16 +26,7 @@ public class Guest {
         return this.needSeat;
     }
 
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setAge(int age){
-        this.age = age;
-    }
-
-    public void setSeatID(UUID seatID){
+    public void setSeatID(int seatID){
         this.seatID = seatID;
     }
 
