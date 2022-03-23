@@ -36,8 +36,12 @@ public class Facade {
         return UserList.getUserByUUID(uuid);
     }
 
+    public void parseUserFlightBookings(RegisteredUser user) {
+        dataLoader.loadUserFlightBookings(user);
+    }
+
     public ArrayList<FlightBooking> getUserFlightBookings(RegisteredUser user) {
-        return dataLoader.loadUserFlightBookings(user);
+        return user.getFlightBookings();
     }
 
     public Flight getFlightByUUID(UUID uuid) {

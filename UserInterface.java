@@ -24,6 +24,7 @@ public class UserInterface {
         System.out.println(facade.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226")));
         System.out.println(facade.getFlightByUUID(UUID.fromString("0c9e5d25-877d-4171-be90-627827007a7a")));
         System.out.println(facade.getFlightByUUID(UUID.fromString("0c9e5d25-877d-4171-be90-627827007a7a")).getSeats().get(1));
+        facade.parseUserFlightBookings(test);
         System.out.println(facade.getUserFlightBookings(test));
     }   
 

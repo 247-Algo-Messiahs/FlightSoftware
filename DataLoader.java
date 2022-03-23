@@ -56,10 +56,10 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
-    public ArrayList<FlightBooking> loadUserFlightBookings(RegisteredUser user) {
+    public void loadUserFlightBookings(RegisteredUser user) {
         ArrayList<FlightBooking> bookings = new ArrayList<FlightBooking>();
         
-        JSONArray flightBookingArray = user.getFlightBooking();
+        JSONArray flightBookingArray = user.getFlightBookingJSON();
 
         for (int i = 0; i < flightBookingArray.size(); i++) {
             JSONObject flightBookingJSON = (JSONObject)flightBookingArray.get(i);
@@ -87,8 +87,10 @@ public class DataLoader extends DataConstants{
             bookings.add(booking);
         }
 
-        return bookings;
+        user.setFlightBookings(bookings);
     }
+
+
 
     public ArrayList<Flight> loadFlights() {
         ArrayList<Flight> flights = new ArrayList<Flight>();

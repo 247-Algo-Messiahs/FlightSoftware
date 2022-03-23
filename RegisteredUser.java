@@ -12,8 +12,10 @@ public class RegisteredUser extends User{
     private String emailAddress;
     private String address;
     private boolean frequentFlyer;
-    private JSONArray flightBooking;
-    private JSONArray hotelBooking;
+    private JSONArray flightBookingJSON;
+    private JSONArray hotelBookingJSON;
+    private ArrayList<FlightBooking> flightBookings;
+    private ArrayList<HotelBooking> hotelBookings;
 
     public RegisteredUser(String userID, String firstName, String lastName, String address, String phoneNumber, 
     String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier, 
@@ -29,8 +31,10 @@ public class RegisteredUser extends User{
         this.age = age;
         this.emailAddress = emailAddress;
         this.frequentFlyer = frequentFlier;
-        this.flightBooking = flightBooking;
-        this.hotelBooking = hotelBooking;
+        this.flightBookingJSON = flightBooking;
+        this.hotelBookingJSON = hotelBooking;
+        flightBookings = new ArrayList<FlightBooking>();
+        hotelBookings = new ArrayList<HotelBooking>();
     }
 
     public UUID getUserID(){
@@ -65,12 +69,20 @@ public class RegisteredUser extends User{
         return this.frequentFlyer;
     }
 
-    public JSONArray getFlightBooking(){
-        return this.flightBooking;
+    public JSONArray getFlightBookingJSON(){
+        return this.flightBookingJSON;
     }
 
-    public JSONArray getHotelBooking(){
-        return this.hotelBooking;
+    public JSONArray getHotelBookingJSON(){
+        return this.hotelBookingJSON;
+    }
+
+    public ArrayList<FlightBooking> getFlightBookings() {
+        return this.flightBookings;
+    }
+
+    public ArrayList<HotelBooking> getHotelBookings() {
+        return this.hotelBookings;
     }
 
     public void setUserID(UUID userID) {
@@ -110,6 +122,6 @@ public class RegisteredUser extends User{
     }
 
     public void setFlightBookings(ArrayList<FlightBooking> flightBookings) {
-
+        this.flightBookings = flightBookings;
     }
 }
