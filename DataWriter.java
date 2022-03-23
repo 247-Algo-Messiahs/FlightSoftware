@@ -45,6 +45,14 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_IS_INTERNATIONAL, flight.getIsInternational());
         flightDetails.put(FLIGHTS_SEATS, flight.getSeats());
 
+        /*
+            protected static final String SEATS_SEAT_ID = "seatID";
+            protected static final String SEATS_SEAT_NUM = "seatNum";
+            protected static final String SEATS_SEAT_CLASS = "seatClass";
+            protected static final String SEATS_TYPE = "type";
+            protected static final String SEATS_BOOKED = "booked";
+        */
+
         return flightDetails;
     }
 
@@ -59,22 +67,22 @@ public class DataWriter extends DataConstants{
         hotelDetails.put(HOTELS_AIRPORT_CODE, hotel.getAirCode());
         
         /*
-        protected static final String HOTELS_FILE_NAME = "hotels.json";
-        protected static final String HOTELS_HOTEL_ID = "hotelID";
-        protected static final String HOTELS_HOTEL_RATING = "hotelRating";
-        protected static final String HOTELS_CAPACITY = "hotelCapacity";
-        protected static final String HOTELS_NAME = "hotelName";
-        protected static final String HOTELS_LOCATION = "location";
-        protected static final String HOTELS_AIRPORT_CODE = "airCode";
-        
-        protected static final String ROOMS_FILE_NAME = "rooms.json";
-        protected static final String ROOMS_ROOM_ID = "roomID";
-        protected static final String ROOMS_HOTEL_ID = "hotelID";
-        protected static final String ROOMS_NOT_AVAIL = "notAvail";
-        protected static final String ROOMS_BED_TYPE = "bedType";
-        protected static final String ROOMS_IS_SMOKING = "isSmoking";
-        protected static final String ROOMS_HAS_BALCONY = "hasBalcony";
-        protected static final String ROOMS_HAS_PULLOUT_COUCH = "hasPulloutCouch";
+            protected static final String HOTELS_FILE_NAME = "hotels.json";
+            protected static final String HOTELS_HOTEL_ID = "hotelID";
+            protected static final String HOTELS_HOTEL_RATING = "hotelRating";
+            protected static final String HOTELS_CAPACITY = "hotelCapacity";
+            protected static final String HOTELS_NAME = "hotelName";
+            protected static final String HOTELS_LOCATION = "location";
+            protected static final String HOTELS_AIRPORT_CODE = "airCode";
+            
+            protected static final String ROOMS_FILE_NAME = "rooms.json";
+            protected static final String ROOMS_ROOM_ID = "roomID";
+            protected static final String ROOMS_HOTEL_ID = "hotelID";
+            protected static final String ROOMS_NOT_AVAIL = "notAvail";
+            protected static final String ROOMS_BED_TYPE = "bedType";
+            protected static final String ROOMS_IS_SMOKING = "isSmoking";
+            protected static final String ROOMS_HAS_BALCONY = "hasBalcony";
+            protected static final String ROOMS_HAS_PULLOUT_COUCH = "hasPulloutCouch";
         */
         return hotelDetails;
     }
