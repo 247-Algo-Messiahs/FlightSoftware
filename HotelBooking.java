@@ -1,54 +1,44 @@
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.UUID;
 
 public class HotelBooking {
-    private RegisteredUser user;
-    private HotelRoom hotelRoom;
-    private ArrayList<Date> dates;
-    private String hotelName;
+    private UUID hotelID;
+    private int roomID;
+    private ArrayList<LocalDate> dates;
 
-    public HotelBooking(RegisteredUser user, HotelRoom hotelRoom, ArrayList<Date> dates, String hotelName){
-
+    public HotelBooking(UUID hotelID, int roomID, ArrayList<LocalDate> dates){
+        this.hotelID = hotelID;
+        this.roomID = roomID;
+        this.dates = new ArrayList<LocalDate>(dates);
     }
 
-    public RegisteredUser getRegisteredUser(){
-        return this.user;
-    }
-
-    public HotelRoom getHotelRoom(){
-        return this.hotelRoom;
-    }
-
-    public ArrayList<Date> getDates(){
+    public ArrayList<LocalDate> getDates(){
         return this.dates;
     }
 
-    public String getHotelName(){
-        return this.hotelName;
-    }
-
-    public void setRegisteredUser(RegisteredUser user){
-        this.user = user;
-    }
-
-    public void setHotelRoom(HotelRoom hotelRoom){
-        this.hotelRoom = hotelRoom;
-    }
-
-    public void getDates(ArrayList<Date> dates){
+    public void setDates(ArrayList<LocalDate> dates){
         this.dates = dates;
-    }
-
-    public void getHotelName(String hotelName){
-        this.hotelName = hotelName;
     }
 
     public void confirmBooking(){
 
     }
 
-    public void displayBooking(){
+    private String getBookedDatesList() {
+        String list = "";
         
+        for (int i = 0; i < this.dates.size(); i++) {
+            list += i+1 + ") " + dates.get(i) + "\n";
+        }
+
+        return list;
     }
+
+    public String toString(){
+        return "Hotel Booking:\n" + "Hotel ID: " + this.hotelID + "\nRoom ID: " + this.roomID + "\n Dates of Stay: \n" + getBookedDatesList();
+    }
+
+    
     
 }

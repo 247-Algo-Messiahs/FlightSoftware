@@ -124,4 +124,8 @@ public class RegisteredUser extends User{
     public void setFlightBookings(ArrayList<FlightBooking> flightBookings) {
         this.flightBookings = flightBookings;
     }
+
+    public void setHotelBookings(ArrayList<HotelBooking> hotelBookings) {
+        this.hotelBookings = hotelBookings;
+    }
 }

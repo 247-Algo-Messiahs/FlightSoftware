@@ -20,8 +20,8 @@
         }],
         "hotelBookings": [{
             "hotelID": "c636521d-d96b-4cfa-9eca-ae1c742ffeca",
-            "roomID": "1",
-            "dateStay": ["01/02/2022", "01/05/2022"]
+            "roomID": 1,
+            "bookedDates": ["01-02-2022", "01-03-2022"]
         }]
     },{
         "userID": "47fec419-9e02-4f75-8e97-811734e2e573",
@@ -43,8 +43,8 @@
         }],
         "hotelBookings": [{
             "hotelID": "c6a8b332-2d21-4fbe-b793-e503cbd8e1d4",
-            "roomID": "2",
-            "dateStay": ["01/02/2022", "01/05/2022"]
+            "roomID": 1,
+            "bookedDates": ["01-02-2022", "01-03-2022"]
         }]
     }
 ]

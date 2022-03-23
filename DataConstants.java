@@ -72,7 +72,7 @@ public abstract class DataConstants {
     protected static final String GUEST_INFO_SEAT_ID = "seatID";
     
     protected static final String HOTEL_BOOKINGS_FILE_NAME = "hotelBookings.json";
-    protected static final String HOTEL_BOOKINGS_USER_ID = "userID";
+    protected static final String HOTEL_BOOKINGS_HOTEL_ID = "hotelID";
     protected static final String HOTEL_BOOKINGS_ROOM_ID = "roomID";
-    protected static final String HOTEL_BOOKINGS_DATE_STAY = "dateStay";
+    protected static final String HOTEL_BOOKINGS_BOOKED_DATES = "bookedDates";
 }

@@ -44,6 +44,14 @@ public class Facade {
         return user.getFlightBookings();
     }
 
+    public void parseUserHotelBookings(RegisteredUser user) {
+        dataLoader.loadUserHotelBookings(user);
+    }
+
+    public ArrayList<HotelBooking> getUserHotelBookings(RegisteredUser user) {
+        return user.getHotelBookings();
+    }
+
     public Flight getFlightByUUID(UUID uuid) {
         return flightList.getFlightByUUID(uuid);
     }

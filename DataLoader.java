@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.UUID;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -139,6 +140,34 @@ public class DataLoader extends DataConstants{
         }
 
         return null;
+    }
+
+    public void loadUserHotelBookings(RegisteredUser user) {
+        ArrayList<HotelBooking> bookings = new ArrayList<HotelBooking>();
+        
+        JSONArray hotelBookingArray = user.getHotelBookingJSON();
+
+        for (int i = 0; i < hotelBookingArray.size(); i++) {
+            JSONObject hotelBookingJSON = (JSONObject)hotelBookingArray.get(i);
+
+            UUID hotelID = UUID.fromString((String)hotelBookingJSON.get(HOTEL_BOOKINGS_HOTEL_ID));
+            long roomID = (long)hotelBookingJSON.get(HOTEL_BOOKINGS_ROOM_ID);
+
+            JSONArray bookedDatesArray = (JSONArray)hotelBookingJSON.get(HOTEL_BOOKINGS_BOOKED_DATES);
+            ArrayList<LocalDate> bookedDates = new ArrayList<LocalDate>();
+
+            for (int k = 0; k < bookedDatesArray.size(); k++) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-uuuu");
+                
+                LocalDate date = LocalDate.parse((String)bookedDatesArray.get(k), formatter);
+                bookedDates.add(date);
+            }
+            
+            HotelBooking booking = new HotelBooking(hotelID, (int)roomID, bookedDates);
+            bookings.add(booking);
+        }
+
+        user.setHotelBookings(bookings);
     }
 
     public ArrayList<Hotel> getAllHotels() {
