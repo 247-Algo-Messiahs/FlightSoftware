@@ -70,9 +70,9 @@ public class FlightBooking {
         String list = "";
 
         for (int i = 0; i < guests.size(); i++) {
-            list += i+1 + ") " + guests.get(i).getFirstName() + " " + guests.get(i).getLastName() + "\n";
+            Guest guest = guests.get(i);
+            list += i+1 + ") " + guest.getFirstName() + " " + guest.getLastName() + "\nSeatID: " + guest.getSeatID() + "\n";
         }
-
         return list;
     }
 

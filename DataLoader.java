@@ -73,8 +73,9 @@ public class DataLoader extends DataConstants{
                 String firstName = (String)guestJSON.get(GUESTS_FIRST_NAME);
                 String lastName = (String)guestJSON.get(GUESTS_LAST_NAME);
                 long age = (long)guestJSON.get(GUESTS_AGE);
+                long seatID = (long)guestJSON.get(GUESTS_SEAT_ID);
 
-                Guest guest = new Guest((int)age, firstName, lastName);
+                Guest guest = new Guest((int)age, firstName, lastName, (int)seatID);
                 guests.add(guest);
             }
 

@@ -4,10 +4,11 @@ public class Guest extends User{
     private int seatID;
     private boolean needSeat;
 
-    public Guest(int age, String firstName, String lastName){
+    public Guest(int age, String firstName, String lastName, int seatID){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.seatID = seatID;
     }
 
     public String getName(){
