@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.json.simple.JSONArray;
+
 public class RegisteredUser extends User{
     private UUID userID;
     private String phoneNumber;
@@ -10,11 +12,12 @@ public class RegisteredUser extends User{
     private String emailAddress;
     private String address;
     private boolean frequentFlyer;
-    private ArrayList<FlightBooking> flightHistory;
-    private ArrayList<HotelBooking> hotelHistory;
+    private JSONArray flightBooking;
+    private JSONArray hotelBooking;
 
     public RegisteredUser(String userID, String firstName, String lastName, String address, String phoneNumber, 
-    String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier){
+    String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier, 
+    JSONArray flightBooking, JSONArray hotelBooking){
         this.userID = UUID.fromString(userID);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,6 +29,8 @@ public class RegisteredUser extends User{
         this.age = age;
         this.emailAddress = emailAddress;
         this.frequentFlyer = frequentFlier;
+        this.flightBooking = flightBooking;
+        this.hotelBooking = hotelBooking;
     }
 
     public UUID getUserID(){
@@ -60,12 +65,12 @@ public class RegisteredUser extends User{
         return this.frequentFlyer;
     }
 
-    public ArrayList<FlightBooking> getFlightHistory(){
-        return this.flightHistory;
+    public JSONArray getFlightBooking(){
+        return this.flightBooking;
     }
 
-    public ArrayList<HotelBooking> getHotelHistory(){
-        return this.hotelHistory;
+    public JSONArray getHotelBooking(){
+        return this.hotelBooking;
     }
 
     public void setUserID(UUID userID) {
@@ -97,14 +102,6 @@ public class RegisteredUser extends User{
 
     public void setFrequentFlyer(boolean frequentFlyer){
         this.frequentFlyer = frequentFlyer;
-    }
-
-    public void setFlightHistory(ArrayList<FlightBooking> flightHistory){
-        this.flightHistory = flightHistory;
-    }
-
-    public void setHotelHistory(ArrayList<HotelBooking> hotelHistory){
-        this.hotelHistory = hotelHistory;
     }
 
     @Override
