@@ -13,6 +13,14 @@ public class HotelBooking {
         this.dates = new ArrayList<LocalDate>(dates);
     }
 
+    public UUID getHotelID(){
+        return this.hotelID;
+    }
+    
+    public int getRoomID(){
+        return this.roomID;
+    }
+
     public ArrayList<LocalDate> getDates(){
         return this.dates;
     }

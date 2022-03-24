@@ -4,27 +4,101 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 /**
- * @author Nicolas Becker + Peyton Tucker
+ * @author Nicolas Becker
  * writes all data to JSON files
  */
 public class DataWriter extends DataConstants{
 
-    public static void saveUsers(ArrayList<User> users) {
+    public static void saveUsers() {
 
     }
     
-    public static void saveFlights(ArrayList<Flight> flights) {
-
+    public static void saveFlights() {
+        /*
+        public static void saveUsers() {
+            Users users = Users.getInstance();
+            ArrayList<User> userList = users.getUsers();
+            JSONArray jsonUsers = new JSONArray();
+            
+            //creating all the json objects
+            for(int i=0; i< userList.size(); i++) {
+                jsonUsers.add(getUserJSON(userList.get(i)));
+            }
+            
+            //Write JSON file
+            try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
+    
+                file.write(jsonUsers.toJSONString());
+                file.flush();
+    
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        */
     }
 
-    public static void saveHotels(ArrayList<Hotel> hotels) {
+    public static void saveHotels() {
         
     }
 
     //Get objects below and save them to JSONObjects to be referenced later
 
-    public static JSONObject getUserJSON(User user){
+    public static JSONObject getUserJSON(RegisteredUser user){
         JSONObject userDetails = new JSONObject();
+        JSONArray flightBookings = new JSONArray();
+        ArrayList<FlightBooking> flightBooking = new ArrayList<>();
+        JSONArray hotelBookings = new JSONArray();
+        ArrayList<HotelBooking> hotelBooking = new ArrayList<>();
+        flightBooking = user.getFlightBookings();
+        hotelBooking = user.getHotelBookings();
+
+        userDetails.put(USERS_USER_ID, user.getUserID());
+        userDetails.put(USERS_USERNAME, user.getUsername());
+        userDetails.put(USERS_PASSWORD, user.getPassword());
+        userDetails.put(USERS_FIRST_NAME, user.getFirstName());
+        userDetails.put(USERS_LAST_NAME, user.getLastName());
+        userDetails.put(USERS_AGE, user.getAge());
+        userDetails.put(USERS_ADDRESS, user.getAddress());
+        userDetails.put(USERS_EMAIL, user.getEmailAddress());
+        userDetails.put(USERS_PHONE, user.getPhoneNumber());
+        userDetails.put(USERS_FREQUENT_FLIER, user.getFrequentFlyer());
+        userDetails.put(USERS_PASSPORT, user.getPassport());
+
+        for(int i=0; i<flightBooking.size(); i++){
+            JSONObject fBooking = new JSONObject();
+            JSONArray guests = new JSONArray();
+
+            fBooking.put(FLIGHT_BOOKINGS_FLIGHT_ID, flightBooking.get(i).getFlightID());
+            fBooking.put(FLIGHT_BOOKINGS_SEAT_ID, flightBooking.get(i).getSeats());
+            fBooking.put(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS, flightBooking.get(i).getBags());
+
+            for(int j=0; j<flightBooking.get(i).getGuests().size(); j++){
+                JSONObject guestInfo = new JSONObject();
+                guestInfo.put(GUESTS_FIRST_NAME, flightBooking.get(i).getGuests().get(j).getFirstName());
+                guestInfo.put(GUESTS_LAST_NAME, flightBooking.get(i).getGuests().get(j).getLastName());
+                guestInfo.put(GUESTS_AGE, flightBooking.get(i).getGuests().get(j).getAge());
+                guests.add(guestInfo);
+            }
+            fBooking.put(FLIGHT_BOOKINGS_GUEST_INFO, guests);
+
+            flightBookings.add(fBooking);
+        }
+
+        userDetails.put(USERS_FLIGHT_BOOKING, flightBookings);
+
+        for(int i=0; i<hotelBooking.size(); i++){
+            JSONObject hBooking = new JSONObject();
+
+            hBooking.put(HOTEL_BOOKINGS_HOTEL_ID, hotelBooking.get(i).getHotelID().toString());
+            hBooking.put(HOTEL_BOOKINGS_ROOM_ID, hotelBooking.get(i).getRoomID());
+            //hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, value)
+            JSONArray bookedArray = new JSONArray();
+            for(int j=0; j<hotelBooking.get(i).getDates().size(); j++){
+                bookedArray.add(hotelBooking.get(i).getDates().get(j));
+            }
+            hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, bookedArray);
+        }
 
         return userDetails;
     }
@@ -34,7 +108,6 @@ public class DataWriter extends DataConstants{
         JSONArray seatsArray = new JSONArray();
         ArrayList<Seat> seats = new ArrayList<>();
         seats = flight.getSeats();
-        int seatNum = 12;
 
         flightDetails.put(FLIGHTS_FLIGHT_ID, flight.getFlightID().toString());
         flightDetails.put(FLIGHTS_DEPARTURE_CODE, flight.getDepartureCode());
@@ -48,7 +121,7 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_IS_FULL, flight.getIsFull());
         flightDetails.put(FLIGHTS_IS_INTERNATIONAL, flight.getIsInternational());
         
-        for(int i=0; i<seatNum; i++){
+        for(int i=0; i<seats.size(); i++){
             JSONObject seatJSON = new JSONObject();
             seatJSON.put(SEATS_SEAT_ID, seats.get(i).getSeatID());
             seatJSON.put(SEATS_SEAT_NUM, seats.get(i).getSeatNumber());
@@ -68,7 +141,6 @@ public class DataWriter extends DataConstants{
         JSONArray roomArray = new JSONArray();
         ArrayList<HotelRoom> rooms = new ArrayList<>();
         rooms = hotel.getRooms();
-        int roomNum = 5;
 
         hotelDetails.put(HOTELS_HOTEL_ID, hotel.getHotelID().toString());
         hotelDetails.put(HOTELS_HOTEL_RATING, hotel.getHotelRating());
@@ -77,7 +149,7 @@ public class DataWriter extends DataConstants{
         hotelDetails.put(HOTELS_LOCATION, hotel.getLocation());
         hotelDetails.put(HOTELS_AIRPORT_CODE, hotel.getAirCode());
         
-        for(int i=0; i<roomNum; i++){
+        for(int i=0; i<rooms.size(); i++){
             JSONObject roomJSON = new JSONObject();
             roomJSON.put(ROOMS_ROOM_ID, rooms.get(i).getRoomID());
             JSONArray availableArray = new JSONArray();

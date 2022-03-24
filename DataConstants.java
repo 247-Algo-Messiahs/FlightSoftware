@@ -64,10 +64,6 @@ public abstract class DataConstants {
     protected static final String FLIGHT_BOOKINGS_FLIGHT_ID = "flightID";
     protected static final String FLIGHT_BOOKINGS_SEAT_ID = "seatID";
     protected static final String FLIGHT_BOOKINGS_NUM_CHECKED_BAGS = "numCheckedBags";
-
-    protected static final String GUEST_INFO_NAME = "name";
-    protected static final String GUEST_INFO_AGE = "age";
-    protected static final String GUEST_INFO_SEAT_ID = "seatID";
     
     protected static final String HOTEL_BOOKINGS_HOTEL_ID = "hotelID";
     protected static final String HOTEL_BOOKINGS_ROOM_ID = "roomID";
