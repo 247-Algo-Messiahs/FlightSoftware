@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -9,37 +11,61 @@ import org.json.simple.parser.JSONParser;
  */
 public class DataWriter extends DataConstants{
 
-    public static void saveUsers() {
+    public static void saveUsers() throws IOException {
+        UserList users = UserList.getInstance();
+        ArrayList<RegisteredUser> userList = users.getUsers();
+        JSONArray jsonUsers = new JSONArray();
 
+        //creating all the json objects
+        for(int i=0; i<userList.size(); i++){
+            jsonUsers.add(getUserJSON(userList.get(i)));
+        }
+
+        //write JSON file
+        try(FileWriter file = new FileWriter(USERS_FILE_NAME)){
+            file.write(jsonUsers.toJSONString());
+            file.flush();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
     
     public static void saveFlights() {
-        /*
-        public static void saveUsers() {
-            Users users = Users.getInstance();
-            ArrayList<User> userList = users.getUsers();
-            JSONArray jsonUsers = new JSONArray();
-            
-            //creating all the json objects
-            for(int i=0; i< userList.size(); i++) {
-                jsonUsers.add(getUserJSON(userList.get(i)));
-            }
-            
-            //Write JSON file
-            try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
-    
-                file.write(jsonUsers.toJSONString());
-                file.flush();
-    
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        FlightList flights = FlightList.getInstance();
+        ArrayList<Flight> flightList = flights.getFlights();
+        JSONArray jsonFlights = new JSONArray();
+
+        //creating all the json objects
+        for(int i=0; i<jsonFlights.size(); i++){
+            jsonFlights.add(getFlightJSON(flightList.get(i)));
         }
-        */
+
+        //write JSON file
+        try(FileWriter file = new FileWriter(FLIGHTS_FILE_NAME)){
+            file.write(jsonFlights.toJSONString());
+            file.flush();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void saveHotels() {
-        
+        HotelList hotels = HotelList.getInstance();
+        ArrayList<Hotel> hotelList = hotels.getHotels();
+        JSONArray jsonHotels = new JSONArray();
+
+        //creating all the json objects
+        for(int i=0; i<hotelList.size(); i++){
+            jsonHotels.add(getHotelJSON(hotelList.get(i)));
+        }
+
+        //write JSON file
+        try(FileWriter file = new FileWriter(USERS_FILE_NAME)){
+            file.write(jsonHotels.toJSONString());
+            file.flush();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     //Get objects below and save them to JSONObjects to be referenced later
@@ -98,6 +124,8 @@ public class DataWriter extends DataConstants{
                 bookedArray.add(hotelBooking.get(i).getDates().get(j));
             }
             hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, bookedArray);
+
+            hotelBookings.add(hBooking);
         }
 
         return userDetails;
