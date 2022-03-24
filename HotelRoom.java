@@ -47,4 +47,17 @@ public class HotelRoom {
     public boolean hasPulloutCouch(){
         return this.hasPulloutCouch;
     }
+
+    public String notAvailDatesList() {
+        String list = "";
+        for (int i = 0; i < notAvail.size(); i++) {
+            list += notAvail.get(i) + "\n";
+        }
+        return list;
+    }
+
+    @Override
+    public String toString() {
+        return "Room " + this.roomID + " with a " + this.bedType + " size bed is not available on the following dates: \n" + notAvailDatesList();
+    }
 }

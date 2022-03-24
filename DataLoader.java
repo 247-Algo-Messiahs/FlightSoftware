@@ -171,7 +171,6 @@ public class DataLoader extends DataConstants{
     }
 
     public static ArrayList<Hotel> loadHotels() {
-        System.out.println("in loadhotels");
         ArrayList<Hotel> hotels = new ArrayList<Hotel>();
 
         try {

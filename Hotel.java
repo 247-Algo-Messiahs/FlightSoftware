@@ -17,6 +17,7 @@ public class Hotel {
         this.hotelName = hotelName;
         this.location = location;
         this.airportCode = airportCode;
+        this.rooms = rooms;
     }
 
     public UUID getHotelID(){

@@ -3,10 +3,10 @@ import java.util.UUID;
 
 public class HotelList {
     private static HotelList hotelList;
-    private ArrayList<Hotel> hotels;
+    private static ArrayList<Hotel> hotels;
 
     private HotelList(){
-        this.hotels = new ArrayList<Hotel>();
+        hotels = DataLoader.loadHotels();
     }
 
     public static HotelList getInstance(){
@@ -15,16 +15,16 @@ public class HotelList {
     }
 
     public ArrayList<Hotel> getHotels(){
-        return this.hotels;
+        return hotels;
     }
 
-    public void setHotels(ArrayList<Hotel> hotels) {
-        this.hotels = hotels;
+    public void setHotels(ArrayList<Hotel> hotelsArrayList) {
+        hotels = hotelsArrayList;
     }
 
-    public Hotel getHotelByUUID(UUID uuid) {
-        for (int i = 0; i < this.hotels.size(); i++) {
-            Hotel selectedHotel = this.hotels.get(i);
+    public static Hotel getHotelByUUID(UUID uuid) {
+        for (int i = 0; i < hotels.size(); i++) {
+            Hotel selectedHotel = hotels.get(i);
             if (selectedHotel.getHotelID().equals(uuid)) return selectedHotel;
         }
         return null;

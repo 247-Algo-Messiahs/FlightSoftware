@@ -1,14 +1,12 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-import org.json.simple.JSONArray;
-
 public class UserList {
     private static UserList userList;
     private static ArrayList<RegisteredUser> users;
 
     private UserList(){
-
+        users = DataLoader.loadUsers();
     }
 
     public static UserList getInstance(){
@@ -21,15 +19,15 @@ public class UserList {
         return null;
     }
 
-    public void setUsers(ArrayList<RegisteredUser> users) {
-        this.users = users;
+    public void setUsers(ArrayList<RegisteredUser> usersArrayList) {
+        users = usersArrayList;
     }
 
     public ArrayList<RegisteredUser> getUsers() {
-        return this.users;
+        return users;
     }
 
-    public static RegisteredUser getUserByUUID(UUID uuid) {
+    public static RegisteredUser getRegisteredUserByUUID(UUID uuid) {
         for (int i = 0; i < users.size(); i++) {
             RegisteredUser selectedUser = users.get(i);
             if (selectedUser.getUserID().equals(uuid)) return selectedUser;

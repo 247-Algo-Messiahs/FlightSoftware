@@ -23,24 +23,7 @@ public class Facade {
         return facade;
     }
 
-    public void loadAllUsers() {
-        userList.setUsers(dataLoader.loadUsers());
-    }
-
-    public void loadAllFlights() {
-        flightList.setFlights(dataLoader.loadFlights());
-
-    }
-
-    public void loadAllHotels() {
-        hotelList.setHotels(dataLoader.loadHotels());
-    }
-
-    public RegisteredUser getRegisteredUserByUUID(UUID uuid) {
-        return UserList.getUserByUUID(uuid);
-    }
-
-    public void parseUserFlightBookings(RegisteredUser user) {
+    public void loadUserFlightBookings(RegisteredUser user) {
         dataLoader.loadUserFlightBookings(user);
     }
 
@@ -48,20 +31,12 @@ public class Facade {
         return user.getFlightBookings();
     }
 
-    public void parseUserHotelBookings(RegisteredUser user) {
+    public void loadUserHotelBookings(RegisteredUser user) {
         dataLoader.loadUserHotelBookings(user);
     }
 
     public ArrayList<HotelBooking> getUserHotelBookings(RegisteredUser user) {
         return user.getHotelBookings();
-    }
-
-    public Flight getFlightByUUID(UUID uuid) {
-        return flightList.getFlightByUUID(uuid);
-    }
-
-    public Hotel getHotelByUUID(UUID uuid) {
-        return hotelList.getHotelByUUID(uuid);
     }
 
     public void logIn(String username, String password) {
