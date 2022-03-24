@@ -8,7 +8,7 @@ public class Facade {
     private HotelList hotelList;
     private DataLoader dataLoader;
     private DataWriter dataWriter;
-    private User currentUser;
+    private User registeredUser;
 
 
     private Facade() {
@@ -44,7 +44,7 @@ public class Facade {
     }
 
     public void logOut() {
-        currentUser = null;
+        registeredUser = null;
     }
 
     public ArrayList<FlightBooking> viewFlightBookings() {
