@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class UserInterface {
-    private UserInterface userInterface;
+    private static UserInterface userInterface;
     private Scanner scanner;
     private Facade facade;
     
@@ -11,14 +11,15 @@ public class UserInterface {
         this.facade = Facade.getInstance();
     }
 
-    public UserInterface getInstance() {
-        if (this.userInterface == null) this.userInterface = new UserInterface();
-        return this.userInterface;
+    public static UserInterface getInstance() {
+        if (userInterface == null) userInterface = new UserInterface();
+        return userInterface;
     }
 
     public void run() {
         facade.loadAllUsers();
         facade.loadAllFlights();
+        facade.loadAllHotels();
 
         RegisteredUser test = facade.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226"));
         System.out.println(facade.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226")));
@@ -30,6 +31,8 @@ public class UserInterface {
 
         facade.parseUserHotelBookings(test);
         System.out.println(facade.getUserHotelBookings(test));
+
+        System.out.println(facade.getHotelByUUID(UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
     }   
 
     private int getUserSelection(int numCommands) {

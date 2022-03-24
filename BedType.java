@@ -1,4 +1,4 @@
-public enum RoomTrait {
+public enum BedType {
     DOUBLE,
     QUEEN,
     KING

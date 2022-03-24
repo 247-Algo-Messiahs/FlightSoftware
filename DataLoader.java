@@ -20,7 +20,7 @@ public class DataLoader extends DataConstants{
         return dataLoader;
     }
     
-    public ArrayList<RegisteredUser> loadUsers() {
+    public static ArrayList<RegisteredUser> loadUsers() {
         ArrayList<RegisteredUser> users = new ArrayList<RegisteredUser>();
 
         try {
@@ -93,7 +93,7 @@ public class DataLoader extends DataConstants{
 
 
 
-    public ArrayList<Flight> loadFlights() {
+    public static ArrayList<Flight> loadFlights() {
         ArrayList<Flight> flights = new ArrayList<Flight>();
 
         try {
@@ -170,7 +170,58 @@ public class DataLoader extends DataConstants{
         user.setHotelBookings(bookings);
     }
 
-    public ArrayList<Hotel> getAllHotels() {
+    public static ArrayList<Hotel> loadHotels() {
+        System.out.println("in loadhotels");
+        ArrayList<Hotel> hotels = new ArrayList<Hotel>();
+
+        try {
+            FileReader reader = new FileReader("data/" + HOTELS_FILE_NAME);
+            JSONParser parser = new JSONParser();
+			JSONArray allHotelsJSON = (JSONArray)parser.parse(reader);
+
+            for (int i = 0; i < allHotelsJSON.size(); i++) {
+                JSONObject hotelJSON = (JSONObject)allHotelsJSON.get(i);
+
+                UUID hotelID = UUID.fromString((String)hotelJSON.get(HOTELS_HOTEL_ID));
+                long hotelRating = (long)hotelJSON.get(HOTELS_HOTEL_RATING);
+                long capacity = (long)hotelJSON.get(HOTELS_CAPACITY);
+                String hotelName = (String)hotelJSON.get(HOTELS_NAME);
+                String location = (String)hotelJSON.get(HOTELS_LOCATION);
+                String airportCode = (String)hotelJSON.get(HOTELS_AIRPORT_CODE);
+
+                ArrayList<HotelRoom> rooms = new ArrayList<HotelRoom>();
+                JSONArray allRoomsJSON = (JSONArray)hotelJSON.get(HOTELS_ROOMS);
+                //add embedded rooms objects
+                for (int k = 0; k < allRoomsJSON.size(); k++) {
+                    JSONObject roomJSON = (JSONObject)allRoomsJSON.get(k);
+
+                    long roomID = (long)roomJSON.get(ROOMS_ROOM_ID);
+                    BedType bedType = BedType.valueOf((String)roomJSON.get(ROOMS_BED_TYPE));
+                    boolean isSmoking = (boolean)roomJSON.get(ROOMS_IS_SMOKING);
+                    boolean hasBalcony = (boolean)roomJSON.get(ROOMS_HAS_BALCONY);
+                    boolean hasPulloutCouch = (boolean)roomJSON.get(ROOMS_HAS_PULLOUT_COUCH);
+
+                    ArrayList<LocalDate> notAvailDatesArray = new ArrayList<LocalDate>();
+                    JSONArray notAvailDatesJSON = (JSONArray)roomJSON.get(ROOMS_NOT_AVAIL);
+
+                    for (int j = 0; j < notAvailDatesJSON.size(); j++) {
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-uuuu");
+                
+                        LocalDate date = LocalDate.parse((String)notAvailDatesJSON.get(j), formatter);
+                        notAvailDatesArray.add(date); 
+                    }
+
+                    rooms.add(new HotelRoom((int)roomID, notAvailDatesArray, bedType, isSmoking, hasBalcony, hasPulloutCouch));
+                }
+
+                hotels.add(new Hotel(hotelID, (int)hotelRating, (int)capacity, hotelName, location, airportCode, rooms));
+            }            
+            
+            return hotels;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 

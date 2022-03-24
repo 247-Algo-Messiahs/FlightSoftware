@@ -1,19 +1,12 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class HotelList {
     private static HotelList hotelList;
     private ArrayList<Hotel> hotels;
 
     private HotelList(){
-
-    }
-
-    public ArrayList<Hotel> getHotels(){
-        return this.hotels;
-    }
-
-    public void setFlights(ArrayList<Hotel> hotels) {
-        this.hotels = hotels;
+        this.hotels = new ArrayList<Hotel>();
     }
 
     public static HotelList getInstance(){
@@ -21,7 +14,19 @@ public class HotelList {
         return hotelList;
     }
 
-    public Hotel getHotel(int id){
+    public ArrayList<Hotel> getHotels(){
+        return this.hotels;
+    }
+
+    public void setHotels(ArrayList<Hotel> hotels) {
+        this.hotels = hotels;
+    }
+
+    public Hotel getHotelByUUID(UUID uuid) {
+        for (int i = 0; i < this.hotels.size(); i++) {
+            Hotel selectedHotel = this.hotels.get(i);
+            if (selectedHotel.getHotelID().equals(uuid)) return selectedHotel;
+        }
         return null;
     }
     

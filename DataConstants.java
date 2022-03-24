@@ -46,14 +46,13 @@ public abstract class DataConstants {
     protected static final String HOTELS_FILE_NAME = "hotels.json";
     protected static final String HOTELS_HOTEL_ID = "hotelID";
     protected static final String HOTELS_HOTEL_RATING = "hotelRating";
-    protected static final String HOTELS_CAPACITY = "hotelCapacity";
+    protected static final String HOTELS_CAPACITY = "capacity";
     protected static final String HOTELS_NAME = "hotelName";
     protected static final String HOTELS_LOCATION = "location";
-    protected static final String HOTELS_AIRPORT_CODE = "airCode";
+    protected static final String HOTELS_AIRPORT_CODE = "airportCode";
+    protected static final String HOTELS_ROOMS = "rooms";
     
-    protected static final String ROOMS_FILE_NAME = "rooms.json";
     protected static final String ROOMS_ROOM_ID = "roomID";
-    protected static final String ROOMS_HOTEL_ID = "hotelID";
     protected static final String ROOMS_NOT_AVAIL = "notAvail";
     protected static final String ROOMS_BED_TYPE = "bedType";
     protected static final String ROOMS_IS_SMOKING = "isSmoking";

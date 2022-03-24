@@ -32,6 +32,10 @@ public class Facade {
 
     }
 
+    public void loadAllHotels() {
+        hotelList.setHotels(dataLoader.loadHotels());
+    }
+
     public RegisteredUser getRegisteredUserByUUID(UUID uuid) {
         return UserList.getUserByUUID(uuid);
     }
@@ -57,7 +61,7 @@ public class Facade {
     }
 
     public Hotel getHotelByUUID(UUID uuid) {
-        return null;
+        return hotelList.getHotelByUUID(uuid);
     }
 
     public void logIn(String username, String password) {

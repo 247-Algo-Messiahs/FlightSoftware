@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Hotel {
@@ -7,11 +8,17 @@ public class Hotel {
     private String hotelName;
     private String location;
     private String airportCode;
-    private HotelRoom[] rooms;
+    private ArrayList<HotelRoom> rooms;
 
-    public Hotel(){
-
+    public Hotel(UUID hotelID, int hotelRating, int capacity, String hotelName, String location, String airportCode, ArrayList<HotelRoom> rooms){
+        this.hotelID = hotelID;
+        this.hotelRating = hotelRating;
+        this.capacity = capacity;
+        this.hotelName = hotelName;
+        this.location = location;
+        this.airportCode = airportCode;
     }
+
     public UUID getHotelID(){
         return this.hotelID;
     }
@@ -36,7 +43,7 @@ public class Hotel {
         return this.airportCode;
     }
 
-    public HotelRoom[] getRooms(){
+    public ArrayList<HotelRoom> getRooms(){
         return this.rooms;
     }
 
@@ -65,10 +72,12 @@ public class Hotel {
         this.airportCode = airCode;
     }
 
-    public void getRooms(HotelRoom[] rooms){
+    public void setRooms(ArrayList<HotelRoom> rooms){
         this.rooms = rooms;
     }
 
-  
-
+    @Override
+    public String toString() {
+        return this.hotelName + " with a rating of " + this.hotelRating + " located at " + this.location;
+    }
 }
