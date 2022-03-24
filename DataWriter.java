@@ -21,7 +21,7 @@ public class DataWriter extends DataConstants{
         
     }
 
-    //Get objects below
+    //Get objects below and save them to JSONObjects to be referenced later
 
     public static JSONObject getUserJSON(User user){
         JSONObject userDetails = new JSONObject();
@@ -31,6 +31,10 @@ public class DataWriter extends DataConstants{
 
     public static JSONObject getFlightJSON(Flight flight){
         JSONObject flightDetails = new JSONObject();
+        JSONArray seatsArray = new JSONArray();
+        ArrayList<Seat> seats = new ArrayList<>();
+        seats = flight.getSeats();
+        int seatNum = 12;
 
         flightDetails.put(FLIGHTS_FLIGHT_ID, flight.getFlightID().toString());
         flightDetails.put(FLIGHTS_DEPARTURE_CODE, flight.getDepartureCode());
@@ -43,21 +47,28 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_ECONOMY_SEATS, flight.getNumEconomySeats());
         flightDetails.put(FLIGHTS_IS_FULL, flight.getIsFull());
         flightDetails.put(FLIGHTS_IS_INTERNATIONAL, flight.getIsInternational());
-        flightDetails.put(FLIGHTS_SEATS, flight.getSeats());
-
-        /*
-            protected static final String SEATS_SEAT_ID = "seatID";
-            protected static final String SEATS_SEAT_NUM = "seatNum";
-            protected static final String SEATS_SEAT_CLASS = "seatClass";
-            protected static final String SEATS_TYPE = "type";
-            protected static final String SEATS_BOOKED = "booked";
-        */
+        
+        for(int i=0; i<seatNum; i++){
+            JSONObject seatJSON = new JSONObject();
+            seatJSON.put(SEATS_SEAT_ID, seats.get(i).getSeatID());
+            seatJSON.put(SEATS_SEAT_NUM, seats.get(i).getSeatNumber());
+            seatJSON.put(SEATS_SEAT_CLASS, seats.get(i).getSeatClass());
+            seatJSON.put(SEATS_TYPE, seats.get(i).getSeatType());
+            seatJSON.put(SEATS_BOOKED, seats.get(i).getIsBooked());
+            seatsArray.add(seatJSON);
+        }
+        
+        flightDetails.put(FLIGHTS_SEATS, seatsArray);
 
         return flightDetails;
     }
 
     public static JSONObject getHotelJSON(Hotel hotel){
         JSONObject hotelDetails = new JSONObject();
+        JSONArray roomArray = new JSONArray();
+        ArrayList<HotelRoom> rooms = new ArrayList<>();
+        rooms = hotel.getRooms();
+        int roomNum = 5;
 
         hotelDetails.put(HOTELS_HOTEL_ID, hotel.getHotelID().toString());
         hotelDetails.put(HOTELS_HOTEL_RATING, hotel.getHotelRating());
@@ -66,24 +77,21 @@ public class DataWriter extends DataConstants{
         hotelDetails.put(HOTELS_LOCATION, hotel.getLocation());
         hotelDetails.put(HOTELS_AIRPORT_CODE, hotel.getAirCode());
         
-        /*
-            protected static final String HOTELS_FILE_NAME = "hotels.json";
-            protected static final String HOTELS_HOTEL_ID = "hotelID";
-            protected static final String HOTELS_HOTEL_RATING = "hotelRating";
-            protected static final String HOTELS_CAPACITY = "hotelCapacity";
-            protected static final String HOTELS_NAME = "hotelName";
-            protected static final String HOTELS_LOCATION = "location";
-            protected static final String HOTELS_AIRPORT_CODE = "airCode";
-            
-            protected static final String ROOMS_FILE_NAME = "rooms.json";
-            protected static final String ROOMS_ROOM_ID = "roomID";
-            protected static final String ROOMS_HOTEL_ID = "hotelID";
-            protected static final String ROOMS_NOT_AVAIL = "notAvail";
-            protected static final String ROOMS_BED_TYPE = "bedType";
-            protected static final String ROOMS_IS_SMOKING = "isSmoking";
-            protected static final String ROOMS_HAS_BALCONY = "hasBalcony";
-            protected static final String ROOMS_HAS_PULLOUT_COUCH = "hasPulloutCouch";
-        */
+        for(int i=0; i<roomNum; i++){
+            JSONObject roomJSON = new JSONObject();
+            roomJSON.put(ROOMS_ROOM_ID, rooms.get(i).getRoomID());
+            JSONArray availableArray = new JSONArray();
+            for(int j=0; j<rooms.get(i).getNotAvail().size(); j++){
+                availableArray.add(rooms.get(i).getNotAvail().get(j));
+            }
+            roomJSON.put(ROOMS_NOT_AVAIL, availableArray);
+            roomJSON.put(ROOMS_NOT_AVAIL, rooms.get(i).getNotAvail());
+            roomJSON.put(ROOMS_BED_TYPE, rooms.get(i).getBedType());
+            roomJSON.put(ROOMS_IS_SMOKING, rooms.get(i).isSmoking());
+            roomJSON.put(ROOMS_HAS_BALCONY, rooms.get(i).hasBalcony());
+            roomJSON.put(ROOMS_HAS_PULLOUT_COUCH, rooms.get(i).hasPulloutCouch());
+        }
+        
         return hotelDetails;
     }
 }

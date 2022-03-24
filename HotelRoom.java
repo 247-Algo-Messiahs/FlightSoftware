@@ -23,6 +23,9 @@ public class HotelRoom {
         this.hasPulloutCouch = hasPulloutCouch;
     }
 
+    public int getRoomID(){
+        return this.roomID;
+    }
 
     public ArrayList<LocalDate> getNotAvail(){
         return this.notAvail;
