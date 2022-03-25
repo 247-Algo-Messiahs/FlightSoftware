@@ -114,6 +114,7 @@ public class DataLoader extends DataConstants{
                 long numAvailEconomySeats = (long)FlightJSON.get(FLIGHTS_ECONOMY_SEATS);
                 boolean isFull = (boolean)FlightJSON.get(FLIGHTS_IS_FULL);
                 boolean isInternational = (boolean) FlightJSON.get(FLIGHTS_IS_INTERNATIONAL);
+                long price = (long) FlightJSON.get(FLIGHTS_PRICE);
 
                 ArrayList<Seat> seats = new ArrayList<Seat>();
                 JSONArray allSeatsJSON = (JSONArray)FlightJSON.get(FLIGHTS_SEATS);
@@ -130,7 +131,7 @@ public class DataLoader extends DataConstants{
                 }
 
                 flights.add(new Flight(flightID, departureCode, arrivalCode, departureTime, arrivalTime, 
-                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational, seats));
+                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational, seats, (int)price));
             }            
             
             return flights;
@@ -195,6 +196,7 @@ public class DataLoader extends DataConstants{
                     JSONObject roomJSON = (JSONObject)allRoomsJSON.get(k);
 
                     long roomID = (long)roomJSON.get(ROOMS_ROOM_ID);
+                    long price = (long)roomJSON.get(ROOMS_PRICE);
                     BedType bedType = BedType.valueOf((String)roomJSON.get(ROOMS_BED_TYPE));
                     boolean isSmoking = (boolean)roomJSON.get(ROOMS_IS_SMOKING);
                     boolean hasBalcony = (boolean)roomJSON.get(ROOMS_HAS_BALCONY);
@@ -210,7 +212,7 @@ public class DataLoader extends DataConstants{
                         notAvailDatesArray.add(date); 
                     }
 
-                    rooms.add(new HotelRoom((int)roomID, notAvailDatesArray, bedType, isSmoking, hasBalcony, hasPulloutCouch));
+                    rooms.add(new HotelRoom((int)roomID, (int) price, notAvailDatesArray, bedType, isSmoking, hasBalcony, hasPulloutCouch));
                 }
 
                 hotels.add(new Hotel(hotelID, (int)hotelRating, (int)capacity, hotelName, location, airportCode, rooms));

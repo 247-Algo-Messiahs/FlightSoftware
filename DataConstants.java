@@ -36,6 +36,7 @@ public abstract class DataConstants {
     protected static final String FLIGHTS_IS_FULL = "isFull";
     protected static final String FLIGHTS_IS_INTERNATIONAL = "isInternational";
     protected static final String FLIGHTS_SEATS = "seats";
+    protected static final String FLIGHTS_PRICE = "price";
 
     protected static final String SEATS_SEAT_ID = "seatID";
     protected static final String SEATS_SEAT_NUM = "seatNum";
@@ -58,6 +59,7 @@ public abstract class DataConstants {
     protected static final String ROOMS_IS_SMOKING = "isSmoking";
     protected static final String ROOMS_HAS_BALCONY = "hasBalcony";
     protected static final String ROOMS_HAS_PULLOUT_COUCH = "hasPulloutCouch";
+    protected static final String ROOMS_PRICE = "price";
 
     protected static final String FLIGHT_BOOKINGS_USER_ID = "userID";
     protected static final String FLIGHT_BOOKINGS_GUEST_INFO = "guestInfo";

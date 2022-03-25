@@ -21,7 +21,7 @@ public class Flight {
     private int price;
     
     public Flight(UUID flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
-     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats) {
+     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats, int price) {
         this.flightID = flightID;
         this.departureCode = departureCode;
         this.arrivalCode = arrivalCode;
@@ -33,6 +33,7 @@ public class Flight {
         this.isFull = isFull;
         this.isInternational = isInternational;
         this.seats = seats;
+        this.price = price;
     }
 
     public Flight(String flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalDate departureDate, LocalTime arrivalTime, LocalDate arrivalDate,
@@ -184,6 +185,6 @@ public class Flight {
 
     @Override
     public String toString() {
-        return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + "\nArriving at: " + this.arrivalTime;
+        return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + "\nArriving at: " + this.arrivalTime + "\nPrice: $" + this.price;
     }
 }

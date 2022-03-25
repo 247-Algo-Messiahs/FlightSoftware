@@ -13,18 +13,24 @@ public class HotelRoom {
     private boolean isSmoking;
     private boolean hasBalcony;
     private boolean hasPulloutCouch;
+    private int price;
     
-    public HotelRoom(int roomID, ArrayList<LocalDate> notAvail, BedType bedType, boolean isSmoking, boolean hasBalcony, boolean hasPulloutCouch){
+    public HotelRoom(int roomID, int price, ArrayList<LocalDate> notAvail, BedType bedType, boolean isSmoking, boolean hasBalcony, boolean hasPulloutCouch){
         this.roomID = roomID;
         this.notAvail = notAvail;
         this.bedType = bedType;
         this.isSmoking = isSmoking;
         this.hasBalcony = hasBalcony;
         this.hasPulloutCouch = hasPulloutCouch;
+        this.price = price;
     }
 
     public int getRoomID(){
         return this.roomID;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 
     public ArrayList<LocalDate> getNotAvail(){
@@ -61,6 +67,6 @@ public class HotelRoom {
 
     @Override
     public String toString() {
-        return "Room " + this.roomID + " with a " + this.bedType + " size bed is not available on the following dates: \n" + notAvailDatesList();
+        return "Room " + this.roomID + " with a " + this.bedType + " size bed and a price of $" + this.price + " is not available on the following dates: \n" + notAvailDatesList();
     }
 }
