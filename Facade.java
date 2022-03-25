@@ -8,7 +8,8 @@ public class Facade {
     private HotelList hotelList;
     private DataLoader dataLoader;
     private DataWriter dataWriter;
-    private User registeredUser;
+    private FlightFilter flightFilter;
+    private RegisteredUser currentUser;
 
 
     private Facade() {
@@ -16,6 +17,7 @@ public class Facade {
         this.flightList = FlightList.getInstance();
         this.hotelList = HotelList.getInstance();
         this.dataLoader = DataLoader.getInstance();
+        this.flightFilter = new FlightFilter();
     }
 
     public static Facade getInstance() {
@@ -43,8 +45,16 @@ public class Facade {
 
     }
 
-    public void logIn(String username, String password) {
-
+    //returns 1 if login successful
+    //returns 0 if username and password match not found
+    public int logIn(String username, String password) {
+        for (RegisteredUser user : userList.getUsers()) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                this.currentUser = user;
+                return 1;
+            }
+        }
+        return 0;
     }
 
     public void loginError(){
@@ -59,24 +69,27 @@ public class Facade {
     public void mainMenu(){
         return;
     }
+
     public void searchForFlight(boolean roundTrip, String departingCode, String arrivalCode, int passengers, int carryOn, int checked){
 
     }
 
     public void logOut() {
-        registeredUser = null;
+        currentUser = null;
     }
 
     public ArrayList<FlightBooking> viewFlightBookings() {
-        return null;
+        if (currentUser.getFlightBookings() == null) loadUserFlightBookings(currentUser);
+        return currentUser.getFlightBookings();
     }
 
     public ArrayList<HotelBooking> viewHotelBookings() {
-        return null;
+        if (currentUser.getHotelBookings() == null) loadUserHotelBookings(currentUser);
+        return currentUser.getHotelBookings();
     }
 
-    public ArrayList<Flight> searchForFlight(String departureCode, String arrivalCode) {
-        return null;
+    public ArrayList<Flight> searchForFlights(String departureCode, String arrivalCode) {
+        return flightFilter.searchForFlights(departureCode, arrivalCode);
     }
 
     public ArrayList<Hotel> searchForHotel(String arrivalCode) {

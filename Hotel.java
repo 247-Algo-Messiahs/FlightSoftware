@@ -40,7 +40,7 @@ public class Hotel {
         return this.location;
     }
 
-    public String getAirCode(){
+    public String getAirportCode(){
         return this.airportCode;
     }
 

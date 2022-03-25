@@ -14,7 +14,7 @@ public class HotelList {
         return hotelList;
     }
 
-    public ArrayList<Hotel> getHotels(){
+    public static ArrayList<Hotel> getHotels(){
         return hotels;
     }
 
@@ -30,4 +30,13 @@ public class HotelList {
         return null;
     }
     
+    public static ArrayList<Hotel> getHotelsByAirportCode(String airportCode) {
+        ArrayList<Hotel> hotelsWithMatchingAirportCode = new ArrayList<Hotel>();
+
+        for (int i = 0; i < hotels.size(); i++) {
+            Hotel selectedHotel = hotels.get(i);
+            if (selectedHotel.getAirportCode().equals(airportCode)) hotelsWithMatchingAirportCode.add(selectedHotel);
+        }
+        return hotelsWithMatchingAirportCode;
+    }
 }
