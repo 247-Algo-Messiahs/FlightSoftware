@@ -39,7 +39,27 @@ public class Facade {
         return user.getHotelBookings();
     }
 
+    public void createAccount(String newUsername, String newPassword, String firstName, String lastName, int age, String address, String phoneNumber, String emailAddress, boolean passport ){
+
+    }
+
     public void logIn(String username, String password) {
+
+    }
+
+    public void loginError(){
+        return;
+    }
+
+    public void guestError(){
+        return;
+    }
+
+
+    public void mainMenu(){
+        return;
+    }
+    public void searchForFlight(boolean roundTrip, String departingCode, String arrivalCode, int passengers, int carryOn, int checked){
 
     }
 
