@@ -1,6 +1,8 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.UUID;
+import java.time.*;
 
 public class UserInterface {
     private static UserInterface userInterface;
@@ -15,6 +17,7 @@ public class UserInterface {
     private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest", "Departure Time (Earliest -> Latest", "Back"};
     private String[] bookingHistoryptions = {"Main Menu","Quit"};
     private boolean roundTrip;
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
 
     private UserInterface() {
@@ -213,16 +216,16 @@ public class UserInterface {
     private void roundtripFlightSearch(){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = scanner.nextLine();       //how do you read in LocalDate scanner
+        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);       //how do you read in LocalDate scanner
         System.out.println("Return Date: (mm/dd/yyyy)");
-        LocalDate arrivalate = scanner.nextLine());        //how do you read in LocalDate scanner
+        LocalDate arrivalate = LocalDate.parse(scanner.nextLine(), FORMATTER);        //how do you read in LocalDate scanner
 
     }
     
     private void onewayFlightSearch(){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = scanner.nextLine();       //how do you read in LocalDate scanner
+        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);       //how do you read in LocalDate scanner
 
         for(int i=0;i<nextPageOptions.length;i++){
             System.out.println((i+1) + ". " + nextPageOptions[i]);
@@ -307,12 +310,12 @@ public class UserInterface {
         System.out.println("Nearby Airport Code");
         String nearbyAirportCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
         System.out.println("Check-in Date: (mm/dd/yyyy");
-        LocalDate checkinDate = scanner.nextLine();     //how do you read in LocalDate scanner
-        System.out.println("Check-out Date: (mm/dd/yyyy");
-        LocalDate checkoutDate = scanner.nextLine();     //how do you read in LocalDate scanner
-        hotelSearchResults(){
 
-        }
+        
+        LocalDate checkinDate = LocalDate.parse(scanner.nextLine(), FORMATTER);     //how do you read in LocalDate scanner
+        System.out.println("Check-out Date: (mm/dd/yyyy");
+        LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);     //how do you read in LocalDate scanner
+        hotelSearchResults();
     }
 
     private void hotelSearchResults(){

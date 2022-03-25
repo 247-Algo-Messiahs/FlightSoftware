@@ -24,6 +24,12 @@ public class HotelFilter {
     }
 
     public ArrayList<HotelRoom> filterHotelRooms(BedType bedType, ArrayList<HotelRoom> hotelRooms) {
-        return null;
+        ArrayList<HotelRoom> filteredRooms = new ArrayList<HotelRoom>();
+
+        for (HotelRoom room : hotelRooms) {
+            if (room.getBedType().equals(bedType)) filteredRooms.add(room);
+        }
+        
+        return filteredRooms;
     }
 }
