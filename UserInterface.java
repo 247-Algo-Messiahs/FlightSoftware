@@ -353,7 +353,7 @@ public class UserInterface {
     
     private void exit(){
         printHeading(" Canoe Booking ");
-        System.out.println("You have successfully logged out.\n Thank you for chooisng Canoe Booking! Happy travels!");
+        System.out.println("Thank you for chooisng Canoe Booking! Happy travels!");
         System.exit(0);
     }
 
