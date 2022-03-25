@@ -175,7 +175,7 @@ public class DataWriter extends DataConstants{
         hotelDetails.put(HOTELS_CAPACITY, hotel.getCapacity());
         hotelDetails.put(HOTELS_NAME, hotel.getHotelName());
         hotelDetails.put(HOTELS_LOCATION, hotel.getLocation());
-        hotelDetails.put(HOTELS_AIRPORT_CODE, hotel.getAirCode());
+        hotelDetails.put(HOTELS_AIRPORT_CODE, hotel.getAirportCode());
         
         for(int i=0; i<rooms.size(); i++){
             JSONObject roomJSON = new JSONObject();
