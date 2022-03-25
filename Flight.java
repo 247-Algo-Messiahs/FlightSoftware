@@ -18,6 +18,7 @@ public class Flight {
     private boolean isFull;
     private boolean isInternational;
     private ArrayList<Seat> seats;
+    private int price;
     
     public Flight(UUID flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
      int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats) {
@@ -104,6 +105,10 @@ public class Flight {
 
     public ArrayList<Seat> getSeats() {
         return this.seats;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 
     public void setFlightID(UUID flightID) {

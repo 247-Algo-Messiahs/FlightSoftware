@@ -14,7 +14,7 @@ public class FlightList {
         return flightList;
     }
 
-    public ArrayList<Flight> getFlights(){
+    public static ArrayList<Flight> getFlights(){
         return flights;
     }
 
