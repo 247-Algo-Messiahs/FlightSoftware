@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -9,8 +10,12 @@ public class UserInterface {
     private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Exit"};
     private String[] loginErrorOptions = {"Re-enter Information", "Create an Account", "Continue as Guest"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
-    private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Quit"};
+    private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
+    private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest", "Departure Time (Earliest -> Latest", "Back"};
+    private String[] bookingHistoryptions = {"Main Menu","Quit"};
+    private boolean roundTrip;
+
 
     private UserInterface() {
         this.scanner = new Scanner(System.in);
@@ -74,7 +79,7 @@ public class UserInterface {
                         searchForFlight();
                         break;
                 case(4):
-                        logOut();
+                        exit();
                         break;
             }
         }
@@ -190,8 +195,15 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                        roundtripFlightSearch();
-                        break;
+                if(roundTrip = true){
+                    roundtripFlightSearch();
+                    break;
+                }
+                else{
+                    onewayFlightSearch();
+                    break;
+                }
+                            
                 case(1):
                         searchForFlight();
                         break;
@@ -199,20 +211,150 @@ public class UserInterface {
         }   
     }
     private void roundtripFlightSearch(){
+        printHeading(" Flight Search ");
+        System.out.println("Departure Date: (mm/dd/yyyy)");
+        LocalDate departureDate = scanner.nextLine();       //how do you read in LocalDate scanner
+        System.out.println("Return Date: (mm/dd/yyyy)");
+        LocalDate arrivalate = scanner.nextLine());        //how do you read in LocalDate scanner
 
+    }
+    
+    private void onewayFlightSearch(){
+        printHeading(" Flight Search ");
+        System.out.println("Departure Date: (mm/dd/yyyy)");
+        LocalDate departureDate = scanner.nextLine();       //how do you read in LocalDate scanner
+
+        for(int i=0;i<nextPageOptions.length;i++){
+            System.out.println((i+1) + ". " + nextPageOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(nextPageOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == nextPageOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                
+                   flightFilter();
+                    break;
+         
+                case(1):
+                    searchForFlight();
+                        break;
+            }
+        }   
+    }
+    
+    private void flightFilter(){
+        printHeading(" Flight Filter ");
+        System.out.println("How would you like your search results to be sorted?");
+        
+
+        for(int i=0;i<flightFilterOptions.length;i++){
+            System.out.println((i+1) + ". " + flightFilterOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(flightFilterOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == flightFilterOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //sort price
+                   departingFlightResults();
+                    break;
+         
+                case(1):
+                    //sort duration
+                    departingFlightResults();
+                        break;
+                case(2):
+                    departingFlightResults();
+                    break;
+                case(3):
+                if(roundTrip = true){
+                    roundtripFlightSearch();
+                    break;
+                }
+                else{
+                    onewayFlightSearch();
+                    break;
+                }
+            }
+        }   
+    }
+
+    private void departingFlightResults(){
+        printHeading(" Departing Flight: ");
+
+        //SHOW DEPARTING FLIGHT SEARCH RESULTS HERE
     }
 
     private void searchForHotel(){
+        printHeading(" Hotel Search ");
+        System.out.println("Please input your desired locations, check-in, and check-out dates below.");
+        System.out.println("\n");
+        System.out.println("Nearby Airport Code");
+        String nearbyAirportCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
+        System.out.println("Check-in Date: (mm/dd/yyyy");
+        LocalDate checkinDate = scanner.nextLine();     //how do you read in LocalDate scanner
+        System.out.println("Check-out Date: (mm/dd/yyyy");
+        LocalDate checkoutDate = scanner.nextLine();     //how do you read in LocalDate scanner
+        hotelSearchResults(){
 
+        }
+    }
+
+    private void hotelSearchResults(){
+        
     }
     private void viewBookingHistory(){
+        printHeading(" Booking History ");
+        System.out.println("You may view your booking history below or choose from one of the following options.");
+
+        for(int i=0;i<bookingHistoryptions.length;i++){
+            System.out.println((i+1) + ". " + bookingHistoryptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(bookingHistoryptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == bookingHistoryptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                
+                   mainMenu();
+                    break;
+         
+                case(1):
+                    exit();
+                    break;
+            }
+        }   
+
+                //SHOW BOOKING HISTORY HERE
 
     }
-    private void logOut(){
-
-    }
-    private void quit(){
-
+    
+    private void exit(){
+        printHeading(" Canoe Booking ");
+        System.out.println("You have successfully logged out.\n Thank you for chooisng Canoe Booking! Happy travels!");
+        System.exit(0);
     }
 
     
@@ -310,7 +452,7 @@ public class UserInterface {
                         viewBookingHistory();
                         break;
                 case(3):
-                        quit();
+                        exit();
                         break;
               }
         }
