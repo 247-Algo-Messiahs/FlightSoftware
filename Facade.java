@@ -9,6 +9,7 @@ public class Facade {
     private DataLoader dataLoader;
     private DataWriter dataWriter;
     private FlightFilter flightFilter;
+    private HotelFilter hotelFilter;
     private RegisteredUser currentUser;
 
 
@@ -92,8 +93,8 @@ public class Facade {
         return flightFilter.searchForFlights(departureCode, arrivalCode);
     }
 
-    public ArrayList<Hotel> searchForHotel(String arrivalCode) {
-        return null;
+    public ArrayList<HotelRoom> searchForHotelRooms(String arrivalCode) {
+        return hotelFilter.searchForHotelRooms(arrivalCode);
     }
 
 }

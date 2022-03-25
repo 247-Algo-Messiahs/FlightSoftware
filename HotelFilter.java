@@ -9,7 +9,7 @@ public class HotelFilter {
         
     }
     
-    public ArrayList<HotelRoom> searchForHotels(String airportCode) {
+    public ArrayList<HotelRoom> searchForHotelRooms(String airportCode) {
         ArrayList<Hotel> hotels = HotelList.getHotelsByAirportCode(airportCode);
         ArrayList<HotelRoom> hotelRooms = new ArrayList<HotelRoom>();
 
@@ -21,5 +21,9 @@ public class HotelFilter {
         }
 
         return hotelRooms;
+    }
+
+    public ArrayList<HotelRoom> filterHotelRooms(BedType bedType, ArrayList<HotelRoom> hotelRooms) {
+        return null;
     }
 }
