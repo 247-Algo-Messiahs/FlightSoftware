@@ -31,7 +31,7 @@ public class DataLoader extends DataConstants{
             for (int i = 0; i < allUsersJSON.size(); i++) {
                 JSONObject userJSON = (JSONObject)allUsersJSON.get(i);
 
-                String userID = (String)userJSON.get(USERS_USER_ID);
+                UUID userID = UUID.fromString((String)userJSON.get(USERS_USER_ID));
                 String username = (String)userJSON.get(USERS_USERNAME);
                 String password = (String)userJSON.get(USERS_PASSWORD);
                 String firstName = (String)userJSON.get(USERS_FIRST_NAME);
@@ -45,7 +45,7 @@ public class DataLoader extends DataConstants{
                 JSONArray flightBooking = (JSONArray)userJSON.get(USERS_FLIGHT_BOOKING);
                 JSONArray hotelBooking = (JSONArray) userJSON.get(USERS_HOTEL_BOOKING);
 
-                users.add(new RegisteredUser(UUID.fromString(userID), firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier, flightBooking, hotelBooking));
+                users.add(new RegisteredUser(userID, firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier, flightBooking, hotelBooking));
             }            
             
             return users;

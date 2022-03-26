@@ -11,6 +11,8 @@ public class Facade {
     private FlightFilter flightFilter;
     private HotelFilter hotelFilter;
     private RegisteredUser currentUser;
+    private FlightBooking currentFlightBooking;
+    private HotelBooking currentHotelBooking;
 
 
     private Facade() {
@@ -44,6 +46,8 @@ public class Facade {
 
     public void createAccount(String newUsername, String newPassword, String firstName, String lastName, int age, String address, String phoneNumber, String emailAddress, boolean passport ){
         RegisteredUser newUser = new RegisteredUser(UUID.randomUUID(), firstName, lastName, address, phoneNumber, newUsername, newPassword, passport, age, emailAddress);
+        userList.addUserToList(newUser);
+        this.currentUser = newUser;
     }
 
     //returns 1 if login successful
@@ -66,12 +70,11 @@ public class Facade {
         return;
     }
 
-
     public void mainMenu(){
         return;
     }
 
-    public void searchForFlight(boolean roundTrip, String departingCode, String arrivalCode, int passengers, int carryOn, int checked){
+    public void searchForFlight(boolean roundTrip, String departingCode, String arrivalCode, int passengers){
 
     }
 
@@ -95,6 +98,10 @@ public class Facade {
 
     public ArrayList<HotelRoom> searchForHotelRooms(String arrivalCode) {
         return hotelFilter.searchForHotelRooms(arrivalCode);
+    }
+
+    public ArrayList<FlightBooking> getBookingHistory() {
+        return currentUser.getFlightBookings();
     }
 
 }

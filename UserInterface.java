@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
 import java.time.*;
@@ -8,7 +9,7 @@ public class UserInterface {
     private static UserInterface userInterface;
     private Scanner scanner;
     private Facade facade;
-    private static final String WELCOME_MESSAGE = "Welcome to Canoe’s Flight Booking Software!\n\n Please choose from the following options:";
+    private static final String WELCOME_MESSAGE = "Welcome to Canoe's Flight Booking Software!\n\n Please choose from the following options:";
     private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Exit"};
     private String[] loginErrorOptions = {"Re-enter Information", "Create an Account", "Continue as Guest"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
@@ -149,6 +150,7 @@ public class UserInterface {
         String lastName = scanner.nextLine();
         System.out.println("Age:");
         int age = scanner.nextInt();
+        scanner.nextLine(); //this fixes the problem listed below; it "absorbs" the newline character that is left after the nextInt() above
         System.out.println("Address:");
         String address = scanner.nextLine(); //for some reason it won't allow user to record address
         System.out.println("Phone Number:");
@@ -157,11 +159,13 @@ public class UserInterface {
         String emailAddress = scanner.nextLine();
         System.out.println("\n");
         System.out.println("Do you have a valid passport? (Y/N)");
-        boolean passport = scanner.nextBoolean();
-        facade.createAccount(newUsername, newPassword, firstName, lastName, age, address, phoneNumber, emailAddress, passport );
+        String passportInput = scanner.nextLine();
+        boolean passport = passportInput.toLowerCase().equals("y");
+        
+        facade.createAccount(newUsername, newPassword, firstName, lastName, age, address, phoneNumber, emailAddress, passport);
         mainMenu();
-        //how do we store all of this information
-        //how do you record the "Y/N" from the boolean
+        
+
         //gonna probably need a function somehwere that converts newUsername to username
 
     }
@@ -169,19 +173,23 @@ public class UserInterface {
 
     private void searchForFlight(){
         printHeading(" Flight Search ");
-        System.out.println("Roundtrip: (Y/N)"); //        //how do you record the "Y/N" from the boolean
-        boolean roundTrip = scanner.nextBoolean();
+        System.out.println("Roundtrip: (Y/N)");
+        //next 2 lines record Y/N from scanner.nextLine
+        String roundtripInput = scanner.nextLine();
+        boolean roundTrip = roundtripInput.toLowerCase().equals("y");
         System.out.println("Departing Airport Code:");
         String departingCode = scanner.nextLine();
         System.out.println("Arrival Airport Code:");
         String arrivalCode = scanner.nextLine();
         System.out.println("Number of Passengers:");
         int passengers = scanner.nextInt();
-        System.out.println("Number of Carry-on Bags:");
-        int carryOn = scanner.nextInt();
-        System.out.println("Number of Checked Bags:");
-        int checked= scanner.nextInt();
-        facade.searchForFlight(roundTrip, departingCode, arrivalCode, passengers, carryOn, checked);
+        scanner.nextLine();
+
+        ArrayList<User> guests = new ArrayList<User>();
+
+        if (passengers > 1) guests = enterGuestInfo(passengers - 1);
+
+        facade.searchForFlight(roundTrip, departingCode, arrivalCode, passengers);
 
         for(int i=0;i<nextPageOptions.length;i++){
             System.out.println((i+1) + ". " + nextPageOptions[i]);
@@ -198,14 +206,14 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                if(roundTrip = true){
-                    roundtripFlightSearch();
-                    break;
-                }
-                else{
-                    onewayFlightSearch();
-                    break;
-                }
+                    if(roundTrip = true){
+                        roundtripFlightSearch();
+                        break;
+                    }
+                    else{
+                        onewayFlightSearch();
+                        break;
+                    }
                             
                 case(1):
                         searchForFlight();
@@ -216,16 +224,15 @@ public class UserInterface {
     private void roundtripFlightSearch(){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);       //how do you read in LocalDate scanner
+        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Return Date: (mm/dd/yyyy)");
-        LocalDate arrivalate = LocalDate.parse(scanner.nextLine(), FORMATTER);        //how do you read in LocalDate scanner
-
+        LocalDate arrivalDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
     }
     
     private void onewayFlightSearch(){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);       //how do you read in LocalDate scanner
+        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
 
         for(int i=0;i<nextPageOptions.length;i++){
             System.out.println((i+1) + ". " + nextPageOptions[i]);
@@ -274,13 +281,13 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //sort price
-                   departingFlightResults();
+                    departingFlightResults();
                     break;
          
                 case(1):
                     //sort duration
                     departingFlightResults();
-                        break;
+                    break;
                 case(2):
                     departingFlightResults();
                     break;
@@ -323,7 +330,13 @@ public class UserInterface {
     }
     private void viewBookingHistory(){
         printHeading(" Booking History ");
-        System.out.println("You may view your booking history below or choose from one of the following options.");
+        System.out.println("You may view your booking history below or choose from one of the following options.\n");
+
+        ArrayList<FlightBooking> bookings = facade.getBookingHistory();
+
+        for (FlightBooking booking : bookings) {
+            System.out.println(booking);
+        }
 
         for(int i=0;i<bookingHistoryptions.length;i++){
             System.out.println((i+1) + ". " + bookingHistoryptions[i]);
@@ -336,7 +349,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == bookingHistoryptions.length -1) break;
+            if(userCommand == bookingHistoryptions.length -1) exit();
 
             switch(userCommand) {
                 case(0):
@@ -427,6 +440,30 @@ public class UserInterface {
         }
          facade.guestError(); //Don't know why this is never used locally. I created a facade method. 
     }
+
+    public ArrayList<User> enterGuestInfo(int numGuests) {
+        printHeading(" Guest Info ");
+
+        System.out.println("You indicated you have additional passengers. Please enter the information for your passengers.");
+
+        ArrayList<User> guests = new ArrayList<User>();
+
+        for (int i = 0; i < numGuests; i++) {
+
+            System.out.println("Guest " + (i + 1) + "First Name:");
+            String firstName = scanner.nextLine();
+            System.out.println("Guest " + (i + 1) + "Last Name:");
+            String lastName = scanner.nextLine();
+            System.out.println("Guest " + (i + 1) + "Age:");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+
+            guests.add(new User(age, firstName, lastName));
+        }
+
+        return guests;
+    }
+
     private void mainMenu(){
         printHeading(" Main Menu ");
         System.out.println("\n");
