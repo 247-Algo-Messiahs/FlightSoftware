@@ -184,6 +184,9 @@ public class UserInterface {
         System.out.println("Number of Passengers:");
         int passengers = scanner.nextInt();
         scanner.nextLine();
+        System.out.println("Number of Checked Bags: ");
+        int checkedBags = scanner.nextInt();
+        scanner.nextLine();
 
         ArrayList<User> guests = new ArrayList<User>();
 

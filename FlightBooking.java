@@ -4,16 +4,22 @@ import java.util.UUID;
 public class FlightBooking {
     private UUID flightID;
     private ArrayList<Guest> guests;
+    private int numCheckedBags;
     private int seatID;
 
-    public FlightBooking(ArrayList<Guest> guests, UUID flightID, int seatID){
+    public FlightBooking(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags){
         this.guests = guests;
         this.flightID = flightID;
+        this.numCheckedBags = numCheckedBags;
         this.seatID = seatID;
     }
 
     public ArrayList<Guest> getGuests(){
         return this.guests;
+    }
+
+    public int getBags(){
+        return this.numCheckedBags;
     }
 
     public int getSeats(){
@@ -26,6 +32,10 @@ public class FlightBooking {
 
     public void setGuests(ArrayList<Guest> guests){
         this.guests = guests;
+    }
+
+    public void setBags(int numCheckedBags){
+        this.numCheckedBags = numCheckedBags;
     }
 
     public void setSeats(int seatID){
@@ -70,6 +80,7 @@ public class FlightBooking {
     public String toString() {
         return "Flight Booking\nFlight ID: " + this.flightID + 
         "\nSeat ID: " + this.seatID +
-        "\nGuests:\n" + getListOfGuests();
+        "\nGuests:\n" + getListOfGuests() +
+        "Checked Bags: " + this.numCheckedBags;
     }
 }
