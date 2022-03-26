@@ -74,10 +74,6 @@ public class Facade {
         return;
     }
 
-    public void searchForFlight(boolean roundTrip, String departingCode, String arrivalCode, int passengers){
-
-    }
-
     public void logOut() {
         currentUser = null;
     }
@@ -104,4 +100,11 @@ public class Facade {
         return currentUser.getFlightBookings();
     }
 
+    public ArrayList<Flight> filterFlights(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights) {
+        return flightFilter.filterFlights(flightTrait, unfilteredFlights);
+    }
+
+    public ArrayList<HotelRoom> filterHotels(BedType bedType, ArrayList<HotelRoom> unfilteredHotelRooms) {
+        return hotelFilter.filterHotelRooms(bedType, unfilteredHotelRooms);
+    }
 }

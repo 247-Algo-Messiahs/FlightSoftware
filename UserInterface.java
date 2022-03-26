@@ -9,7 +9,10 @@ public class UserInterface {
     private static UserInterface userInterface;
     private Scanner scanner;
     private Facade facade;
+
     private static final String WELCOME_MESSAGE = "Welcome to Canoe's Flight Booking Software!\n\n Please choose from the following options:";
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
+
     private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Exit"};
     private String[] loginErrorOptions = {"Re-enter Information", "Create an Account", "Continue as Guest"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
@@ -17,8 +20,15 @@ public class UserInterface {
     private String[] nextPageOptions = {"Next Page","Back"};
     private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest", "Departure Time (Earliest -> Latest", "Back"};
     private String[] bookingHistoryptions = {"Main Menu","Quit"};
+
     private boolean roundTrip;
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
+    private String departingCode;
+    private String arrivalCode;
+    private ArrayList<User> guests;
+    private int checkedBags;
+    private LocalDate departureDate;
+    private LocalDate returnDate;
+    
 
 
     private UserInterface() {
@@ -176,23 +186,21 @@ public class UserInterface {
         System.out.println("Roundtrip: (Y/N)");
         //next 2 lines record Y/N from scanner.nextLine
         String roundtripInput = scanner.nextLine();
-        boolean roundTrip = roundtripInput.toLowerCase().equals("y");
+        this.roundTrip = roundtripInput.toLowerCase().equals("y");
         System.out.println("Departing Airport Code:");
-        String departingCode = scanner.nextLine();
+        this.departingCode = scanner.nextLine();
         System.out.println("Arrival Airport Code:");
-        String arrivalCode = scanner.nextLine();
+        this.arrivalCode = scanner.nextLine();
         System.out.println("Number of Passengers:");
         int passengers = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Number of Checked Bags: ");
-        int checkedBags = scanner.nextInt();
+        this.checkedBags = scanner.nextInt();
         scanner.nextLine();
 
-        ArrayList<User> guests = new ArrayList<User>();
+        this.guests = new ArrayList<User>();
 
         if (passengers > 1) guests = enterGuestInfo(passengers - 1);
-
-        facade.searchForFlight(roundTrip, departingCode, arrivalCode, passengers);
 
         for(int i=0;i<nextPageOptions.length;i++){
             System.out.println((i+1) + ". " + nextPageOptions[i]);
@@ -209,12 +217,12 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                    if(roundTrip = true){
-                        roundtripFlightSearch();
+                    if(roundTrip){
+                        roundtripFlightSearch(this.departingCode, this.arrivalCode, this.guests, this.checkedBags);
                         break;
                     }
                     else{
-                        onewayFlightSearch();
+                        onewayFlightSearch(this.departingCode, this.arrivalCode, this.guests, this.checkedBags);
                         break;
                     }
                             
@@ -224,18 +232,23 @@ public class UserInterface {
             }
         }   
     }
-    private void roundtripFlightSearch(){
+    private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<User> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+        this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Return Date: (mm/dd/yyyy)");
-        LocalDate arrivalDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+        this.returnDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+
+        ArrayList<Flight> departingFlightSearchResults = facade.searchForFlights(departingCode, arrivalCode);
+        ArrayList<Flight> returnFlightSearchResults = facade.searchForFlights(arrivalCode, departingCode);
     }
     
-    private void onewayFlightSearch(){
+    private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<User> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
-        LocalDate departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+        this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+
+        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
 
         for(int i=0;i<nextPageOptions.length;i++){
             System.out.println((i+1) + ". " + nextPageOptions[i]);
@@ -253,7 +266,7 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                 
-                   flightFilter();
+                   flightFilter(flightSearchResults);
                     break;
          
                 case(1):
@@ -263,7 +276,7 @@ public class UserInterface {
         }   
     }
     
-    private void flightFilter(){
+    private void flightFilter(ArrayList<Flight> flightSearchResults){
         printHeading(" Flight Filter ");
         System.out.println("How would you like your search results to be sorted?");
         
@@ -284,31 +297,34 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //sort price
-                    departingFlightResults();
+                    departingFlightResults(FlightTrait.valueOf("PRICE"), flightSearchResults);
                     break;
          
                 case(1):
                     //sort duration
-                    departingFlightResults();
+                    departingFlightResults(FlightTrait.valueOf("DURATION"), flightSearchResults);
                     break;
                 case(2):
-                    departingFlightResults();
+                    //sort departure time
+                    departingFlightResults(FlightTrait.valueOf("TAKEOFF_TIME"), flightSearchResults);
                     break;
                 case(3):
-                if(roundTrip = true){
-                    roundtripFlightSearch();
+                if(roundTrip){
+                    roundtripFlightSearch(this.departingCode, this.arrivalCode, this.guests, this.checkedBags);
                     break;
                 }
                 else{
-                    onewayFlightSearch();
+                    onewayFlightSearch(this.departingCode, this.arrivalCode, this.guests, this.checkedBags);
                     break;
                 }
             }
         }   
     }
 
-    private void departingFlightResults(){
-        printHeading(" Departing Flight: ");
+    private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights){
+        printHeading(" Departing Flight ");
+
+        ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, unfilteredFlights);
 
         //SHOW DEPARTING FLIGHT SEARCH RESULTS HERE
     }
