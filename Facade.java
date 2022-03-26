@@ -43,7 +43,7 @@ public class Facade {
     }
 
     public void createAccount(String newUsername, String newPassword, String firstName, String lastName, int age, String address, String phoneNumber, String emailAddress, boolean passport ){
-
+        RegisteredUser newUser = new RegisteredUser(UUID.randomUUID(), firstName, lastName, address, phoneNumber, newUsername, newPassword, passport, age, emailAddress);
     }
 
     //returns 1 if login successful

@@ -15,8 +15,8 @@ public class UserList {
 
     }
 
-    public User getUser(String userName){
-        return null;
+    public void addUserToList(RegisteredUser user) {
+        users.add(user);
     }
 
     public void setUsers(ArrayList<RegisteredUser> usersArrayList) {

@@ -17,10 +17,11 @@ public class RegisteredUser extends User{
     private ArrayList<FlightBooking> flightBookings;
     private ArrayList<HotelBooking> hotelBookings;
 
-    public RegisteredUser(String userID, String firstName, String lastName, String address, String phoneNumber, 
+    //for use in populating UserList from users.json
+    public RegisteredUser(UUID userID, String firstName, String lastName, String address, String phoneNumber, 
     String username, String password, boolean passport, int age, String emailAddress, boolean frequentFlier, 
     JSONArray flightBooking, JSONArray hotelBooking){
-        this.userID = UUID.fromString(userID);
+        this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -35,6 +36,21 @@ public class RegisteredUser extends User{
         this.hotelBookingJSON = hotelBooking;
         flightBookings = new ArrayList<FlightBooking>();
         hotelBookings = new ArrayList<HotelBooking>();
+    }
+
+    //for use in creating new RegisteredUser accounts
+    public RegisteredUser(UUID userID, String firstName, String lastName, String address, String phoneNumber, 
+    String username, String password, boolean passport, int age, String emailAddress){
+        this.userID = userID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.username = username;
+        this.password = password;
+        this.passport = passport;
+        this.age = age;
+        this.emailAddress = emailAddress;
     }
 
     public UUID getUserID(){

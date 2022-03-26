@@ -45,7 +45,7 @@ public class DataLoader extends DataConstants{
                 JSONArray flightBooking = (JSONArray)userJSON.get(USERS_FLIGHT_BOOKING);
                 JSONArray hotelBooking = (JSONArray) userJSON.get(USERS_HOTEL_BOOKING);
 
-                users.add(new RegisteredUser(userID, firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier, flightBooking, hotelBooking));
+                users.add(new RegisteredUser(UUID.fromString(userID), firstName, lastName, address, phone, username, password, passport, (int)age, email, frequentFlier, flightBooking, hotelBooking));
             }            
             
             return users;
