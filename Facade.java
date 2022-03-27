@@ -151,12 +151,22 @@ public class Facade {
         return 0;
     }
 
-    public void bookFlight(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags) {
-        ArrayList<FlightBooking> currentUserBookings = currentUser.getFlightBookings();
+    //returns true if flight was successfully booked; returns false if it was not, likely due to seat already being booked
+    public boolean bookFlight(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags) {
+        Seat requestedSeat = FlightList.getFlightByUUID(flightID).getSeatByID(seatID);
         
-        FlightBooking booking = new FlightBooking(guests, flightID, seatID, numCheckedBags);
-        currentUserBookings.add(booking);
+        if (!requestedSeat.getIsBooked()) {
+            ArrayList<FlightBooking> currentUserBookings = currentUser.getFlightBookings();
+            
+            FlightBooking booking = new FlightBooking(guests, flightID, seatID, numCheckedBags);
+            currentUserBookings.add(booking);
+            
+            requestedSeat.setIsBooked(true);
 
-        currentUser.setFlightBookings(currentUserBookings);
+            currentUser.setFlightBookings(currentUserBookings);
+
+            return true;
+        }
+        return false;
     }
 }
