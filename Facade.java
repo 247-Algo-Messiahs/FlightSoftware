@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -76,8 +77,9 @@ public class Facade {
         return;
     }
 
-    public void logOut() {
+    public void logOut() throws IOException {
         currentUser = null;
+        userList.saveUsers();
     }
 
     public ArrayList<FlightBooking> viewFlightBookings() {

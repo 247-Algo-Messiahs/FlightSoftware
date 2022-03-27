@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -15,7 +16,7 @@ public class UserList {
 
     }
 
-    public void addUserToList(RegisteredUser user) {
+    public static void addUserToList(RegisteredUser user) {
         users.add(user);
     }
 
@@ -33,5 +34,9 @@ public class UserList {
             if (selectedUser.getUserID().equals(uuid)) return selectedUser;
         }
         return null;
+    }
+
+    public void saveUsers() throws IOException{
+        DataWriter.saveUsers();
     }
 }
