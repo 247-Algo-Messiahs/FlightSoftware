@@ -21,6 +21,13 @@ public class UserInterface {
     private String[] nextPageOptions = {"Next Page","Back"};
     private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest", "Departure Time (Earliest -> Latest", "Back"};
     private String[] bookingHistoryptions = {"Main Menu","Quit"};
+    private String[] hotelResultsOptions = {"Hotel 1","Hotel 2","Hotel 3", "Main Menu (No Selection)"};
+    private String[] roomSizeOptions = {"King","Queen","Double"};
+    private String[] checkoutOptions = {"Purchase ","Return to Results"};
+    private String[] completedHotelBookingOptions = {"Main Menu","View Booking History","Exit"};
+    private String[] completedFlightBookingOptions = {"Main Menu","View Booking History","Search for Hotel","Exit"};
+    private String[] chooseFlightOptions = {"Choose Flight 1","Choose Flight 2","Choose Flight 3","Filter Flights","Return to Flight Search"};
+
 
     private boolean roundTrip;
     private String departingCode;
@@ -119,12 +126,7 @@ public class UserInterface {
         System.out.println("**********" + heading + "**********");
     }
 
-
     
-    //scanner.nextInt();
-    //scanner.nextLine();
-    
-
     private int getUserSelection(int numCommands) {
         String input = scanner.nextLine();
         int command = Integer.parseInt(input) - 1;
@@ -132,16 +134,6 @@ public class UserInterface {
         if(command >=0 && command <= numCommands -1) return command;
 
         return -1;
-
-
-
-
-
-
-        //int command = Integer.parseInt(input);
-
-        //if (command < 1 || command > numCommands) return -1;
-       // else return command;
 
     }
 
@@ -174,9 +166,9 @@ public class UserInterface {
         String lastName = scanner.nextLine();
         System.out.println("Age:");
         int age = scanner.nextInt();
-        scanner.nextLine(); //this fixes the problem listed below; it "absorbs" the newline character that is left after the nextInt() above
+        scanner.nextLine(); 
         System.out.println("Address:");
-        String address = scanner.nextLine(); //for some reason it won't allow user to record address
+        String address = scanner.nextLine(); 
         System.out.println("Phone Number:");
         String phoneNumber = scanner.nextLine();
         System.out.println("Email Address:");
@@ -194,6 +186,43 @@ public class UserInterface {
 
     }
 
+    private void mainMenu(){
+        printHeading(" Main Menu ");
+        System.out.println("\n");
+        System.out.println("Please choose from the following options:");
+        for(int i=0;i<mainMenuOptions.length;i++){
+            System.out.println((i+1) + ". " + mainMenuOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(mainMenuOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == mainMenuOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                        searchForFlight();
+                        break;
+                case(1):
+                        searchForHotel();
+                        break;
+                case(2):
+                        viewBookingHistory();
+                        break;
+                case(3):
+                        exit();
+                        break;
+              }
+        }
+         facade.mainMenu(); 
+    }
+
+
+    //**********BENEATH IS ALL THE FLIGHT SEARCH METHODS******************
 
     private void searchForFlight(){
         printHeading(" Flight Search ");
@@ -252,6 +281,33 @@ public class UserInterface {
         this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Return Date: (mm/dd/yyyy)");
         this.returnDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+
+        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
+
+        for(int i=0;i<nextPageOptions.length;i++){
+            System.out.println((i+1) + ". " + nextPageOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(nextPageOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == nextPageOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                
+                   flightFilter(flightSearchResults); //
+                    break;
+         
+                case(1):
+                    searchForFlight();
+                        break;
+            }
+        }   
 
         ArrayList<Flight> departingFlightSearchResults = facade.searchForFlights(departingCode, arrivalCode);
         ArrayList<Flight> returnFlightSearchResults = facade.searchForFlights(arrivalCode, departingCode);
@@ -336,12 +392,188 @@ public class UserInterface {
     }
 
     private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights){
-        printHeading(" Departing Flight ");
+        printHeading(" Departing Flight Results ");
 
         ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, unfilteredFlights);
+        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
+
 
         //SHOW DEPARTING FLIGHT SEARCH RESULTS HERE
+
+        //HOW DO YOU RECORD AND SAVE THE FLIGHT 
+
+
+        for(int i=0;i<chooseFlightOptions.length;i++){
+            System.out.println((i+1) + ". " + chooseFlightOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(chooseFlightOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == chooseFlightOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //Flight 1 chosen
+                    //if oneway, call "chooseSeats"
+                    //if roundtrip, call "returnFlightResults"
+                    break;
+         
+                case(1):
+                    //Flight 2 chosen
+                    //if oneway, call "chooseSeats"
+                    //if roundtrip, call "returnFlightResults"
+                    break;
+                case(2):
+                    //Flight 3 chosen
+                    //if oneway, call "chooseSeats"
+                    //if roundtrip, call "returnFlightResults"
+                    break;
+                case(3):
+                flightFilter(flightSearchResults);
+                    break;
+                case(4):
+                searchForFlight();
+                break;
+
+            }
+        } 
     }
+
+    private void returnFlightResults(){
+        printHeading(" Return Flight Results ");
+
+        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
+
+        //DISPLAY RETURNING FLIGHT RESULTS HERE
+
+        //HOW DO YOU RECORD AND SAVE THE FLIGHT 
+
+        for(int i=0;i<chooseFlightOptions.length;i++){
+            System.out.println((i+1) + ". " + chooseFlightOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(chooseFlightOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == chooseFlightOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //Flight 1 chosen
+                    chooseSeats();
+                    break;
+         
+                case(1):
+                    //Flight 2 chosen
+                    chooseSeats();
+                    break;
+                case(2):
+                    //Flight 3 chosen
+                    chooseSeats();
+                    break;
+                case(3):
+                flightFilter(flightSearchResults);
+                    break;
+                case(4):
+                searchForFlight();
+                break;
+
+            }
+        } 
+    }
+
+    private void chooseSeats(){
+        printHeading(" Choose Seats ");
+        System.out.println("Select your desired seats from the list of available seats below.");
+
+        //DISPLAY OPEN SEATS HERE
+
+        //HOW DO YOU RECORD AND SAVE CHOSEN SEATS? JUST USE IT AS A STRING?
+
+        flightCheckout();
+    }
+
+    private void flightCheckout(){
+        printHeading(" Flight Checkout ");
+
+        //DISPLAY FLIGHT DETAILS HERE
+
+
+        for(int i=0;i<checkoutOptions.length;i++){
+            System.out.println((i+1) + ". " + checkoutOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(checkoutOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == checkoutOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //IF USER IS GUEST, call "guestError"
+                    //else, call "completedFlightBooking" and save booking to account
+                    break;
+         
+                case(1):
+                    //if Oneway, call "departingFlightResults"
+                    //else, call "returnFlightResults"
+                        break;
+            }
+        } 
+    }
+
+    private void completedFlightBooking(){
+        printHeading(" Booking Confirmation ");
+        System.out.println("Thank you for choosing Canoe.\nYour booking has been saved to your account");
+
+        for(int i=0;i<completedFlightBookingOptions.length;i++){
+            System.out.println((i+1) + ". " + completedFlightBookingOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(completedFlightBookingOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == completedFlightBookingOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    mainMenu();
+                    break;
+                  
+                case(1):
+                    viewBookingHistory();
+                    break;
+                
+                case(3):
+                    searchForHotelPostFlight();
+                    break;
+
+                case(4):
+                    exit();
+                    break;
+            }
+        }   
+    }
+
+
+    //**********BENEATH IS ALL THE HOTEL SEARCH METHODS******************
 
     private void searchForHotel(){
         printHeading(" Hotel Search ");
@@ -358,8 +590,155 @@ public class UserInterface {
         hotelSearchResults();
     }
 
+    private void searchForHotelPostFlight(){
+        printHeading(" Hotel Search ");
+        System.out.println("Please inout your desired checkout date below");
+        System.out.println("\n");
+        System.out.println("Check-out Date: (mm/dd/yyyy");
+        LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
+        hotelSearchResults();
+    }
+
     private void hotelSearchResults(){
         printHeading(" Hotel Search Results ");
+        System.out.println("Please select a hotel from the list below. Then you will be asked what type of room you would like.");
+
+        //DISPLAY HOTELS HERE
+
+
+        for(int i=0;i<hotelResultsOptions.length;i++){
+            System.out.println((i+1) + ". " + hotelResultsOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(hotelResultsOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == hotelResultsOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //hotel 1 chosen
+                    selectRoomSize();
+                    break;
+         
+                case(1):
+                    //hotel 2 chosen
+                    selectRoomSize();
+                    break;
+                case(2):
+                    //hotel 3 chosen
+                    selectRoomSize();
+                    break;
+                case(3):
+                    mainMenu();
+                    break;
+            }
+        }   
+    }   
+    
+    private void selectRoomSize(){
+        printHeading(" Room Selection ");
+        System.out.println("Please choose your desired room size:");
+
+        for(int i=0;i<roomSizeOptions.length;i++){
+            System.out.println((i+1) + ". " + roomSizeOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(roomSizeOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == roomSizeOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //king bed chosen
+                    hotelCheckout();
+                    break;
+         
+                case(1):
+                    //queen bed chosen
+                    hotelCheckout();        
+                    break;
+                case(2):
+                    //double bed chosen
+                    hotelCheckout();
+                    break;
+                
+            }
+        }   
+    }
+
+    private void hotelCheckout(){
+        printHeading(" Hotel Checkout ");
+
+        // DISPLAY HOTEL DETAILS HERE
+
+        for(int i=0;i<checkoutOptions.length;i++){
+            System.out.println((i+1) + ". " + checkoutOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(checkoutOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == checkoutOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //IF USER IS GUEST, call "guestError"
+                    //else, call "completedHotelBooking" and save booking to account
+                  
+         
+                case(1):
+                    hotelSearchResults();
+                        break;
+            }
+        }   
+
+    }
+
+    private void completedHotelBooking(){
+        printHeading(" Booking Confirmation ");
+        System.out.println("Thank you for choosing Canoe.\nYour booking has been saved to your account");
+
+        for(int i=0;i<completedHotelBookingOptions.length;i++){
+            System.out.println((i+1) + ". " + completedHotelBookingOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(completedHotelBookingOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            if(userCommand == completedHotelBookingOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    mainMenu();
+                    break;
+                  
+                case(1):
+                    viewBookingHistory();
+                    break;
+                
+                case(3):
+                    exit();
+                    break;
+            }
+        }   
     }
 
 
@@ -402,12 +781,8 @@ public class UserInterface {
 
     }
     
-    private void exit(){
-        printHeading(" Canoe Booking ");
-        System.out.println("Thank you for chooisng Canoe Booking! Happy travels!");
-        System.exit(0);
-    }
-
+  
+//************** OTHER METHODS ******************
     
 
     private void loginError(){
@@ -499,39 +874,10 @@ public class UserInterface {
         return guests;
     }
 
-    private void mainMenu(){
-        printHeading(" Main Menu ");
-        System.out.println("\n");
-        System.out.println("Please choose from the following options:");
-        for(int i=0;i<mainMenuOptions.length;i++){
-            System.out.println((i+1) + ". " + mainMenuOptions[i]);
-        }
-        while(true){
-            int userCommand = getUserSelection(mainMenuOptions.length);
-			
-			if(userCommand == -1) {
-				System.out.println("Not a valid command");
-				continue;
-            }
-
-            if(userCommand == mainMenuOptions.length -1) break;
-
-            switch(userCommand) {
-                case(0):
-                        searchForFlight();
-                        break;
-                case(1):
-                        searchForHotel();
-                        break;
-                case(2):
-                        viewBookingHistory();
-                        break;
-                case(3):
-                        exit();
-                        break;
-              }
-        }
-         facade.mainMenu(); 
+    private void exit(){
+        printHeading(" Canoe Booking ");
+        System.out.println("Thank you for chooisng Canoe Booking! Happy travels!");
+        System.exit(0);
     }
     
    
