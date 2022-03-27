@@ -3,6 +3,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
+import java.io.IOException;
 import java.time.*;
 
 public class UserInterface {
@@ -46,6 +47,17 @@ public class UserInterface {
         RegisteredUser testUser = UserList.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226"));
         facade.loadUserFlightBookings(testUser);
         facade.loadUserHotelBookings(testUser);
+
+        //testing datawriter
+        UUID testId = new UUID(1, 3);
+        RegisteredUser testWriter = new RegisteredUser(testId, "Johnny", "Test", "Fake Ave", "867-5309", "johhnyRox", "Password123", true, 21, "testing@email.com");
+        UserList.addUserToList(testWriter);
+        try {
+            facade.logOut();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         Hotel testHotel = HotelList.getHotelByUUID((UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
 
