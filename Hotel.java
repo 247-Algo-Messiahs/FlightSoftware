@@ -48,6 +48,12 @@ public class Hotel {
         return this.rooms;
     }
 
+    public HotelRoom getRoomByID(int roomID) {
+        for (HotelRoom room : rooms) {
+            if (room.getRoomID() == roomID) return room;
+        }
+        return null;
+    }
 
     public void setHotelID(UUID hotelID){
         this.hotelID = hotelID;

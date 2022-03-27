@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -109,11 +110,53 @@ public class Facade {
         return hotelFilter.filterHotelRooms(bedType, unfilteredHotelRooms);
     }
 
-    public int bookHotelRoom() {
+    public boolean roomIsAvailableBetweenDates(UUID hotelID, int roomID, LocalDate checkInDate, LocalDate checkOutDate) {
+        ArrayList<LocalDate> datesToBook = getDaysBetweenDates(checkInDate, checkOutDate);
+        ArrayList<LocalDate> notAvailDates = HotelList.getHotelByUUID(hotelID).getRoomByID(roomID).getNotAvail();
+
+        for (int i = 0; i < datesToBook.size(); i++) {
+            for (int k = 0; k < notAvailDates.size(); k++) {
+                if (datesToBook.get(i).equals(notAvailDates.get(k))) return false;
+            }
+        }
+        
+        return true;
+    }
+
+    public ArrayList<LocalDate> getDaysBetweenDates(LocalDate checkIn, LocalDate checkOut) {
+        ArrayList<LocalDate> dates = new ArrayList<LocalDate>();
+        
+        Period periodBetweenDates = Period.between(checkIn, checkOut);
+        for (int i = 0; i < periodBetweenDates.getDays()+1; i++) {
+            dates.add(checkIn.plusDays(i));
+        }
+
+        return dates;
+    }
+    
+    //returns 1 if booking was successful, returns 0 if room was not available at requested dates
+    public int bookHotelRoom(UUID hotelID, int roomID, LocalDate checkInDate, LocalDate checkOutDate) {
+        ArrayList<HotelBooking> currentUserBookings = currentUser.getHotelBookings();
+        ArrayList<LocalDate> requestedDates = getDaysBetweenDates(checkInDate, checkOutDate);
+
+        if (roomIsAvailableBetweenDates(hotelID, roomID, checkInDate, checkOutDate)) {
+            HotelBooking booking = new HotelBooking(hotelID, roomID, requestedDates);
+            currentUserBookings.add(booking);
+
+            currentUser.setHotelBookings(currentUserBookings);
+
+            HotelList.getHotelByUUID(hotelID).getRoomByID(roomID).addToNotAvail(requestedDates);
+            return 1;
+        }
         return 0;
     }
 
-    public void bookFlight(RegisteredUser user, HotelRoom room, LocalDate checkInDate, LocalDate checkOutDate) {
+    public void bookFlight(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags) {
+        ArrayList<FlightBooking> currentUserBookings = currentUser.getFlightBookings();
+        
+        FlightBooking booking = new FlightBooking(guests, flightID, seatID, numCheckedBags);
+        currentUserBookings.add(booking);
 
+        currentUser.setFlightBookings(currentUserBookings);
     }
 }
