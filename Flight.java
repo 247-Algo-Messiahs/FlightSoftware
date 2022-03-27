@@ -122,6 +122,17 @@ public class Flight {
         return this.connectionsJSON;
     }
 
+    public int getDurationOfTotalTrip() {
+        int totalMinutes = 0;
+        totalMinutes+= this.getDuration();
+
+        for (Flight connection : this.connections) {
+            totalMinutes += connection.getDuration();
+        }
+
+        return totalMinutes;
+    }
+
     public void setFlightID(UUID flightID) {
         this.flightID = flightID;
     }
