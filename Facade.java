@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -106,5 +107,13 @@ public class Facade {
 
     public ArrayList<HotelRoom> filterHotels(BedType bedType, ArrayList<HotelRoom> unfilteredHotelRooms) {
         return hotelFilter.filterHotelRooms(bedType, unfilteredHotelRooms);
+    }
+
+    public int bookHotelRoom() {
+        return 0;
+    }
+
+    public void bookFlight(RegisteredUser user, HotelRoom room, LocalDate checkInDate, LocalDate checkOutDate) {
+
     }
 }
