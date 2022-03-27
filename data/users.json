@@ -14,7 +14,7 @@
         "flightBookings": [{
             "guestInfo": [{ "firstName": "Jane", "lastName": "Brown", "age": 21, "seatID": 1},
                 {"firstName": "Ronald", "lastName": "Johnson", "age": 43, "seatID": 2}],
-            "flightID": "cb9830c4-a2b4-43e4-86d4-9547d8f619c0",
+            "flightID": "00b8ec49-0018-481a-864a-0ea05b6bd7e4",
             "seatID": 3,
             "numCheckedBags": 1
         }],
@@ -37,7 +37,7 @@
         "passport": false,
         "flightBookings": [{
             "guestInfo": [{"firstName": "Bob", "lastName": "Bandworth", "age": 15, "seatID": 4}],
-            "flightID": "abe1a726-3135-4f43-89a0-bd7a73c69719",
+            "flightID": "e2d8f42e-6faf-4c6b-b539-99daa46d490a",
             "seatID": 5,
             "numCheckedBags": 2
         }],

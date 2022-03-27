@@ -37,6 +37,7 @@ public abstract class DataConstants {
     protected static final String FLIGHTS_IS_INTERNATIONAL = "isInternational";
     protected static final String FLIGHTS_SEATS = "seats";
     protected static final String FLIGHTS_PRICE = "price";
+    protected static final String FLIGHTS_CONNECTIONS = "connections";
 
     protected static final String SEATS_SEAT_ID = "seatID";
     protected static final String SEATS_SEAT_NUM = "seatNum";

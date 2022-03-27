@@ -84,6 +84,8 @@ public class DataLoader extends DataConstants{
             long seatID = (long)flightBookingJSON.get(FLIGHT_BOOKINGS_SEAT_ID);
             long numCheckedBags = (long)flightBookingJSON.get(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS);
 
+            loadFlightConnections(FlightList.getFlightByUUID(flightID));
+
             FlightBooking booking = new FlightBooking(guests, flightID, (int)seatID, (int)numCheckedBags);
             bookings.add(booking);
         }
@@ -115,6 +117,7 @@ public class DataLoader extends DataConstants{
                 boolean isFull = (boolean)FlightJSON.get(FLIGHTS_IS_FULL);
                 boolean isInternational = (boolean) FlightJSON.get(FLIGHTS_IS_INTERNATIONAL);
                 long price = (long) FlightJSON.get(FLIGHTS_PRICE);
+                JSONArray connectionsJSON = (JSONArray)FlightJSON.get(FLIGHTS_CONNECTIONS);
 
                 ArrayList<Seat> seats = new ArrayList<Seat>();
                 JSONArray allSeatsJSON = (JSONArray)FlightJSON.get(FLIGHTS_SEATS);
@@ -131,7 +134,7 @@ public class DataLoader extends DataConstants{
                 }
 
                 flights.add(new Flight(flightID, departureCode, arrivalCode, departureTime, arrivalTime, 
-                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational, seats, (int)price));
+                (int)numAvailFirstSeats, (int)numAvailBusinessSeats, (int)numAvailEconomySeats, isFull, isInternational, seats, (int)price, connectionsJSON));
             }            
             
             return flights;
@@ -141,6 +144,19 @@ public class DataLoader extends DataConstants{
         }
 
         return null;
+    }
+
+    public void loadFlightConnections(Flight flight) {
+        ArrayList<Flight> connections = new ArrayList<Flight>();
+
+        JSONArray connectionsArray = flight.getConnectionsJSON();
+
+        for (int i = 0; i < connectionsArray.size(); i++) {
+            UUID flightUUID = UUID.fromString((String)connectionsArray.get(i));
+            connections.add(FlightList.getFlightByUUID(flightUUID));
+        }
+
+        flight.setConnections(connections);
     }
 
     public void loadUserHotelBookings(RegisteredUser user) {

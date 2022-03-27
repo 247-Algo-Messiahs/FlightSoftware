@@ -12,6 +12,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 250,
+        "connections": ["cf259c58-1fa8-4126-92e1-7c44a234de12"],    
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -99,6 +100,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 248,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -186,6 +188,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 148,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -273,6 +276,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 365,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -360,6 +364,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 421,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -447,6 +452,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 124,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -534,6 +540,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 122,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -621,6 +628,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 184,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -708,6 +716,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 526,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -795,6 +804,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 264,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -882,6 +892,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 311,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -969,6 +980,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 421,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1056,6 +1068,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 287,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1143,6 +1156,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 99,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1230,6 +1244,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 81,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1317,6 +1332,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 165,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1404,6 +1420,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 401,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1491,6 +1508,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 232,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1578,6 +1596,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 604,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1665,6 +1684,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 68,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1752,6 +1772,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 107,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1839,6 +1860,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 296,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -1926,6 +1948,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 367,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2013,6 +2036,7 @@
         "isFull": false,
         "isInternational": false,
         "price": 336,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2100,6 +2124,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 332,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2187,6 +2212,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 287,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2274,6 +2300,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 445,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2357,10 +2384,99 @@
         "duration": "129",
         "firstSeats": 3,
         "businessSeats": 3,
-        "economySeats": 6,
+        "economySeats": 6,  
         "isFull": false,
         "isInternational": true,
         "price": 226,
+        "connections": [],
+        "seats": [{
+                "seatID": 1,
+                "seatNum": "1A",
+                "seatClass": "FIRST",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 2,
+                "seatNum": "2A",
+                "seatClass": "BUSINESS",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 3,
+                "seatNum": "3A",
+                "seatClass": "ECONOMY",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 4,
+                "seatNum": "4A",
+                "seatClass": "ECONOMY",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 5,
+                "seatNum": "1B",
+                "seatClass": "FIRST",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 6,
+                "seatNum": "2B",
+                "seatClass": "BUSINESS",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 7,
+                "seatNum": "3B",
+                "seatClass": "ECONOMY",
+                "type": "MIDDLE",
+                "booked": false
+            },{
+                "seatID": 8,
+                "seatNum": "4B",
+                "seatClass": "ECONOMY",
+                "type": "MIDDLE",
+                "booked": false
+            },{
+                "seatID": 9,
+                "seatNum": "1C",
+                "seatClass": "FIRST",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 10,
+                "seatNum": "2C",
+                "seatClass": "BUSINESS",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 11,
+                "seatNum": "3C",
+                "seatClass": "ECONOMY",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 12,
+                "seatNum": "4C",
+                "seatClass": "ECONOMY",
+                "type": "AISLE",
+                "booked": false
+            }
+        ]
+    },{
+        "flightID": "cf259c58-1fa8-4126-92e1-7c44a234de12",
+        "departureCode": "JFK",
+        "arrivalCode": "DFW",
+        "departureTime": "09:16",
+        "arrivalTime": "12:23",
+        "duration": "187",
+        "firstSeats": 3,
+        "businessSeats": 3,
+        "economySeats": 6,  
+        "isFull": false,
+        "isInternational": true,
+        "price": 223,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2448,6 +2564,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 117,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",
@@ -2535,6 +2652,7 @@
         "isFull": false,
         "isInternational": true,
         "price": 98,
+        "connections": [],
         "seats": [{
                 "seatID": 1,
                 "seatNum": "1A",

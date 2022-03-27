@@ -4,6 +4,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.json.simple.JSONArray;
+
 public class Flight {
     private UUID flightID;
     private String departureCode;
@@ -19,9 +21,11 @@ public class Flight {
     private boolean isInternational;
     private ArrayList<Seat> seats;
     private int price;
+    private JSONArray connectionsJSON;
+    private ArrayList<Flight> connections;
     
     public Flight(UUID flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalTime arrivalTime, int numAvailFirstSeats,
-     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats, int price) {
+     int numAvailBusinessSeats, int numAvailEconomySeats, boolean isFull, boolean isInternational, ArrayList<Seat> seats, int price, JSONArray connectionsJSON) {
         this.flightID = flightID;
         this.departureCode = departureCode;
         this.arrivalCode = arrivalCode;
@@ -34,6 +38,8 @@ public class Flight {
         this.isInternational = isInternational;
         this.seats = seats;
         this.price = price;
+        this.connectionsJSON = connectionsJSON;
+        this.connections = new ArrayList<Flight>();
     }
 
     public Flight(String flightID, String departureCode, String arrivalCode, LocalTime departureTime, LocalDate departureDate, LocalTime arrivalTime, LocalDate arrivalDate,
@@ -84,8 +90,8 @@ public class Flight {
         return this.arrivalTime;
     }
 
-    public String getDuration(){
-        return Duration.between(this.arrivalTime, this.departureTime).toString();
+    public int getDuration(){
+        return (int)Duration.between(this.departureTime, this.arrivalTime).toMinutes();
     }
 
     public int getNumAvailFirstSeats() {
@@ -110,6 +116,10 @@ public class Flight {
 
     public int getPrice() {
         return this.price;
+    }
+
+    public JSONArray getConnectionsJSON() {
+        return this.connectionsJSON;
     }
 
     public void setFlightID(UUID flightID) {
@@ -163,6 +173,10 @@ public class Flight {
         this.seats = seats;
     }
 
+    public void setConnections(ArrayList<Flight> connections) {
+        this.connections = connections;
+    }
+
     public void checkForFull() {
         if (this.numAvailFirstSeats < 1 && this.numAvailBusinessSeats < 1 && this.numAvailEconomySeats < 1) this.isFull = true;
         else this.isFull = false;
@@ -183,8 +197,20 @@ public class Flight {
         this.numAvailEconomySeats--;
     }
 
+    public String getConnectionsList() {
+        String list = "";
+
+        for (Flight connection : this.connections) {
+            list += connection.getDepartureCode() + "-->" + connection.getArrivalCode() + "\nDuration: " + connection.getDuration() + "\n";
+        }
+
+        return list;
+    }
+
     @Override
     public String toString() {
-        return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + "\nArriving at: " + this.arrivalTime + "\nPrice: $" + this.price;
+        return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + 
+        "\nArriving at: " + this.arrivalTime + "\nPrice: $" + this.price + 
+        "\nConnections:\n" + getConnectionsList();
     }
 }

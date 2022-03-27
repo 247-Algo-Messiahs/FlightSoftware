@@ -44,16 +44,18 @@ public class UserInterface {
     public void run() {
 
         RegisteredUser testUser = UserList.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226"));
+        facade.loadUserFlightBookings(testUser);
+        facade.loadUserHotelBookings(testUser);
+
         Hotel testHotel = HotelList.getHotelByUUID((UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
 
         System.out.println(UserList.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226")));
-        System.out.println(FlightList.getFlightByUUID(UUID.fromString("0c9e5d25-877d-4171-be90-627827007a7a")));
+        System.out.println(FlightList.getFlightByUUID(UUID.fromString("00b8ec49-0018-481a-864a-0ea05b6bd7e4")));
         System.out.println(FlightList.getFlightByUUID(UUID.fromString("0c9e5d25-877d-4171-be90-627827007a7a")).getSeats().get(1));
         
-        facade.loadUserFlightBookings(testUser);
         System.out.println(facade.getUserFlightBookings(testUser));
 
-        facade.loadUserHotelBookings(testUser);
+        
         System.out.println(facade.getUserHotelBookings(testUser));
 
         System.out.println(testHotel);
@@ -338,15 +340,17 @@ public class UserInterface {
         System.out.println("Check-in Date: (mm/dd/yyyy");
 
         
-        LocalDate checkinDate = LocalDate.parse(scanner.nextLine(), FORMATTER);     //how do you read in LocalDate scanner
+        LocalDate checkinDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Check-out Date: (mm/dd/yyyy");
-        LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);     //how do you read in LocalDate scanner
+        LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         hotelSearchResults();
     }
 
     private void hotelSearchResults(){
-        
+        printHeading(" Hotel Search Results ");
     }
+
+
     private void viewBookingHistory(){
         printHeading(" Booking History ");
         System.out.println("You may view your booking history below or choose from one of the following options.\n");
