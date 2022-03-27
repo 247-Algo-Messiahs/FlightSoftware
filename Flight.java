@@ -207,6 +207,13 @@ public class Flight {
         return list;
     }
 
+    public Seat getSeatByID(int seatID) {
+        for (Seat seat : this.seats) {
+            if (seat.getSeatID() == (seatID)) return seat;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + 
