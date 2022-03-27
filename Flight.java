@@ -197,6 +197,10 @@ public class Flight {
         this.numAvailEconomySeats--;
     }
 
+    public ArrayList<Flight> getConnections(){
+        return this.connections;
+    }
+
     public String getConnectionsList() {
         String list = "";
 

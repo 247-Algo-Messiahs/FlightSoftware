@@ -91,49 +91,53 @@ public class DataWriter extends DataConstants{
         userDetails.put(USERS_FREQUENT_FLIER, user.getFrequentFlyer());
         userDetails.put(USERS_PASSPORT, user.getPassport());
 
-        for(int i=0; i<flightBooking.size(); i++){
-            JSONObject fBooking = new JSONObject();
-            JSONArray guests = new JSONArray();
-
-            fBooking.put(FLIGHT_BOOKINGS_FLIGHT_ID, flightBooking.get(i).getFlightID());
-            fBooking.put(FLIGHT_BOOKINGS_SEAT_ID, flightBooking.get(i).getSeats());
-            fBooking.put(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS, flightBooking.get(i).getBags());
-
-            for(int j=0; j<flightBooking.get(i).getGuests().size(); j++){
-                JSONObject guestInfo = new JSONObject();
-                guestInfo.put(GUESTS_FIRST_NAME, flightBooking.get(i).getGuests().get(j).getFirstName());
-                guestInfo.put(GUESTS_LAST_NAME, flightBooking.get(i).getGuests().get(j).getLastName());
-                guestInfo.put(GUESTS_AGE, flightBooking.get(i).getGuests().get(j).getAge());
-                guests.add(guestInfo);
+        if(flightBooking!=null){
+            for(int i=0; i<flightBooking.size(); i++){
+                JSONObject fBooking = new JSONObject();
+                JSONArray guests = new JSONArray();
+    
+                fBooking.put(FLIGHT_BOOKINGS_FLIGHT_ID, flightBooking.get(i).getFlightID());
+                fBooking.put(FLIGHT_BOOKINGS_SEAT_ID, flightBooking.get(i).getSeats());
+                fBooking.put(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS, flightBooking.get(i).getBags());
+    
+                for(int j=0; j<flightBooking.get(i).getGuests().size(); j++){
+                    JSONObject guestInfo = new JSONObject();
+                    guestInfo.put(GUESTS_FIRST_NAME, flightBooking.get(i).getGuests().get(j).getFirstName());
+                    guestInfo.put(GUESTS_LAST_NAME, flightBooking.get(i).getGuests().get(j).getLastName());
+                    guestInfo.put(GUESTS_AGE, flightBooking.get(i).getGuests().get(j).getAge());
+                    guests.add(guestInfo);
+                }
+                fBooking.put(FLIGHT_BOOKINGS_GUEST_INFO, guests);
+    
+                flightBookings.add(fBooking);
             }
-            fBooking.put(FLIGHT_BOOKINGS_GUEST_INFO, guests);
+            userDetails.put(USERS_FLIGHT_BOOKING, flightBookings);
+        } else{ userDetails.put(USERS_FLIGHT_BOOKING, ""); }        
 
-            flightBookings.add(fBooking);
-        }
-
-        userDetails.put(USERS_FLIGHT_BOOKING, flightBookings);
-
-        for(int i=0; i<hotelBooking.size(); i++){
-            JSONObject hBooking = new JSONObject();
-
-            hBooking.put(HOTEL_BOOKINGS_HOTEL_ID, hotelBooking.get(i).getHotelID().toString());
-            hBooking.put(HOTEL_BOOKINGS_ROOM_ID, hotelBooking.get(i).getRoomID());
-            //hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, value)
-            JSONArray bookedArray = new JSONArray();
-            for(int j=0; j<hotelBooking.get(i).getDates().size(); j++){
-                bookedArray.add(hotelBooking.get(i).getDates().get(j));
+        if(hotelBooking!=null){
+            for(int i=0; i<hotelBooking.size(); i++){
+                JSONObject hBooking = new JSONObject();
+    
+                hBooking.put(HOTEL_BOOKINGS_HOTEL_ID, hotelBooking.get(i).getHotelID().toString());
+                hBooking.put(HOTEL_BOOKINGS_ROOM_ID, hotelBooking.get(i).getRoomID());
+                //hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, value)
+                JSONArray bookedArray = new JSONArray();
+                for(int j=0; j<hotelBooking.get(i).getDates().size(); j++){
+                    bookedArray.add(hotelBooking.get(i).getDates().get(j));
+                }
+                hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, bookedArray);
+    
+                hotelBookings.add(hBooking);
             }
-            hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, bookedArray);
-
-            hotelBookings.add(hBooking);
-        }
-
+        } else{ userDetails.put(USERS_HOTEL_BOOKING, ""); }
+        
         return userDetails;
     }
 
     public static JSONObject getFlightJSON(Flight flight){
         JSONObject flightDetails = new JSONObject();
         JSONArray seatsArray = new JSONArray();
+        JSONArray connections = new JSONArray();
         ArrayList<Seat> seats = new ArrayList<>();
         seats = flight.getSeats();
 
@@ -148,6 +152,12 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_ECONOMY_SEATS, flight.getNumEconomySeats());
         flightDetails.put(FLIGHTS_IS_FULL, flight.getIsFull());
         flightDetails.put(FLIGHTS_IS_INTERNATIONAL, flight.getIsInternational());
+        flightDetails.put(FLIGHTS_PRICE, flight.getPrice());
+
+        for(int i=0; i<flight.getConnections().size(); i++){
+            connections.add(flight.getConnections().get(i));
+        }
+        flightDetails.put(FLIGHTS_CONNECTIONS, connections)
         
         for(int i=0; i<seats.size(); i++){
             JSONObject seatJSON = new JSONObject();
