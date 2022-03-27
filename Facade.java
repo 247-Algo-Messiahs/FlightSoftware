@@ -55,14 +55,18 @@ public class Facade {
 
     //returns 1 if login successful
     //returns 0 if username and password match not found
-    public int logIn(String username, String password) {
+    public boolean logIn(String username, String password) {
         for (RegisteredUser user : userList.getUsers()) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 this.currentUser = user;
-                return 1;
+                return true;
             }
         }
-        return 0;
+        return false;
+    }
+
+    public RegisteredUser getCurrentUser() {
+        return this.currentUser;
     }
 
     public void loginError(){

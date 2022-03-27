@@ -157,7 +157,7 @@ public class DataWriter extends DataConstants{
         for(int i=0; i<flight.getConnections().size(); i++){
             connections.add(flight.getConnections().get(i));
         }
-        flightDetails.put(FLIGHTS_CONNECTIONS, connections)
+        flightDetails.put(FLIGHTS_CONNECTIONS, connections);
         
         for(int i=0; i<seats.size(); i++){
             JSONObject seatJSON = new JSONObject();

@@ -144,12 +144,30 @@ public class UserInterface {
         String username = scanner.nextLine();
         System.out.println("Password:");
         String password = scanner.nextLine();
-        facade.logIn(username, password);
 
-        
+        while (!facade.logIn(username, password)) {
+            System.out.println("Sorry, your records were not found. Enter 1 to try again, or 2 to create an account.");
+            int input = scanner.nextInt();
+            scanner.nextLine();
 
-        //Need to determine if the login is valid or not. Then call "mainMenu()"
-        
+            switch (input) {
+                case (1):
+                    System.out.println("Please enter your login information.");
+                    System.out.println("Username:");
+                    username = scanner.nextLine();
+                    System.out.println("Password:");
+                    password = scanner.nextLine();
+                    continue;
+                case (2):
+                    createAccount();
+                    break;
+                default:
+                    System.out.println("Your entry is not a valid option.");
+                    continue;
+            }
+        }
+        System.out.println("Now logged in as: " + facade.getCurrentUser().getUsername());
+        mainMenu();
     }
 
     private void createAccount(){
