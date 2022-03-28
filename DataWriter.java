@@ -1,5 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -22,7 +24,7 @@ public class DataWriter extends DataConstants{
         }
 
         //write JSON file
-        try(FileWriter file = new FileWriter(USERS_FILE_NAME)){
+        try(FileWriter file = new FileWriter("data/"+USERS_FILE_NAME)){
             file.write(jsonUsers.toJSONString());
             file.flush();
         } catch (IOException e){
@@ -79,7 +81,7 @@ public class DataWriter extends DataConstants{
         flightBooking = user.getFlightBookings();
         hotelBooking = user.getHotelBookings();
 
-        userDetails.put(USERS_USER_ID, user.getUserID());
+        userDetails.put(USERS_USER_ID, user.getUserID().toString());
         userDetails.put(USERS_USERNAME, user.getUsername());
         userDetails.put(USERS_PASSWORD, user.getPassword());
         userDetails.put(USERS_FIRST_NAME, user.getFirstName());
@@ -96,7 +98,7 @@ public class DataWriter extends DataConstants{
                 JSONObject fBooking = new JSONObject();
                 JSONArray guests = new JSONArray();
     
-                fBooking.put(FLIGHT_BOOKINGS_FLIGHT_ID, flightBooking.get(i).getFlightID());
+                fBooking.put(FLIGHT_BOOKINGS_FLIGHT_ID, flightBooking.get(i).getFlightID().toString());
                 fBooking.put(FLIGHT_BOOKINGS_SEAT_ID, flightBooking.get(i).getSeats());
                 fBooking.put(FLIGHT_BOOKINGS_NUM_CHECKED_BAGS, flightBooking.get(i).getBags());
     
@@ -105,6 +107,7 @@ public class DataWriter extends DataConstants{
                     guestInfo.put(GUESTS_FIRST_NAME, flightBooking.get(i).getGuests().get(j).getFirstName());
                     guestInfo.put(GUESTS_LAST_NAME, flightBooking.get(i).getGuests().get(j).getLastName());
                     guestInfo.put(GUESTS_AGE, flightBooking.get(i).getGuests().get(j).getAge());
+                    guestInfo.put(GUESTS_SEAT_ID, flightBooking.get(i).getGuests().get(j).getSeatID());
                     guests.add(guestInfo);
                 }
                 fBooking.put(FLIGHT_BOOKINGS_GUEST_INFO, guests);
@@ -123,12 +126,16 @@ public class DataWriter extends DataConstants{
                 //hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, value)
                 JSONArray bookedArray = new JSONArray();
                 for(int j=0; j<hotelBooking.get(i).getDates().size(); j++){
-                    bookedArray.add(hotelBooking.get(i).getDates().get(j));
+                    //bookedArray.add(hotelBooking.get(i).getDates().get(j).toString());
+
+                    LocalDate date = hotelBooking.get(i).getDates().get(j);
+                    bookedArray.add(date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
                 }
                 hBooking.put(HOTEL_BOOKINGS_BOOKED_DATES, bookedArray);
     
                 hotelBookings.add(hBooking);
             }
+            userDetails.put(USERS_HOTEL_BOOKING, hotelBookings);
         } else{ userDetails.put(USERS_HOTEL_BOOKING, ""); }
         
         return userDetails;

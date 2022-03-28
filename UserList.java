@@ -36,6 +36,12 @@ public class UserList {
         return null;
     }
 
+    public void printUsers(){
+        for(int i=0; i<users.size(); i++){
+            System.out.println(users.get(i));
+        }
+    }
+
     public void saveUsers() throws IOException{
         DataWriter.saveUsers();
     }
