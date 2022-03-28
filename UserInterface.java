@@ -55,14 +55,14 @@ public class UserInterface {
         facade.loadUserFlightBookings(testUser);
         facade.loadUserHotelBookings(testUser);
 
-        //testing datawriter
+        /*testing datawriter
         UUID testId = new UUID(1, 3);
         RegisteredUser testWriter = new RegisteredUser(testId, "Johnny", "Test", "Fake Ave", "867-5309", "johhnyRox", "Password123", true, 21, "testing@email.com");
         UserList.addUserToList(testWriter);
+        */
         try {
             facade.logOut();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

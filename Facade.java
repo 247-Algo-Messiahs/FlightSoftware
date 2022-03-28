@@ -82,6 +82,7 @@ public class Facade {
     }
 
     public void logOut() throws IOException {
+        System.out.println("made it to logout in facade");
         currentUser = null;
         userList.saveUsers();
     }
