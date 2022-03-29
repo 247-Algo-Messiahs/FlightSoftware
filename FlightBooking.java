@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
+import java.io.PrintWriter;
+import java.io.IOException;
 
 public class FlightBooking {
     private UUID flightID;
@@ -64,6 +66,17 @@ public class FlightBooking {
 
     public void displayBooking(){
         
+    }
+
+    public void printBooking(){
+        Printwriter out = new PrintWriter("bookings.txt"); // Opens file
+
+        out.println("Flight ID: "+this.flightID);
+        out.println("Seat ID: "+this.seatID);
+        out.println("Guests: "+this.guests);
+        out.println("Checked Bags: "+this.numCheckedBags);
+
+        out.close(); //close the file
     }
 
     public String getListOfGuests(){
