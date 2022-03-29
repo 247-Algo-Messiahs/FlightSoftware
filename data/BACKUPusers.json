@@ -1,0 +1,50 @@
+[
+    {
+        "userID": "74432d6e-394c-4ea7-bb77-ed3c53ac5226",
+        "username": "jackisback",
+        "password": "kungfupanda",
+        "firstName": "Jack",
+        "lastName": "Black",
+        "age": 52,
+        "address": "456 Panda Lane",
+        "email": "jackisback@gmail.com",
+        "phone": "860-867-5309",
+        "frequentFlier": true,
+        "passport": true,
+        "flightBookings": [{
+            "guestInfo": [{ "firstName": "Jane", "lastName": "Brown", "age": 21, "seatID": 1},
+                {"firstName": "Ronald", "lastName": "Johnson", "age": 43, "seatID": 2}],
+            "flightID": "00b8ec49-0018-481a-864a-0ea05b6bd7e4",
+            "seatID": 3,
+            "numCheckedBags": 1
+        }],
+        "hotelBookings": [{
+            "hotelID": "c636521d-d96b-4cfa-9eca-ae1c742ffeca",
+            "roomID": 1,
+            "bookedDates": ["01-02-2022", "01-03-2022"]
+        }]
+    },{
+        "userID": "47fec419-9e02-4f75-8e97-811734e2e573",
+        "username": "rickrulez",
+        "password": "plumbus123$",
+        "firstName": "Rick",
+        "lastName": "Sanchez",
+        "age": 70,
+        "address": "789 Birdperson Road",
+        "email": "ihatemorty@aol.com",
+        "phone": "111-222-3333",
+        "frequentFlier": true,
+        "passport": false,
+        "flightBookings": [{
+            "guestInfo": [{"firstName": "Bob", "lastName": "Bandworth", "age": 15, "seatID": 4}],
+            "flightID": "e2d8f42e-6faf-4c6b-b539-99daa46d490a",
+            "seatID": 5,
+            "numCheckedBags": 2
+        }],
+        "hotelBookings": [{
+            "hotelID": "c6a8b332-2d21-4fbe-b793-e503cbd8e1d4",
+            "roomID": 1,
+            "bookedDates": ["01-02-2022", "01-03-2022"]
+        }]
+    }
+]

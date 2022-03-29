@@ -56,14 +56,14 @@ public class UserInterface {
         facade.loadUserFlightBookings(testUser);
         facade.loadUserHotelBookings(testUser);
 
-        //testing datawriter
+        /*testing datawriter
         UUID testId = new UUID(1, 3);
         RegisteredUser testWriter = new RegisteredUser(testId, "Johnny", "Test", "Fake Ave", "867-5309", "johhnyRox", "Password123", true, 21, "testing@email.com");
         UserList.addUserToList(testWriter);
+        */
         try {
             facade.logOut();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
@@ -84,6 +84,7 @@ public class UserInterface {
 
 
         //TERMINAL STARTS HERE
+        
         System.out.println(WELCOME_MESSAGE);
 
         while(true){
@@ -259,9 +260,9 @@ public class UserInterface {
         System.out.println("Number of Checked Bags: ");
         this.checkedBags = scanner.nextInt();
         scanner.nextLine();
-
+        
         this.guests = new ArrayList<User>();
-
+        System.out.println("\n");
         if (passengers > 1) guests = enterGuestInfo(passengers - 1);
 
         for(int i=0;i<nextPageOptions.length;i++){
@@ -612,13 +613,13 @@ public class UserInterface {
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired locations, check-in, and check-out dates below.");
         System.out.println("\n");
-        System.out.println("Nearby Airport Code");
+        System.out.println("Nearby Airport Code:");
         String nearbyAirportCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
-        System.out.println("Check-in Date: (mm/dd/yyyy");
+        System.out.println("Check-in Date: (mm/dd/yyyy)");
 
         
         LocalDate checkinDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
-        System.out.println("Check-out Date: (mm/dd/yyyy");
+        System.out.println("Check-out Date: (mm/dd/yyyy)");
         LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         hotelSearchResults();
     }
@@ -627,7 +628,7 @@ public class UserInterface {
         printHeading(" Hotel Search ");
         System.out.println("Please inout your desired checkout date below");
         System.out.println("\n");
-        System.out.println("Check-out Date: (mm/dd/yyyy");
+        System.out.println("Check-out Date: (mm/dd/yyyy)");
         LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         hotelSearchResults();
     }
@@ -881,7 +882,7 @@ public class UserInterface {
                         break;
               }
         }
-         facade.guestError(); //Don't know why this is never used locally. I created a facade method. 
+         facade.guestError(); 1
     }
 
     public ArrayList<User> enterGuestInfo(int numGuests) {
@@ -893,11 +894,11 @@ public class UserInterface {
 
         for (int i = 0; i < numGuests; i++) {
 
-            System.out.println("Guest " + (i + 1) + "First Name:");
+            System.out.println("Guest " + (i + 1) + " First Name:");
             String firstName = scanner.nextLine();
-            System.out.println("Guest " + (i + 1) + "Last Name:");
+            System.out.println("Guest " + (i + 1) + " Last Name:");
             String lastName = scanner.nextLine();
-            System.out.println("Guest " + (i + 1) + "Age:");
+            System.out.println("Guest " + (i + 1) + " Age:");
             int age = scanner.nextInt();
             scanner.nextLine();
 
