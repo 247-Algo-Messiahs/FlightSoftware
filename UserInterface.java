@@ -15,7 +15,6 @@ public class UserInterface {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
     private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Exit"};
-    private String[] loginErrorOptions = {"Re-enter Information", "Create an Account", "Continue as Guest"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
@@ -37,7 +36,7 @@ public class UserInterface {
     private LocalDate departureDate;
     private LocalDate returnDate;
     private FlightTrait flightTrait;
-    
+    private ArrayList<Flight> unfilteredFlights;
 
 
     private UserInterface() {
@@ -417,6 +416,7 @@ public class UserInterface {
     private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights){
         printHeading(" Departing Flight Results ");
 
+        this.unfilteredFlights = unfilteredFlights;
         ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, unfilteredFlights);
         
 
@@ -557,14 +557,23 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                    //IF USER IS GUEST, call "guestError"
-                    //else, call "completedFlightBooking" and save booking to account
-                    break;
-         
-                case(1):
-                    //if Oneway, call "departingFlightResults"
-                    //else, call "returnFlightResults"
+                    if(facade.getCurrentUser() == null){
+                        guestError();
                         break;
+                    }   
+                    else{
+                        completedFlightBooking();  //SAVE BOOKING TO ACCOUNT
+                        break;
+                    }       
+                case(1):
+                        if(!roundTrip){
+                            departingFlightResults(flightTrait, unfilteredFlights);
+                            break;
+                        }
+                        else{
+                            returnFlightResults();
+                            break;
+                        }
             }
         } 
     }
@@ -730,10 +739,14 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                    //IF USER IS GUEST, call "guestError"
-                    //else, call "completedHotelBooking" and save booking to account
-                  
-         
+                if(facade.getCurrentUser() == null){
+                    guestError();
+                    break;
+                }
+                else{
+                    completedHotelBooking();
+                    break;                          //SAVE NEW BOOKING
+                }
                 case(1):
                     hotelSearchResults();
                         break;
@@ -819,38 +832,6 @@ public class UserInterface {
 //************** OTHER METHODS ******************
     
 
-    private void loginError(){
-        printHeading(" LogIn Error ");
-        System.out.println("Your information does not match any user accounts.");
-        System.out.println("\n");
-        System.out.println("Please choose from the following options:");
-        for(int i=0;i<loginErrorOptions.length;i++){
-            System.out.println((i+1) + ". " + loginErrorOptions[i]);
-        }
-        while(true){
-            int userCommand = getUserSelection(loginErrorOptions.length);
-			
-			if(userCommand == -1) {
-				System.out.println("Not a valid command");
-				continue;
-            }
-
-            if(userCommand == loginErrorOptions.length -1) break;
-
-            switch(userCommand) {
-                case(0):
-                        loginError();
-                        break;
-                case(1):
-                        createAccount();
-                        break;
-                case(2):
-                        mainMenu();
-                        break;
-              }
-        }
-         facade.loginError(); //Don't know why this is never used locally. I created a facade method. 
-    }
 
     private void guestError(){
         printHeading(" Guest Error ");
