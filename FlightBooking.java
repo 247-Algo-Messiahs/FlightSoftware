@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 import java.io.PrintWriter;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class FlightBooking {
@@ -68,8 +69,8 @@ public class FlightBooking {
         
     }
 
-    public void printBooking(){
-        Printwriter out = new PrintWriter("bookings.txt"); // Opens file
+    public void printBooking() throws FileNotFoundException{
+        PrintWriter out = new PrintWriter("bookings.txt"); // Opens file
 
         out.println("Flight ID: "+this.flightID);
         out.println("Seat ID: "+this.seatID);

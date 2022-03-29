@@ -18,7 +18,7 @@ public class UserInterface {
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
-    private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest", "Departure Time (Earliest -> Latest", "Back"};
+    private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest)", "Departure Time (Earliest -> Latest)", "Back"};
     private String[] bookingHistoryptions = {"Main Menu","Quit"};
     private String[] hotelResultsOptions = {"Hotel 1","Hotel 2","Hotel 3", "Main Menu (No Selection)"};
     private String[] roomSizeOptions = {"King","Queen","Double"};
@@ -90,7 +90,6 @@ public class UserInterface {
             for(int i=0;i<welcomeMenuOptions.length;i++){
                 System.out.println((i+1) + ". " + welcomeMenuOptions[i]);
             }
-            System.out.println("\n");
 
             int userCommand = getUserSelection(welcomeMenuOptions.length);
 			
@@ -99,7 +98,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == welcomeMenuOptions.length -1) break;
+            //if(userCommand == welcomeMenuOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -120,11 +119,9 @@ public class UserInterface {
             }
         }
 
-        System.out.println("Thank you for choosing Canoe Booking! Happy Travels!");
-
     }   
     public void printHeading(String heading) {
-        System.out.println("**********" + heading + "**********");
+        System.out.println("\n\n**********" + heading + "**********\n");
     }
 
     
@@ -178,7 +175,6 @@ public class UserInterface {
         String newUsername = scanner.nextLine();
         System.out.println("New Password:");
         String newPassword = scanner.nextLine();
-        System.out.println("\n");
         System.out.println("First Name:");
         String firstName = scanner.nextLine();
         System.out.println("Last Name:");
@@ -192,7 +188,6 @@ public class UserInterface {
         String phoneNumber = scanner.nextLine();
         System.out.println("Email Address:");
         String emailAddress = scanner.nextLine();
-        System.out.println("\n");
         System.out.println("Do you have a valid passport? (Y/N)");
         String passportInput = scanner.nextLine();
         boolean passport = passportInput.toLowerCase().equals("y");
@@ -207,7 +202,6 @@ public class UserInterface {
 
     private void mainMenu(){
         printHeading(" Main Menu ");
-        System.out.println("\n");
         System.out.println("Please choose from the following options:");
         for(int i=0;i<mainMenuOptions.length;i++){
             System.out.println((i+1) + ". " + mainMenuOptions[i]);
@@ -220,7 +214,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == mainMenuOptions.length -1) break;
+            //if(userCommand == mainMenuOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -237,7 +231,6 @@ public class UserInterface {
                         break;
               }
         }
-         facade.mainMenu(); 
     }
 
 
@@ -261,7 +254,6 @@ public class UserInterface {
         scanner.nextLine();
         
         this.guests = new ArrayList<User>();
-        System.out.println("\n");
         if (passengers > 1) guests = enterGuestInfo(passengers - 1);
 
         for(int i=0;i<nextPageOptions.length;i++){
@@ -275,7 +267,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == nextPageOptions.length -1) break;
+            //if(userCommand == nextPageOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -314,7 +306,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == nextPageOptions.length -1) break;
+            //if(userCommand == nextPageOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -327,9 +319,6 @@ public class UserInterface {
                         break;
             }
         }   
-
-        ArrayList<Flight> departingFlightSearchResults = facade.searchForFlights(departingCode, arrivalCode);
-        ArrayList<Flight> returnFlightSearchResults = facade.searchForFlights(arrivalCode, departingCode);
     }
     
     private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<User> guests, int checkedBags){
@@ -350,7 +339,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == nextPageOptions.length -1) break;
+            //if(userCommand == nextPageOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -381,7 +370,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == flightFilterOptions.length -1) break;
+            //if(userCommand == flightFilterOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -442,7 +431,6 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == chooseFlightOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -462,12 +450,13 @@ public class UserInterface {
                     else chooseSeats(filteredFlights.get(2));
                     break;
                 case(3):
-                flightFilter(unfilteredFlights);
+                    flightFilter(unfilteredFlights);
                     break;
                 case(4):
-                searchForFlight();
-                break;
-
+                    searchForFlight();
+                    break;
+                default:
+                    System.out.println("Default case");
             }
         } 
     }
@@ -497,8 +486,6 @@ public class UserInterface {
 				System.out.println("Not a valid command");
 				continue;
             }
-
-            if(userCommand == chooseFlightOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -553,7 +540,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == checkoutOptions.length -1) break;
+            //if(userCommand == checkoutOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -593,7 +580,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == completedFlightBookingOptions.length -1) break;
+            //if(userCommand == completedFlightBookingOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -621,7 +608,6 @@ public class UserInterface {
     private void searchForHotel(){
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired locations, check-in, and check-out dates below.");
-        System.out.println("\n");
         System.out.println("Nearby Airport Code:");
         String nearbyAirportCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
         System.out.println("Check-in Date: (mm/dd/yyyy)");
@@ -635,8 +621,7 @@ public class UserInterface {
 
     private void searchForHotelPostFlight(){
         printHeading(" Hotel Search ");
-        System.out.println("Please inout your desired checkout date below");
-        System.out.println("\n");
+        System.out.println("Please input your desired checkout date below");
         System.out.println("Check-out Date: (mm/dd/yyyy)");
         LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         hotelSearchResults();
@@ -660,7 +645,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == hotelResultsOptions.length -1) break;
+            //if(userCommand == hotelResultsOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -698,7 +683,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == roomSizeOptions.length -1) break;
+            //if(userCommand == roomSizeOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -735,7 +720,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == checkoutOptions.length -1) break;
+            //if(userCommand == checkoutOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -770,7 +755,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == completedHotelBookingOptions.length -1) break;
+            //if(userCommand == completedHotelBookingOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -836,7 +821,6 @@ public class UserInterface {
     private void guestError(){
         printHeading(" Guest Error ");
         System.out.println("You are currently using a guest account and therefore don't have access to this feature.");
-        System.out.println("\n");
         System.out.println("Please choose from the following options:");
         for(int i=0;i<guestErrorOptions.length;i++){
             System.out.println((i+1) + ". " + guestErrorOptions[i]);
@@ -849,7 +833,7 @@ public class UserInterface {
 				continue;
             }
 
-            if(userCommand == guestErrorOptions.length -1) break;
+            //if(userCommand == guestErrorOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -863,7 +847,6 @@ public class UserInterface {
                         break;
               }
         }
-         facade.guestError();
     }
 
     public ArrayList<User> enterGuestInfo(int numGuests) {
@@ -891,7 +874,7 @@ public class UserInterface {
 
     private void exit(){
         printHeading(" Canoe Booking ");
-        System.out.println("Thank you for chooisng Canoe Booking! Happy travels!");
+        System.out.println("Thank you for choosing Canoe Booking! Happy travels!");
         System.exit(0);
     }
     
