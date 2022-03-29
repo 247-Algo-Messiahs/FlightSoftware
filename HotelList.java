@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -38,5 +39,9 @@ public class HotelList {
             if (selectedHotel.getAirportCode().equals(airportCode)) hotelsWithMatchingAirportCode.add(selectedHotel);
         }
         return hotelsWithMatchingAirportCode;
+    }
+
+    public void saveHotels() throws IOException{
+        DataWriter.saveHotels();
     }
 }

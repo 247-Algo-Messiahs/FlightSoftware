@@ -85,6 +85,8 @@ public class Facade {
         System.out.println("made it to logout in facade");
         currentUser = null;
         userList.saveUsers();
+        hotelList.saveHotels();
+        flightList.saveFlights();
     }
 
     public ArrayList<FlightBooking> viewFlightBookings() {
@@ -107,6 +109,10 @@ public class Facade {
 
     public ArrayList<FlightBooking> getBookingHistory() {
         return currentUser.getFlightBookings();
+    }
+
+    public ArrayList<HotelBooking> getHotelBookingHistory() {
+        return currentUser.getHotelBookings();
     }
 
     public ArrayList<Flight> filterFlights(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights) {
@@ -141,8 +147,8 @@ public class Facade {
         return dates;
     }
     
-    //returns 1 if booking was successful, returns 0 if room was not available at requested dates
-    public int bookHotelRoom(UUID hotelID, int roomID, LocalDate checkInDate, LocalDate checkOutDate) {
+    //returns true if booking was successful, returns false if room was not available at requested dates
+    public boolean bookHotelRoom(UUID hotelID, int roomID, LocalDate checkInDate, LocalDate checkOutDate) {
         ArrayList<HotelBooking> currentUserBookings = currentUser.getHotelBookings();
         ArrayList<LocalDate> requestedDates = getDaysBetweenDates(checkInDate, checkOutDate);
 
@@ -153,9 +159,9 @@ public class Facade {
             currentUser.setHotelBookings(currentUserBookings);
 
             HotelList.getHotelByUUID(hotelID).getRoomByID(roomID).addToNotAvail(requestedDates);
-            return 1;
+            return true;
         }
-        return 0;
+        return false;
     }
 
     //returns true if flight was successfully booked; returns false if it was not, likely due to seat already being booked

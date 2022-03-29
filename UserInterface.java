@@ -14,7 +14,7 @@ public class UserInterface {
     private static final String WELCOME_MESSAGE = "Welcome to Canoe's Flight Booking Software!\n\n Please choose from the following options:";
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
-    private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Exit"};
+    private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Search for a hotel","Exit"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
@@ -36,6 +36,7 @@ public class UserInterface {
     private LocalDate departureDate;
     private LocalDate returnDate;
     private FlightTrait flightTrait;
+    private BedType bedType;
     private ArrayList<Flight> unfilteredFlights;
 
 
@@ -114,6 +115,9 @@ public class UserInterface {
                         searchForFlight();
                         break;
                 case(4):
+                        searchForHotel();
+                        break;
+                case(5):
                         exit();
                         break;
             }
@@ -603,20 +607,57 @@ public class UserInterface {
     }
 
 
-    //**********BENEATH IS ALL THE HOTEL SEARCH METHODS******************
-
+    /**
+    * BENEATH IS ALL THE HOTEL SEARCH METHODS
+    */
     private void searchForHotel(){
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired locations, check-in, and check-out dates below.");
         System.out.println("Nearby Airport Code:");
         String nearbyAirportCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
         System.out.println("Check-in Date: (mm/dd/yyyy)");
-
-        
         LocalDate checkinDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Check-out Date: (mm/dd/yyyy)");
         LocalDate checkoutDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
-        hotelSearchResults();
+        
+        selectRoomSize();
+    }
+   
+    private void selectRoomSize(){
+        printHeading(" Room Selection ");
+        System.out.println("Please choose your desired room size:");
+
+        for(int i=0;i<roomSizeOptions.length;i++){
+            System.out.println((i+1) + ". " + roomSizeOptions[i]);
+        }
+        while(true){
+            int userCommand = getUserSelection(roomSizeOptions.length);
+			
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
+            }
+
+            //if(userCommand == roomSizeOptions.length -1) break;
+
+            switch(userCommand) {
+                case(0):
+                    //king bed chosen
+                    this.bedType.equals(BedType.valueOf("KING"));
+                    hotelSearchResults();
+                    break;
+         
+                case(1):
+                    //queen bed chosen
+                    this.bedType.equals(BedType.valueOf("QUEEN"));
+                    hotelSearchResults();        
+                    break;
+                case(2):
+                this.bedType.equals(BedType.valueOf("DOUBLE"));
+                    hotelSearchResults();
+                    break;
+            }
+        }   
     }
 
     private void searchForHotelPostFlight(){
@@ -650,16 +691,16 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //hotel 1 chosen
-                    selectRoomSize();
+                    hotelCheckout();
                     break;
          
                 case(1):
                     //hotel 2 chosen
-                    selectRoomSize();
+                    hotelCheckout();
                     break;
                 case(2):
                     //hotel 3 chosen
-                    selectRoomSize();
+                    hotelCheckout();
                     break;
                 case(3):
                     mainMenu();
@@ -667,42 +708,6 @@ public class UserInterface {
             }
         }   
     }   
-    
-    private void selectRoomSize(){
-        printHeading(" Room Selection ");
-        System.out.println("Please choose your desired room size:");
-
-        for(int i=0;i<roomSizeOptions.length;i++){
-            System.out.println((i+1) + ". " + roomSizeOptions[i]);
-        }
-        while(true){
-            int userCommand = getUserSelection(roomSizeOptions.length);
-			
-			if(userCommand == -1) {
-				System.out.println("Not a valid command");
-				continue;
-            }
-
-            //if(userCommand == roomSizeOptions.length -1) break;
-
-            switch(userCommand) {
-                case(0):
-                    //king bed chosen
-                    hotelCheckout();
-                    break;
-         
-                case(1):
-                    //queen bed chosen
-                    hotelCheckout();        
-                    break;
-                case(2):
-                    //double bed chosen
-                    hotelCheckout();
-                    break;
-                
-            }
-        }   
-    }
 
     private void hotelCheckout(){
         printHeading(" Hotel Checkout ");
@@ -737,7 +742,6 @@ public class UserInterface {
                         break;
             }
         }   
-
     }
 
     private void completedHotelBooking(){

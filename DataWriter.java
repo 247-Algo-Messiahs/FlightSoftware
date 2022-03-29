@@ -32,7 +32,7 @@ public class DataWriter extends DataConstants{
         }
     }
     
-    public static void saveFlights() {
+    public static void saveFlights() throws IOException{
         FlightList flights = FlightList.getInstance();
         ArrayList<Flight> flightList = flights.getFlights();
         JSONArray jsonFlights = new JSONArray();
@@ -43,7 +43,7 @@ public class DataWriter extends DataConstants{
         }
 
         //write JSON file
-        try(FileWriter file = new FileWriter(FLIGHTS_FILE_NAME)){
+        try(FileWriter file = new FileWriter("data/"+FLIGHTS_FILE_NAME)){
             file.write(jsonFlights.toJSONString());
             file.flush();
         } catch (IOException e){
@@ -51,7 +51,7 @@ public class DataWriter extends DataConstants{
         }
     }
 
-    public static void saveHotels() {
+    public static void saveHotels() throws IOException{
         HotelList hotels = HotelList.getInstance();
         ArrayList<Hotel> hotelList = hotels.getHotels();
         JSONArray jsonHotels = new JSONArray();
@@ -62,7 +62,7 @@ public class DataWriter extends DataConstants{
         }
 
         //write JSON file
-        try(FileWriter file = new FileWriter(USERS_FILE_NAME)){
+        try(FileWriter file = new FileWriter("data/"+USERS_FILE_NAME)){
             file.write(jsonHotels.toJSONString());
             file.flush();
         } catch (IOException e){

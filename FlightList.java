@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -28,5 +29,9 @@ public class FlightList {
             if (selectedFlight.getFlightID().equals(uuid)) return selectedFlight;
         }
         return null;
+    }
+
+    public void saveFlights() throws IOException{
+        DataWriter.saveFlights();
     }
 }
