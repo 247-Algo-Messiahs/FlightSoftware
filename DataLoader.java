@@ -146,7 +146,7 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
-    public void loadFlightConnections(Flight flight) {
+    public static void loadFlightConnections(Flight flight) {
         ArrayList<Flight> connections = new ArrayList<Flight>();
 
         JSONArray connectionsArray = flight.getConnectionsJSON();

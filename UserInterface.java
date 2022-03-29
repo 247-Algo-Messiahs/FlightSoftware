@@ -36,6 +36,7 @@ public class UserInterface {
     private int checkedBags;
     private LocalDate departureDate;
     private LocalDate returnDate;
+    private FlightTrait flightTrait;
     
 
 
@@ -249,9 +250,9 @@ public class UserInterface {
         String roundtripInput = scanner.nextLine();
         this.roundTrip = roundtripInput.toLowerCase().equals("y");
         System.out.println("Departing Airport Code:");
-        this.departingCode = scanner.nextLine();
+        this.departingCode = scanner.nextLine().toUpperCase();
         System.out.println("Arrival Airport Code:");
-        this.arrivalCode = scanner.nextLine();
+        this.arrivalCode = scanner.nextLine().toUpperCase();
         System.out.println("Number of Passengers:");
         int passengers = scanner.nextInt();
         scanner.nextLine();
@@ -385,16 +386,19 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //sort price
-                    departingFlightResults(FlightTrait.valueOf("PRICE"), flightSearchResults);
+                    this.flightTrait = FlightTrait.valueOf("PRICE");
+                    departingFlightResults(this.flightTrait, flightSearchResults);
                     break;
          
                 case(1):
                     //sort duration
-                    departingFlightResults(FlightTrait.valueOf("DURATION"), flightSearchResults);
+                    this.flightTrait = FlightTrait.valueOf("DURATION");
+                    departingFlightResults(this.flightTrait, flightSearchResults);
                     break;
                 case(2):
                     //sort departure time
-                    departingFlightResults(FlightTrait.valueOf("TAKEOFF_TIME"), flightSearchResults);
+                    this.flightTrait = FlightTrait.valueOf("TAKEOFF_TIME");
+                    departingFlightResults(this.flightTrait, flightSearchResults);
                     break;
                 case(3):
                 if(roundTrip){
@@ -413,10 +417,15 @@ public class UserInterface {
         printHeading(" Departing Flight Results ");
 
         ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, unfilteredFlights);
-        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
+        
 
 
         //SHOW DEPARTING FLIGHT SEARCH RESULTS HERE
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("FLIGHT " + (i+1));
+            System.out.println(filteredFlights.get(i));
+        }
 
         //HOW DO YOU RECORD AND SAVE THE FLIGHT 
 
@@ -437,22 +446,22 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //Flight 1 chosen
-                    //if oneway, call "chooseSeats"
-                    //if roundtrip, call "returnFlightResults"
+                    if (roundTrip) returnFlightResults();
+                    else chooseSeats(filteredFlights.get(0));
                     break;
          
                 case(1):
                     //Flight 2 chosen
-                    //if oneway, call "chooseSeats"
-                    //if roundtrip, call "returnFlightResults"
+                    if (roundTrip) returnFlightResults();
+                    else chooseSeats(filteredFlights.get(1));
                     break;
                 case(2):
                     //Flight 3 chosen
-                    //if oneway, call "chooseSeats"
-                    //if roundtrip, call "returnFlightResults"
+                    if (roundTrip) returnFlightResults();
+                    else chooseSeats(filteredFlights.get(2));
                     break;
                 case(3):
-                flightFilter(flightSearchResults);
+                flightFilter(unfilteredFlights);
                     break;
                 case(4):
                 searchForFlight();
@@ -465,9 +474,15 @@ public class UserInterface {
     private void returnFlightResults(){
         printHeading(" Return Flight Results ");
 
-        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.departingCode, this.arrivalCode);
+        ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.arrivalCode, this.departingCode);
+        ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, flightSearchResults);
 
         //DISPLAY RETURNING FLIGHT RESULTS HERE
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("FLIGHT " + (i+1));
+            System.out.println(filteredFlights.get(i));
+        }
 
         //HOW DO YOU RECORD AND SAVE THE FLIGHT 
 
@@ -487,16 +502,16 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //Flight 1 chosen
-                    chooseSeats();
+                    chooseSeats(filteredFlights.get(0));
                     break;
          
                 case(1):
                     //Flight 2 chosen
-                    chooseSeats();
+                    chooseSeats(filteredFlights.get(1));
                     break;
                 case(2):
                     //Flight 3 chosen
-                    chooseSeats();
+                    chooseSeats(filteredFlights.get(2));
                     break;
                 case(3):
                 flightFilter(flightSearchResults);
@@ -509,11 +524,11 @@ public class UserInterface {
         } 
     }
 
-    private void chooseSeats(){
+    private void chooseSeats(Flight flight){
         printHeading(" Choose Seats ");
         System.out.println("Select your desired seats from the list of available seats below.");
 
-        //DISPLAY OPEN SEATS HERE
+        
 
         //HOW DO YOU RECORD AND SAVE CHOSEN SEATS? JUST USE IT AS A STRING?
 

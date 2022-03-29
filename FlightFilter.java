@@ -21,6 +21,7 @@ public class FlightFilter {
         for (Flight flight : allFlights) {
             if (flight.getDepartureCode().equals(departureCode) && flight.getArrivalCode().equals(arrivalCode)) {
                 unfilteredFlights.add(flight);
+                DataLoader.loadFlightConnections(flight);
             }
         }
         return unfilteredFlights;

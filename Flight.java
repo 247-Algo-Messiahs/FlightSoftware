@@ -91,6 +91,9 @@ public class Flight {
     }
 
     public int getDuration(){
+        int duration = (int)Duration.between(this.departureTime, this.arrivalTime).toMinutes();
+        if (duration < 0) duration = 1440 - duration; //accounts for if flight leaves in p.m., and lands in a.m.
+
         return (int)Duration.between(this.departureTime, this.arrivalTime).toMinutes();
     }
 
@@ -215,8 +218,10 @@ public class Flight {
     public String getConnectionsList() {
         String list = "";
 
+        if (this.connections.isEmpty()) return "None (Direct Flight)";
+
         for (Flight connection : this.connections) {
-            list += connection.getDepartureCode() + "-->" + connection.getArrivalCode() + "\nDuration: " + connection.getDuration() + "\n";
+            list += connection.getDepartureCode() + " --> " + connection.getArrivalCode() + "\nDuration: " + connection.getDuration() + "\n";
         }
 
         return list;
@@ -232,7 +237,9 @@ public class Flight {
     @Override
     public String toString() {
         return this.departureCode + " --> " + this.arrivalCode + "\nDeparting at: " + this.departureTime + 
-        "\nArriving at: " + this.arrivalTime + "\nPrice: $" + this.price + 
-        "\nConnections:\n" + getConnectionsList();
+        "\nArriving at: " + this.arrivalTime + 
+        "\nPrice: $" + this.price + 
+        "\nDuration: " + this.getDuration() + " minutes" + 
+        "\nConnections:\n" + getConnectionsList() + "\n";
     }
 }

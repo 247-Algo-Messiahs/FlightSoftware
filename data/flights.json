@@ -11,7 +11,7 @@
         "economySeats": 3,
         "isFull": false,
         "isInternational": false,
-        "price": 250,
+        "price": 189,
         "connections": ["cf259c58-1fa8-4126-92e1-7c44a234de12"],    
         "seats": [{
                 "seatID": 1,
@@ -99,7 +99,7 @@
         "economySeats": 3,
         "isFull": false,
         "isInternational": false,
-        "price": 250,
+        "price": 349,
         "connections": ["80332354-dee0-4611-b2f9-14d63914ccc6"],    
         "seats": [{
                 "seatID": 1,
@@ -187,7 +187,7 @@
         "economySeats": 3,
         "isFull": false,
         "isInternational": false,
-        "price": 250,
+        "price": 251,
         "connections": ["2841e2fe-0a55-49de-ac48-b1f9a34a7605", "80332354-dee0-4611-b2f9-14d63914ccc6"],    
         "seats": [{
                 "seatID": 1,
