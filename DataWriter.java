@@ -62,7 +62,7 @@ public class DataWriter extends DataConstants{
         }
 
         //write JSON file
-        try(FileWriter file = new FileWriter("data/"+USERS_FILE_NAME)){
+        try(FileWriter file = new FileWriter("data/"+HOTELS_FILE_NAME)){
             file.write(jsonHotels.toJSONString());
             file.flush();
         } catch (IOException e){
