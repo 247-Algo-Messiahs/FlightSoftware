@@ -882,7 +882,7 @@ public class UserInterface {
                         break;
               }
         }
-         facade.guestError(); 1
+         facade.guestError();
     }
 
     public ArrayList<User> enterGuestInfo(int numGuests) {
