@@ -60,12 +60,14 @@ public class UserInterface {
         UUID testId = new UUID(1, 3);
         RegisteredUser testWriter = new RegisteredUser(testId, "Johnny", "Test", "Fake Ave", "867-5309", "johhnyRox", "Password123", true, 21, "testing@email.com");
         UserList.addUserToList(testWriter);
-        */
+        
         try {
             facade.logOut();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        */
         
 
         Hotel testHotel = HotelList.getHotelByUUID((UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
