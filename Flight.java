@@ -121,6 +121,13 @@ public class Flight {
         return this.price;
     }
 
+    public Seat getSeatBySeatNumber(String seatNum) {
+        for (Seat seat : this.seats) {
+            if (seat.getSeatNumber().equals(seatNum)) return seat;
+        }
+        return null;
+    }
+
     public JSONArray getConnectionsJSON() {
         return this.connectionsJSON;
     }
@@ -134,6 +141,17 @@ public class Flight {
         }
 
         return totalMinutes;
+    }
+
+    public ArrayList<Seat> getAvailableSeats() {
+        ArrayList<Seat> availableSeats = new ArrayList<Seat>();
+        ArrayList<Seat> allSeats = this.getSeats();
+
+        for (Seat seat : allSeats) {
+            if (!seat.getIsBooked()) availableSeats.add(seat);
+        }
+
+        return availableSeats;
     }
 
     public void setFlightID(UUID flightID) {

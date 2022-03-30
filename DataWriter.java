@@ -186,7 +186,7 @@ public class DataWriter extends DataConstants{
         JSONArray roomArray = new JSONArray();
         ArrayList<HotelRoom> rooms = new ArrayList<>();
         rooms = hotel.getRooms();
-
+        
         hotelDetails.put(HOTELS_HOTEL_ID, hotel.getHotelID().toString());
         hotelDetails.put(HOTELS_HOTEL_RATING, hotel.getHotelRating());
         hotelDetails.put(HOTELS_CAPACITY, hotel.getCapacity());
@@ -199,15 +199,18 @@ public class DataWriter extends DataConstants{
             roomJSON.put(ROOMS_ROOM_ID, rooms.get(i).getRoomID());
             JSONArray availableArray = new JSONArray();
             for(int j=0; j<rooms.get(i).getNotAvail().size(); j++){
-                availableArray.add(rooms.get(i).getNotAvail().get(j));
+                LocalDate date = rooms.get(i).getNotAvail().get(j);
+                availableArray.add(date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
             }
             roomJSON.put(ROOMS_NOT_AVAIL, availableArray);
-            roomJSON.put(ROOMS_NOT_AVAIL, rooms.get(i).getNotAvail());
-            roomJSON.put(ROOMS_BED_TYPE, rooms.get(i).getBedType());
+
+            roomJSON.put(ROOMS_BED_TYPE, rooms.get(i).getBedType().toString());
             roomJSON.put(ROOMS_IS_SMOKING, rooms.get(i).isSmoking());
             roomJSON.put(ROOMS_HAS_BALCONY, rooms.get(i).hasBalcony());
             roomJSON.put(ROOMS_HAS_PULLOUT_COUCH, rooms.get(i).hasPulloutCouch());
+            roomArray.add(roomJSON);
         }
+        hotelDetails.put(HOTELS_ROOMS, roomArray);
         
         return hotelDetails;
     }

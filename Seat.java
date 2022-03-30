@@ -64,6 +64,6 @@ public class Seat {
 
     @Override
     public String toString() {
-        return this.seatNumber + " with seatID of " + seatID + " in " + seatClass + " class";
+        return this.seatNumber + " with seatID of " + seatID + " in " + seatClass + " class. Booked: " + this.isBooked ;
     }
 }

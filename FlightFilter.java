@@ -3,20 +3,13 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class FlightFilter {
-    private ArrayList<Flight> unfilteredFlights;
-    private ArrayList<Flight> filteredFlights;
     private ArrayList<FlightTrait> filterParams;
     private Flight bestFlight;
     private RegisteredUser user;
 
-    public FlightFilter(){
-        unfilteredFlights = new ArrayList<Flight>();
-        filteredFlights = new ArrayList<Flight>();
-        
-    }
-
     public ArrayList<Flight> searchForFlights(String departureCode, String arrivalCode) {
         ArrayList<Flight> allFlights = FlightList.getFlights();
+        ArrayList<Flight> unfilteredFlights = new ArrayList<Flight>();
 
         for (Flight flight : allFlights) {
             if (flight.getDepartureCode().equals(departureCode) && flight.getArrivalCode().equals(arrivalCode)) {

@@ -31,18 +31,20 @@ public class UserInterface {
     private boolean roundTrip;
     private String departingCode;
     private String arrivalCode;
-    private ArrayList<User> guests;
+    private ArrayList<Guest> guests;
     private int checkedBags;
     private LocalDate departureDate;
     private LocalDate returnDate;
     private FlightTrait flightTrait;
     private BedType bedType;
     private ArrayList<Flight> unfilteredFlights;
+    private ArrayList<FlightBooking> flightBookingsInCart;
 
 
     private UserInterface() {
         this.scanner = new Scanner(System.in);
         this.facade = Facade.getInstance();
+        this.flightBookingsInCart = new ArrayList<FlightBooking>();
     }
 
     public static UserInterface getInstance() {
@@ -61,17 +63,12 @@ public class UserInterface {
         RegisteredUser testWriter = new RegisteredUser(testId, "Johnny", "Test", "Fake Ave", "867-5309", "johhnyRox", "Password123", true, 21, "testing@email.com");
         UserList.addUserToList(testWriter);
         */
-        try {
-            facade.logOut();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         Hotel testHotel = HotelList.getHotelByUUID((UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
 
         System.out.println(UserList.getRegisteredUserByUUID(UUID.fromString("74432d6e-394c-4ea7-bb77-ed3c53ac5226")));
         System.out.println(FlightList.getFlightByUUID(UUID.fromString("00b8ec49-0018-481a-864a-0ea05b6bd7e4")));
-        System.out.println(FlightList.getFlightByUUID(UUID.fromString("0c9e5d25-877d-4171-be90-627827007a7a")).getSeats().get(1));
+        System.out.println(FlightList.getFlightByUUID(UUID.fromString("00b8ec49-0018-481a-864a-0ea05b6bd7e4")).getSeats().get(0));
         
         System.out.println(facade.getUserFlightBookings(testUser));
 
@@ -257,7 +254,7 @@ public class UserInterface {
         this.checkedBags = scanner.nextInt();
         scanner.nextLine();
         
-        this.guests = new ArrayList<User>();
+        this.guests = new ArrayList<Guest>();
         if (passengers > 1) guests = enterGuestInfo(passengers - 1);
 
         for(int i=0;i<nextPageOptions.length;i++){
@@ -290,7 +287,7 @@ public class UserInterface {
             }
         }   
     }
-    private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<User> guests, int checkedBags){
+    private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
         this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
@@ -314,18 +311,16 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                
-                   flightFilter(flightSearchResults); //
+                    flightFilter(flightSearchResults);
                     break;
-         
                 case(1):
                     searchForFlight();
-                        break;
+                    break;
             }
         }   
     }
     
-    private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<User> guests, int checkedBags){
+    private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
         this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
@@ -468,14 +463,17 @@ public class UserInterface {
     private void returnFlightResults(){
         printHeading(" Return Flight Results ");
 
+        System.out.println("Arrival Code: " + this.arrivalCode + "\nDeparting Code: " + this.departingCode);
         ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.arrivalCode, this.departingCode);
-        ArrayList<Flight> filteredFlights = facade.filterFlights(flightTrait, flightSearchResults);
+
+        //this method is resulting in the same results as
+        ArrayList<Flight> filteredReturnFlights = facade.filterFlights(flightTrait, flightSearchResults);
 
         //DISPLAY RETURNING FLIGHT RESULTS HERE
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             System.out.println("FLIGHT " + (i+1));
-            System.out.println(filteredFlights.get(i));
+            System.out.println(filteredReturnFlights.get(i));
         }
 
         //HOW DO YOU RECORD AND SAVE THE FLIGHT 
@@ -494,16 +492,16 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //Flight 1 chosen
-                    chooseSeats(filteredFlights.get(0));
+                    chooseSeats(filteredReturnFlights.get(0));
                     break;
          
                 case(1):
                     //Flight 2 chosen
-                    chooseSeats(filteredFlights.get(1));
+                    chooseSeats(filteredReturnFlights.get(1));
                     break;
                 case(2):
                     //Flight 3 chosen
-                    chooseSeats(filteredFlights.get(2));
+                    chooseSeats(filteredReturnFlights.get(2));
                     break;
                 case(3):
                 flightFilter(flightSearchResults);
@@ -519,12 +517,56 @@ public class UserInterface {
     private void chooseSeats(Flight flight){
         printHeading(" Choose Seats ");
         System.out.println("Select your desired seats from the list of available seats below.");
-
+        if (!guests.isEmpty() || guests != null) System.out.println("You have indicated that you have guests. After choosing your own seat, you will choose a seat for each guest as well.");
         
+        ArrayList<Seat> availableSeats = flight.getAvailableSeats();
+        int seatChoiceIterations;
+        if (guests.isEmpty() || guests == null) seatChoiceIterations = 1;
+        else seatChoiceIterations = guests.size()+1;
 
-        //HOW DO YOU RECORD AND SAVE CHOSEN SEATS? JUST USE IT AS A STRING?
+        int currentUserSeatID = 0;        
 
-        flightCheckout();
+        for (int i = 0; i < seatChoiceIterations; i++) {
+            
+            if (i > 0) System.out.println("\nPlease choose a seat for your guest, " + guests.get(i-1).getFirstName() + ":");
+
+            System.out.println("\nFirst Class Seats:");
+            for (Seat seat : availableSeats) {
+                if (SeatClass.FIRST == seat.getSeatClass()) System.out.println(seat.getSeatNumber() + " (" + seat.getSeatType().toString().toLowerCase() + ")");
+            }
+
+            System.out.println("\nBusiness Class Seats:");
+            for (Seat seat : availableSeats) {
+                if (SeatClass.BUSINESS == seat.getSeatClass()) System.out.println(seat.getSeatNumber() + " (" + seat.getSeatType().toString().toLowerCase() + ")");
+            }
+
+            System.out.println("\nEconomy Class Seats:");
+            for (Seat seat : availableSeats) {
+                if (SeatClass.ECONOMY == seat.getSeatClass()) System.out.println(seat.getSeatNumber() + " (" + seat.getSeatType().toString().toLowerCase() + ")");
+            }
+            
+            String userInput = scanner.nextLine();
+
+            ArrayList<String> availableSeatNums = new ArrayList<String>();
+            for (Seat seat : availableSeats) {
+                availableSeatNums.add(seat.getSeatNumber());
+            }
+            
+            while (!availableSeatNums.contains(userInput)) {
+                System.out.println("Sorry, that seat isn't available. Please choose a different seat.");
+                userInput = scanner.nextLine();
+            }
+
+            if (i > 0) guests.get(i-1).setSeatID(flight.getSeatBySeatNumber(userInput).getSeatID());
+            else currentUserSeatID = flight.getSeatBySeatNumber(userInput).getSeatID();
+
+            //remove seat so you can't choose the same seat twice
+            availableSeats.remove(flight.getSeatBySeatNumber(userInput));
+        }
+
+        FlightBooking flightBooking = new FlightBooking(guests, flight.getFlightID(), currentUserSeatID, this.checkedBags);
+        flightBookingsInCart.add(flightBooking);
+
     }
 
     private void flightCheckout(){
@@ -853,12 +895,12 @@ public class UserInterface {
         }
     }
 
-    public ArrayList<User> enterGuestInfo(int numGuests) {
+    public ArrayList<Guest> enterGuestInfo(int numGuests) {
         printHeading(" Guest Info ");
 
         System.out.println("You indicated you have additional passengers. Please enter the information for your passengers.");
 
-        ArrayList<User> guests = new ArrayList<User>();
+        ArrayList<Guest> guests = new ArrayList<Guest>();
 
         for (int i = 0; i < numGuests; i++) {
 
@@ -870,7 +912,7 @@ public class UserInterface {
             int age = scanner.nextInt();
             scanner.nextLine();
 
-            guests.add(new User(age, firstName, lastName));
+            guests.add(new Guest(age, firstName, lastName, -1));
         }
 
         return guests;
@@ -878,6 +920,8 @@ public class UserInterface {
 
     private void exit(){
         printHeading(" Canoe Booking ");
+        
+        
         System.out.println("Thank you for choosing Canoe Booking! Happy travels!");
         System.exit(0);
     }

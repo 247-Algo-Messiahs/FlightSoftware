@@ -1320,6 +1320,94 @@
             }
         ]
     },{
+        "flightID": "1ee337e5-14bd-4393-ab7e-a253b190575e",
+        "departureCode": "DFW",
+        "arrivalCode": "ATL",
+        "departureTime": "06:59",
+        "arrivalTime": "09:22",
+        "duration": "143",
+        "firstSeats": 3,
+        "businessSeats": 3,
+        "economySeats": 3,
+        "isFull": false,
+        "isInternational": false,
+        "price": 221,
+        "connections": [],
+        "seats": [{
+                "seatID": 1,
+                "seatNum": "1A",
+                "seatClass": "FIRST",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 2,
+                "seatNum": "2A",
+                "seatClass": "BUSINESS",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 3,
+                "seatNum": "3A",
+                "seatClass": "ECONOMY",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 4,
+                "seatNum": "4A",
+                "seatClass": "ECONOMY",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 5,
+                "seatNum": "1B",
+                "seatClass": "FIRST",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 6,
+                "seatNum": "2B",
+                "seatClass": "BUSINESS",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 7,
+                "seatNum": "3B",
+                "seatClass": "ECONOMY",
+                "type": "MIDDLE",
+                "booked": false
+            },{
+                "seatID": 8,
+                "seatNum": "4B",
+                "seatClass": "ECONOMY",
+                "type": "MIDDLE",
+                "booked": false
+            },{
+                "seatID": 9,
+                "seatNum": "1C",
+                "seatClass": "FIRST",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 10,
+                "seatNum": "2C",
+                "seatClass": "BUSINESS",
+                "type": "WINDOW",
+                "booked": false
+            },{
+                "seatID": 11,
+                "seatNum": "3C",
+                "seatClass": "ECONOMY",
+                "type": "AISLE",
+                "booked": false
+            },{
+                "seatID": 12,
+                "seatNum": "4C",
+                "seatClass": "ECONOMY",
+                "type": "AISLE",
+                "booked": false
+            }
+        ]
+    },{
         "flightID": "09f4edda-8c0e-4420-8752-8dc8a4af4c8d",
         "departureCode": "DFW",
         "arrivalCode": "LAX",
