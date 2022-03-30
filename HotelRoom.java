@@ -73,6 +73,6 @@ public class HotelRoom {
 
     @Override
     public String toString() {
-        return "Room " + this.roomID + " with a " + this.bedType + " size bed and a price of $" + this.price + " is not available on the following dates: \n" + notAvailDatesList();
+        return "Room " + this.roomID + "\nBed: " + this.bedType + "   Price: $" + this.price;
     }
 }

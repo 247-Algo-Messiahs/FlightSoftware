@@ -17,7 +17,7 @@ Guests:
 None
 Checked Bags: 1 
 
-Hotel Booking:
+Hotel Booking
 Hotel ID: c636521d-d96b-4cfa-9eca-ae1c742ffeca
 Room ID: 1
 Address: Over Yonder Rd, Atlanta GA, 12345
@@ -25,5 +25,15 @@ Room Size: queen
 Dates of Stay: 
 1) 2022-01-02
 2) 2022-01-03
+
+
+Hotel Booking
+Hotel ID: c636521d-d96b-4cfa-9eca-ae1c742ffeca
+Room ID: 1
+Address: Over Yonder Rd, Atlanta GA, 12345
+Room Size: queen
+Dates of Stay: 
+1) 2026-05-04
+2) 2026-06-04
 
 
