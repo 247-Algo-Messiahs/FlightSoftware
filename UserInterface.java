@@ -14,30 +14,34 @@ public class UserInterface {
     private Scanner scanner;
     private Facade facade;
 
+
+ /**
+* All of the menu options stored in the individual String[]'s that the user can choose from when navigating the system.
+ */
     private static final String WELCOME_MESSAGE = "Welcome to Canoe's Flight Booking Software!\n\n Please choose from the following options:";
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
-    private String[] welcomeMenuOptions = { "Log In", "Create an Account", "Continue as Guest", "Search for Flight",
-            "Search for Hotel", "Exit" };
-    private String[] guestErrorOptions = { "Log in", "Create an Account", "Exit" };
-    private String[] mainMenuOptions = { "Search for Flight", "Search for Hotel", "View Booking History", "Exit" };
-    private String[] nextPageOptions = { "Next Page", "Back" };
-    private String[] flightFilterOptions = { "Price (Lowest -> Highest)", "Duration (Shortest -> Longest)",
-            "Departure Time (Earliest -> Latest)", "Back" };
-    private String[] bookingHistoryptions = { "Main Menu", "Quit" };
-    private String[] hotelResultsOptions = { "Hotel 1", "Hotel 2", "Hotel 3", "Main Menu (No Selection)" };
-    private String[] roomSizeOptions = { "King", "Queen", "Double" };
-    private String[] checkoutOptions = { "Purchase ", "Start a New Search" };
-    private String[] completedHotelBookingOptions = { "Main Menu", "View Booking History", "Exit" };
-    private String[] completedFlightBookingOptions = { "Main Menu", "View Booking History", "Search for Hotel",
-            "Exit" };
-    private String[] chooseFlightOptions = { "Choose Flight 1", "Choose Flight 2", "Choose Flight 3", "Filter Flights",
-            "Return to Flight Search" };
+    private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Search for Hotel","Exit"};
+    private String[] guestErrorOptions = {"Log in", "Create an Account", "Exit"};
+    private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
+    private String[] nextPageOptions = {"Next Page","Back"};
+    private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest)", "Departure Time (Earliest -> Latest)", "Back"};
+    private String[] bookingHistoryptions = {"Main Menu","Quit"};
+    private String[] hotelResultsOptions = {"Hotel 1","Hotel 2","Hotel 3", "Main Menu (No Selection)"};
+    private String[] roomSizeOptions = {"King","Queen","Double"};
+    private String[] checkoutOptions = {"Purchase ","Start a New Search"};
+    private String[] completedHotelBookingOptions = {"Main Menu","View Booking History","Exit"};
+    private String[] completedFlightBookingOptions = {"Main Menu","View Booking History","Search for Hotel","Exit"};
+    private String[] chooseFlightOptions = {"Choose Flight 1","Choose Flight 2","Choose Flight 3","Filter Flights","Return to Flight Search"};
 
+ /**
+ * Declaration of Variables
+ */
     private boolean roundTrip;
     private boolean chosenReturnFlight;
     private boolean chosenDepartureFlight;
-    private boolean redirectGuestToCheckout;
+    private boolean redirectGuestToFlightCheckout;
+    private boolean redirectGuestToHotelCheckout;
     private String departingCode;
     private String arrivalCode;
     private ArrayList<Guest> guests;
@@ -55,6 +59,9 @@ public class UserInterface {
     private ArrayList<Flight> unfilteredFlights;
     private ArrayList<FlightBooking> flightBookingsInCart;
 
+/**
+ * Constructor for the User interface. Reads in scanner/facade and allows to choose departure/return flihts and store them in cart. 
+ */
     private UserInterface() {
         this.scanner = new Scanner(System.in);
         this.facade = Facade.getInstance();
@@ -62,7 +69,10 @@ public class UserInterface {
         chosenReturnFlight = false;
         chosenDepartureFlight = false;
     }
-
+/**
+ * Allows the ability to get objects in the class
+ * @return
+ */
     public static UserInterface getInstance() {
         if (userInterface == null)
             userInterface = new UserInterface();
@@ -104,10 +114,17 @@ public class UserInterface {
          * System.out.println(testHotel);
          * 
          * System.out.println(testHotel.getRooms().get(0));
-         */
+         *
 
         // TERMINAL STARTS HERE
 
+        System.out.println(testHotel.getRooms().get(0)); 
+        */
+
+        //TERMINAL STARTS HERE
+/**
+*  Terminal starts here with Welcome Message and Welcome page menu options. 
+*/      
         System.out.println(WELCOME_MESSAGE);
 
         while (true) {
@@ -144,12 +161,20 @@ public class UserInterface {
             }
         }
 
-    }
-
+    } 
+ /**
+* Call this method when wanting to print a new heading for different sections of the system
+* @param heading
+*/  
     public void printHeading(String heading) {
         System.out.println("\n\n**********" + heading + "**********\n");
     }
 
+/**
+* allows the ability to record which menu option the user chooses
+* @param numCommands
+* @return
+*/
     private int getUserSelection(int numCommands) {
         String input = scanner.nextLine();
         int command = Integer.parseInt(input) - 1;
@@ -161,7 +186,10 @@ public class UserInterface {
 
     }
 
-    private void logIn() {
+/**
+* User has the ability to LogIn
+*/
+    private void logIn(){
         printHeading(" Log In ");
         System.out.println("Please enter your login information.");
         System.out.println("Username:");
@@ -192,13 +220,16 @@ public class UserInterface {
         }
         System.out.println("Now logged in as: " + facade.getCurrentUser().getUsername());
 
-        if (redirectGuestToCheckout)
-            flightCheckout();
+        if (redirectGuestToFlightCheckout) flightCheckout();
+        if (redirectGuestToHotelCheckout) hotelCheckout();
 
         mainMenu();
     }
 
-    private void createAccount() {
+/**
+* User has the ability to create a new account
+*/
+    private void createAccount(){
         printHeading(" Account Creation ");
         System.out.println("Please enter your information to create an account");
         System.out.println("New Username:");
@@ -222,11 +253,8 @@ public class UserInterface {
         String passportInput = scanner.nextLine();
         boolean passport = passportInput.toLowerCase().equals("y");
 
-        facade.createAccount(newUsername, newPassword, firstName, lastName, age, address, phoneNumber, emailAddress,
-                passport);
-
-        if (redirectGuestToCheckout)
-            flightCheckout();
+        if (redirectGuestToFlightCheckout) flightCheckout();
+        if (redirectGuestToHotelCheckout) hotelCheckout();
 
         mainMenu();
 
@@ -235,7 +263,10 @@ public class UserInterface {
 
     }
 
-    private void mainMenu() {
+/**
+* Main menu of the system. User can do many different things from here including Search for a flight/hotl or view booking history
+*/
+    private void mainMenu(){
         printHeading(" Main Menu ");
         System.out.println("Please choose from the following options:");
         for (int i = 0; i < mainMenuOptions.length; i++) {
@@ -268,7 +299,12 @@ public class UserInterface {
 
     // **********BENEATH IS ALL THE FLIGHT SEARCH METHODS******************
 
-    private void searchForFlight() {
+    //**********BENEATH IS ALL THE FLIGHT SEARCH METHODS******************
+
+/**
+* User inputs all their desired information for searching a flight
+*/
+    private void searchForFlight(){
 
         printHeading(" Flight Search ");
         System.out.println("Roundtrip: (Y/N)");
@@ -318,8 +354,14 @@ public class UserInterface {
         }
     }
 
-    private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests,
-            int checkedBags) {
+/**
+* User inputs departing and return dates for a roundtrip flight
+* @param departingCode
+* @param arrivalCode
+* @param guests
+* @param checkedBags
+*/
+    private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
         this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
@@ -349,9 +391,15 @@ public class UserInterface {
             }
         }
     }
-
-    private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests,
-            int checkedBags) {
+  
+/**
+* User inputs only departing dates for a oneway flight
+* @param departingCode
+* @param arrivalCode
+* @param guests
+* @param checkedBags
+*/
+    private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
         System.out.println("Departure Date: (mm/dd/yyyy)");
         this.departureDate = LocalDate.parse(scanner.nextLine(), FORMATTER);
@@ -381,8 +429,12 @@ public class UserInterface {
             }
         }
     }
-
-    private void flightFilter(ArrayList<Flight> flightSearchResults) {
+    
+/**
+* User can sort his flight search results in 3 different ways 
+* @param flightSearchResults
+*/
+    private void flightFilter(ArrayList<Flight> flightSearchResults){
         printHeading(" Flight Filter ");
         System.out.println("How would you like your search results to be sorted?");
 
@@ -432,7 +484,12 @@ public class UserInterface {
         }
     }
 
-    private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights) {
+ /**
+* Displays 3 flight results based off the information entered in "searchForFlight". User chooses a flight it is saved to their account as their departing flight. 
+* @param flightTrait
+* @param unfilteredFlights
+*/   
+    private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights){
         printHeading(" Departing Flight Results ");
 
         this.unfilteredFlights = unfilteredFlights;
@@ -487,7 +544,10 @@ public class UserInterface {
         }
     }
 
-    private void returnFlightResults() {
+/**
+* If roundtrip flight, Displays 3 returning flight results based off the information entered in "searchForFlight". User chooses a flight it is saved to their account. 
+*/
+    private void returnFlightResults(){
         printHeading(" Return Flight Results ");
 
         ArrayList<Flight> flightSearchResults = facade.searchForFlights(this.arrivalCode, this.departingCode);
@@ -544,7 +604,11 @@ public class UserInterface {
         }
     }
 
-    private void chooseSeats(Flight flight) {
+/**
+* System displays and the user chooses their desired seats from the list of available seats on that flight
+* @param flight
+*/    
+    private void chooseSeats(Flight flight){
         printHeading(" Choose Seats ");
         System.out.println("Select your desired seats from the list of available seats below.");
         ArrayList<Flight> flightsToChooseSeatsFor = new ArrayList<Flight>();
@@ -641,7 +705,10 @@ public class UserInterface {
 
     }
 
-    private void flightCheckout() {
+/**
+* System shows the user their flight bookings currently in their cart. User can choose to purchase these bookngs and save to their account, or go back to search results
+*/  
+    private void flightCheckout(){
         printHeading(" Flight Checkout ");
 
         System.out.println("You have the following flight bookings in your cart currently:");
@@ -661,9 +728,10 @@ public class UserInterface {
                 continue;
             }
 
-            switch (userCommand) {
-                case (0):
-                    if (facade.getCurrentUser() == null) {
+            switch(userCommand) {
+                case(0):
+                    if(facade.getCurrentUser() == null){
+                        redirectGuestToFlightCheckout = true;
                         guestError();
                         break;
                     } else {
@@ -685,7 +753,10 @@ public class UserInterface {
         }
     }
 
-    private void completedFlightBooking() {
+/**
+* User successfully completes a booking and can either continue or exit the system
+*/
+    private void completedFlightBooking(){
         printHeading(" Booking Confirmation ");
         System.out.println("Thank you for choosing Canoe.\nYour booking has been saved to your account");
 
@@ -721,9 +792,13 @@ public class UserInterface {
     }
 
     /**
-     * BENEATH IS ALL THE HOTEL SEARCH METHODS
-     */
-    private void searchForHotel() {
+    * BENEATH IS ALL THE HOTEL SEARCH METHODS
+    */
+
+/**
+* User inputs all of their desired information for choosing a hotel
+*/    
+    private void searchForHotel(){
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired locations, check-in, and check-out dates below.");
         System.out.println("Nearby Airport Code:");
@@ -738,7 +813,10 @@ public class UserInterface {
         hotelSearchResults();
     }
 
-    private void selectRoomSize() {
+/**
+* User can choose from a King, Queen, or Double bed in the hotel.
+*/  
+    private void selectRoomSize(){
         printHeading(" Room Selection ");
         System.out.println("Please choose your desired room size:");
 
@@ -774,6 +852,9 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Selects room from chosen hotel and saves the roomId
+     */
     private void selectRoom() {
         printHeading(" Room Selection ");
         System.out.println("Please choose your desired room:");
@@ -815,6 +896,9 @@ public class UserInterface {
         }
     }
 
+    /**
+* Allows the user to search for a hotel, directly after booking a flight. System will save the arrival airport code and will search for hotels near that airport.
+*/
     private void searchForHotelPostFlight() {
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired checkout date below");
@@ -825,7 +909,10 @@ public class UserInterface {
         hotelSearchResults();
     }
 
-    private void hotelSearchResults() {
+/**
+* Displays 3 hotel search results based on the information inputted above. 
+*/
+    private void hotelSearchResults(){
         printHeading(" Hotel Search Results ");
         System.out.println(
                 "Please select a hotel from the list below. Then you will be asked what type of room you would like.");
@@ -867,7 +954,10 @@ public class UserInterface {
         }
     }
 
-    private void hotelCheckout() {
+/**
+* Shows the user what is in their cart and gives them the option to purchase the hotel room
+*/
+    private void hotelCheckout(){
         printHeading(" Hotel Checkout ");
 
         System.out.println(this.chosenHotel);
@@ -904,7 +994,10 @@ public class UserInterface {
         }
     }
 
-    private void completedHotelBooking() {
+/**
+* Completion of booking a hotel room. The booking is saved to users account
+*/
+    private void completedHotelBooking(){
         printHeading(" Booking Confirmation ");
         System.out.println("Thank you for choosing Canoe.\nYour booking has been saved to your account");
 
@@ -935,7 +1028,10 @@ public class UserInterface {
         }
     }
 
-    private void viewBookingHistory() {
+/**
+ * From the main menu, this section allows a logged in user to view all of their completed flight or hotel bookings
+ */
+    private void viewBookingHistory(){
         printHeading(" Booking History ");
         System.out.println("You may view your booking history below or choose from one of the following options.\n");
 
@@ -982,9 +1078,10 @@ public class UserInterface {
 
     }
 
-    // ************** OTHER METHODS ******************
-
-    private void guestError() {
+/**
+ * Users are prompted to this page when they try to checkout as a guest. Then gives them the option to login, create an account, or exit the system
+ */
+    private void guestError(){
         printHeading(" Guest Error ");
         System.out.println("You are currently using a guest account and therefore don't have access to this feature.");
         System.out.println("Please choose from the following options:");
@@ -999,22 +1096,25 @@ public class UserInterface {
                 continue;
             }
 
-            switch (userCommand) {
-                case (0):
-                    redirectGuestToCheckout = true;
-                    logIn();
-                    break;
-                case (1):
-                    redirectGuestToCheckout = true;
-                    createAccount();
-                    break;
-                case (2):
-                    exit();
-                    break;
-            }
+            switch(userCommand) {
+                case(0):
+                        logIn();
+                        break;
+                case(1):
+                        createAccount();
+                        break;
+                case(2):
+                        exit();
+                        break;
+              }
         }
     }
 
+/**
+* When users are booking flights for other guests, they are prompted to this page to enter their guests information.
+* @param numGuests
+* @return
+*/
     public ArrayList<Guest> enterGuestInfo(int numGuests) {
         printHeading(" Guest Info ");
 
@@ -1039,7 +1139,10 @@ public class UserInterface {
         return guests;
     }
 
-    private void exit() {
+/**
+ * User exits/quits the system.
+ */
+    private void exit(){
         printHeading(" Canoe Booking ");
 
         try {
