@@ -73,7 +73,7 @@ public class UserInterface {
     }
 /**
  * Allows the ability to get objects in the class
- * @return
+ * @return the userInterface variable
  */
     public static UserInterface getInstance() {
         if (userInterface == null)
@@ -167,7 +167,7 @@ public class UserInterface {
     } 
  /**
 * Call this method when wanting to print a new heading for different sections of the system
-* @param heading
+* @param heading A String that displays the heading of which page the user is currently on 
 */  
     public void printHeading(String heading) {
         clear();
@@ -176,8 +176,8 @@ public class UserInterface {
 
 /**
 * allows the ability to record which menu option the user chooses
-* @param numCommands
-* @return
+* @param numCommands A int that records the number of commands for the option menus
+* @return -1 when there are no more options
 */
     private int getUserSelection(int numCommands) {
         String input = scanner.nextLine();
@@ -360,10 +360,10 @@ public class UserInterface {
 
 /**
 * User inputs departing and return dates for a roundtrip flight
-* @param departingCode
-* @param arrivalCode
-* @param guests
-* @param checkedBags
+* @param departingCode A String that represents the departing airport
+* @param arrivalCode A String that represents the arrival airport
+* @param guests A ArrayList of guests that represents who are the guests on the flight
+* @param checkedBags A int of how many checked bags the user has indicated
 */
     private void roundtripFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
@@ -397,11 +397,11 @@ public class UserInterface {
     }
   
 /**
-* User inputs only departing dates for a oneway flight
-* @param departingCode
-* @param arrivalCode
-* @param guests
-* @param checkedBags
+* User inputs only departing dates for a Oneway flight
+* @param departingCode A String that represents the departing airport
+* @param arrivalCode A String that represents the arrival airport
+* @param guests A ArrayList of guests that represents who are the guests on the flight
+* @param checkedBags A int of how many checked bags the user has indicated
 */
     private void onewayFlightSearch(String departingCode, String arrivalCode, ArrayList<Guest> guests, int checkedBags){
         printHeading(" Flight Search ");
@@ -436,7 +436,7 @@ public class UserInterface {
     
 /**
 * User can sort his flight search results in 3 different ways 
-* @param flightSearchResults
+* @param flightSearchResults A ArrayList of Flight that represents how the flights will be sorted
 */
     private void flightFilter(ArrayList<Flight> flightSearchResults){
         printHeading(" Flight Filter ");
@@ -490,8 +490,8 @@ public class UserInterface {
 
  /**
 * Displays 3 flight results based off the information entered in "searchForFlight". User chooses a flight it is saved to their account as their departing flight. 
-* @param flightTrait
-* @param unfilteredFlights
+* @param flightTrait A enum of the different ways the flights can be sorted
+* @param unfilteredFlights A ArrayList of Flight that represents the flights unfiltered
 */   
     private void departingFlightResults(FlightTrait flightTrait, ArrayList<Flight> unfilteredFlights){
         printHeading(" Departing Flight Results ");
@@ -622,7 +622,7 @@ public class UserInterface {
 
 /**
 * System displays and the user chooses their desired seats from the list of available seats on that flight
-* @param flight
+* @param flight A variable from the Flight class that represents the different flights and avilable seats on each flight
 */    
     private void chooseSeats(Flight flight){
         printHeading(" Choose Seats ");
@@ -914,7 +914,7 @@ public class UserInterface {
         }
     }
 
-    /**
+/**
 * Allows the user to search for a hotel, directly after booking a flight. System will save the arrival airport code and will search for hotels near that airport.
 */
     private void searchForHotelPostFlight() {
@@ -1143,8 +1143,8 @@ public class UserInterface {
 
 /**
 * When users are booking flights for other guests, they are prompted to this page to enter their guests information.
-* @param numGuests
-* @return
+* @param numGuests A int of the number of guests that a registered user is booking flights for 
+* @return the amount of guests enterred
 */
     public ArrayList<Guest> enterGuestInfo(int numGuests) {
         printHeading(" Guest Info ");
