@@ -66,6 +66,7 @@ public class UserInterface {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
 
         Hotel testHotel = HotelList.getHotelByUUID((UUID.fromString("c6a8b332-2d21-4fbe-b793-e503cbd8e1d4")));
 

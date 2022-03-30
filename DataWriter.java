@@ -38,7 +38,7 @@ public class DataWriter extends DataConstants{
         JSONArray jsonFlights = new JSONArray();
 
         //creating all the json objects
-        for(int i=0; i<jsonFlights.size(); i++){
+        for(int i=0; i<flightList.size(); i++){
             jsonFlights.add(getFlightJSON(flightList.get(i)));
         }
 
@@ -151,8 +151,8 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_FLIGHT_ID, flight.getFlightID().toString());
         flightDetails.put(FLIGHTS_DEPARTURE_CODE, flight.getDepartureCode());
         flightDetails.put(FLIGHTS_ARRIVAL_CODE, flight.getArrivalCode());
-        flightDetails.put(FLIGHTS_DEPARTURE_TIME, flight.getDepartureTime());
-        flightDetails.put(FLIGHTS_ARRIVAL_TIME, flight.getArrivalTime());
+        flightDetails.put(FLIGHTS_DEPARTURE_TIME, flight.getDepartureTime().toString());
+        flightDetails.put(FLIGHTS_ARRIVAL_TIME, flight.getArrivalTime().toString());
         flightDetails.put(FLIGHTS_DURATION, flight.getDuration());
         flightDetails.put(FLIGHTS_FIRST_SEATS, flight.getNumAvailFirstSeats());
         flightDetails.put(FLIGHTS_BUSINESS_SEATS, flight.getNumBusinessSeats());
@@ -162,7 +162,7 @@ public class DataWriter extends DataConstants{
         flightDetails.put(FLIGHTS_PRICE, flight.getPrice());
 
         for(int i=0; i<flight.getConnections().size(); i++){
-            connections.add(flight.getConnections().get(i));
+            connections.add(flight.getConnectionsJSON().get(i).toString());
         }
         flightDetails.put(FLIGHTS_CONNECTIONS, connections);
         
@@ -170,8 +170,8 @@ public class DataWriter extends DataConstants{
             JSONObject seatJSON = new JSONObject();
             seatJSON.put(SEATS_SEAT_ID, seats.get(i).getSeatID());
             seatJSON.put(SEATS_SEAT_NUM, seats.get(i).getSeatNumber());
-            seatJSON.put(SEATS_SEAT_CLASS, seats.get(i).getSeatClass());
-            seatJSON.put(SEATS_TYPE, seats.get(i).getSeatType());
+            seatJSON.put(SEATS_SEAT_CLASS, seats.get(i).getSeatClass().toString());
+            seatJSON.put(SEATS_TYPE, seats.get(i).getSeatType().toString());
             seatJSON.put(SEATS_BOOKED, seats.get(i).getIsBooked());
             seatsArray.add(seatJSON);
         }
@@ -186,7 +186,7 @@ public class DataWriter extends DataConstants{
         JSONArray roomArray = new JSONArray();
         ArrayList<HotelRoom> rooms = new ArrayList<>();
         rooms = hotel.getRooms();
-
+        
         hotelDetails.put(HOTELS_HOTEL_ID, hotel.getHotelID().toString());
         hotelDetails.put(HOTELS_HOTEL_RATING, hotel.getHotelRating());
         hotelDetails.put(HOTELS_CAPACITY, hotel.getCapacity());
@@ -199,15 +199,19 @@ public class DataWriter extends DataConstants{
             roomJSON.put(ROOMS_ROOM_ID, rooms.get(i).getRoomID());
             JSONArray availableArray = new JSONArray();
             for(int j=0; j<rooms.get(i).getNotAvail().size(); j++){
-                availableArray.add(rooms.get(i).getNotAvail().get(j));
+                LocalDate date = rooms.get(i).getNotAvail().get(j);
+                availableArray.add(date.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
             }
             roomJSON.put(ROOMS_NOT_AVAIL, availableArray);
-            roomJSON.put(ROOMS_NOT_AVAIL, rooms.get(i).getNotAvail());
-            roomJSON.put(ROOMS_BED_TYPE, rooms.get(i).getBedType());
+
+            roomJSON.put(ROOMS_BED_TYPE, rooms.get(i).getBedType().toString());
             roomJSON.put(ROOMS_IS_SMOKING, rooms.get(i).isSmoking());
             roomJSON.put(ROOMS_HAS_BALCONY, rooms.get(i).hasBalcony());
             roomJSON.put(ROOMS_HAS_PULLOUT_COUCH, rooms.get(i).hasPulloutCouch());
+            roomJSON.put(ROOMS_PRICE, rooms.get(i).getPrice());
+            roomArray.add(roomJSON);
         }
+        hotelDetails.put(HOTELS_ROOMS, roomArray);
         
         return hotelDetails;
     }
