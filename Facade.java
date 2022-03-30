@@ -24,6 +24,7 @@ public class Facade {
         this.hotelList = HotelList.getInstance();
         this.dataLoader = DataLoader.getInstance();
         this.flightFilter = new FlightFilter();
+        this.hotelFilter = new HotelFilter();
     }
 
     public static Facade getInstance() {
@@ -82,7 +83,6 @@ public class Facade {
     }
 
     public void logOut() throws IOException {
-        System.out.println("made it to logout in facade");
         currentUser = null;
         userList.saveUsers();
         hotelList.saveHotels();
@@ -101,6 +101,10 @@ public class Facade {
 
     public ArrayList<Flight> searchForFlights(String departureCode, String arrivalCode) {
         return flightFilter.searchForFlights(departureCode, arrivalCode);
+    }
+
+    public ArrayList<Hotel> searchForHotels(String airportCode){
+        return hotelFilter.searchFoHotels(airportCode);
     }
 
     public ArrayList<HotelRoom> searchForHotelRooms(String arrivalCode) {

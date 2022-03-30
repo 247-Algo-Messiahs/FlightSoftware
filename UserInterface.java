@@ -46,6 +46,7 @@ public class UserInterface {
     private String hotelCode;
     private LocalDate checkIn;
     private LocalDate checkOut;
+    private Hotel chosenHotel;
     private HotelRoom chosenHotelRoom;
     private ArrayList<Flight> unfilteredFlights;
     private ArrayList<FlightBooking> flightBookingsInCart;
@@ -770,7 +771,7 @@ public class UserInterface {
 
         //DISPLAY HOTELS HERE
 
-        ArrayList<HotelRoom> hotelResults = facade.searchForHotelRooms(this.hotelCode);
+        ArrayList<Hotel> hotelResults = facade.searchForHotels(this.hotelCode);
 
         for(int i=0;i<hotelResultsOptions.length;i++){
             System.out.println((i+1) + ". " + hotelResultsOptions[i]);
@@ -788,16 +789,16 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):    
-                    this.chosenHotelRoom = hotelResults.get(0);
+                    this.chosenHotel= hotelResults.get(0);
                     selectRoomSize();
                     break;
          
                 case(1):
-                    this.chosenHotelRoom = hotelResults.get(2);
+                    this.chosenHotel = hotelResults.get(2);
                     selectRoomSize();
                     break;
                 case(2):
-                    this.chosenHotelRoom = hotelResults.get(2);
+                    this.chosenHotel = hotelResults.get(2);
                     selectRoomSize();
                     break;
                 case(3):
@@ -833,6 +834,7 @@ public class UserInterface {
                     break;
                 }
                 else{
+                    facade.bookHotelRoom(this.chosenHotel.getHotelID(), chosenHotelRoom.getRoomID(), this.checkIn, this.checkOut);
                     completedHotelBooking();
                     break;                          //SAVE NEW BOOKING
                 }
@@ -846,8 +848,6 @@ public class UserInterface {
     private void completedHotelBooking(){
         printHeading(" Booking Confirmation ");
         System.out.println("Thank you for choosing Canoe.\nYour booking has been saved to your account");
-
-        facade.bookHotelRoom(UUID.fromString(this.hotelCode), chosenHotelRoom.getRoomID(), this.checkIn, this.checkOut);
 
         for(int i=0;i<completedHotelBookingOptions.length;i++){
             System.out.println((i+1) + ". " + completedHotelBookingOptions[i]);

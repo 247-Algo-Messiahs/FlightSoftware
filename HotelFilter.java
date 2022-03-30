@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class HotelFilter {
@@ -5,8 +6,10 @@ public class HotelFilter {
     private ArrayList<HotelRoom> filteredHotels;
     private ArrayList<BedType> filterParams;
 
-    public HotelFilter(){
-        
+    public ArrayList<Hotel> searchFoHotels(String airportCode){
+        ArrayList<Hotel> hotels = HotelList.getHotelsByAirportCode(airportCode);
+
+        return hotels;
     }
     
     public ArrayList<HotelRoom> searchForHotelRooms(String airportCode) {
