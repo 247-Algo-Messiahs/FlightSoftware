@@ -698,7 +698,7 @@ public class UserInterface {
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired locations, check-in, and check-out dates below.");
         System.out.println("Nearby Airport Code:");
-        this.hotelCode = scanner.nextLine();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
+        this.hotelCode = scanner.nextLine().toUpperCase();      //would the variable be this or something different because the only other variables are "departingCode" and "arrivalCode"
         System.out.println("Check-in Date: (mm/dd/yyyy)");
         this.checkIn = LocalDate.parse(scanner.nextLine(), FORMATTER);
         System.out.println("Check-out Date: (mm/dd/yyyy)");
