@@ -34,7 +34,8 @@ public class UserInterface {
     private boolean roundTrip;
     private boolean chosenReturnFlight;
     private boolean chosenDepartureFlight;
-    private boolean redirectGuestToCheckout;
+    private boolean redirectGuestToFlightCheckout;
+    private boolean redirectGuestToHotelCheckout;
     private String departingCode;
     private String arrivalCode;
     private ArrayList<Guest> guests;
@@ -180,7 +181,8 @@ public class UserInterface {
         }
         System.out.println("Now logged in as: " + facade.getCurrentUser().getUsername());
 
-        if (redirectGuestToCheckout) flightCheckout();
+        if (redirectGuestToFlightCheckout) flightCheckout();
+        if (redirectGuestToHotelCheckout) hotelCheckout();
 
         mainMenu();
     }
@@ -211,7 +213,8 @@ public class UserInterface {
         
         facade.createAccount(newUsername, newPassword, firstName, lastName, age, address, phoneNumber, emailAddress, passport);
 
-        if (redirectGuestToCheckout) flightCheckout();
+        if (redirectGuestToFlightCheckout) flightCheckout();
+        if (redirectGuestToHotelCheckout) hotelCheckout();
 
         mainMenu();
         
@@ -630,6 +633,7 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     if(facade.getCurrentUser() == null){
+                        redirectGuestToFlightCheckout = true;
                         guestError();
                         break;
                     }   
@@ -811,6 +815,7 @@ public class UserInterface {
                 case(0):
                 if(facade.getCurrentUser() == null){
                     guestError();
+                    redirectGuestToHotelCheckout = true;
                     break;
                 }
                 else{
@@ -925,11 +930,9 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
-                        redirectGuestToCheckout = true;
                         logIn();
                         break;
                 case(1):
-                        redirectGuestToCheckout = true;
                         createAccount();
                         break;
                 case(2):
