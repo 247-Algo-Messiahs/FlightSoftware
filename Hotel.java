@@ -55,6 +55,10 @@ public class Hotel {
         return null;
     }
 
+    public void setRoomByBed(HotelRoom bedType){
+        
+    }
+
     public void setHotelID(UUID hotelID){
         this.hotelID = hotelID;
     }
