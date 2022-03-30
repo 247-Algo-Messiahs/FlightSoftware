@@ -73,6 +73,6 @@ public class HotelRoom {
 
     @Override
     public String toString() {
-        return "Room " + this.roomID + "\nBed: " + this.bedType + "   Price: $" + this.price;
+        return "Room " + this.roomID + "\nBed: " + this.bedType + "   Price: $" + this.price + "\nAmeneties:\nSmoking: " + this.isSmoking + "   Balcony: " + this.hasBalcony + "    Pullout couch: " + this.hasPulloutCouch;
     }
 }
