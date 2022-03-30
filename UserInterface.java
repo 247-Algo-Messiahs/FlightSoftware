@@ -17,7 +17,7 @@ public class UserInterface {
     private static final String WELCOME_MESSAGE = "Welcome to Canoe's Flight Booking Software!\n\n Please choose from the following options:";
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
-    private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Search for a hotel","Exit"};
+    private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Search for Hotel","Exit"};
     private String[] guestErrorOptions = {"Log in", "Create an Account", "Exit"};
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
@@ -110,8 +110,6 @@ public class UserInterface {
 				System.out.println("Not a valid command");
 				continue;
             }
-
-            //if(userCommand == welcomeMenuOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -236,8 +234,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == mainMenuOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                         searchForFlight();
@@ -290,8 +286,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == nextPageOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                     if(roundTrip){
@@ -329,8 +323,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == nextPageOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                     flightFilter(flightSearchResults);
@@ -360,8 +352,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == nextPageOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                 
@@ -390,8 +380,6 @@ public class UserInterface {
 				System.out.println("Not a valid command");
 				continue;
             }
-
-            //if(userCommand == flightFilterOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -639,8 +627,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == checkoutOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                     if(facade.getCurrentUser() == null){
@@ -648,10 +634,10 @@ public class UserInterface {
                         break;
                     }   
                     else{
-                        for (FlightBooking booking : flightBookingsInCart) {
+                        for (FlightBooking booking : flightBookingsInCart) { //for each booking in shopping cart, add to user's booking history
                             facade.bookFlight(booking);
                         }
-                        completedFlightBooking();  //SAVE BOOKING TO ACCOUNT
+                        completedFlightBooking();  
                         break;
                     }       
                 case(1):
@@ -679,8 +665,6 @@ public class UserInterface {
 				System.out.println("Not a valid command");
 				continue;
             }
-
-            //if(userCommand == completedFlightBookingOptions.length -1) break;
 
             switch(userCommand) {
                 case(0):
@@ -734,8 +718,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == roomSizeOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                     //king bed chosen
@@ -785,8 +767,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == hotelResultsOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):    
                     this.chosenHotel= hotelResults.get(0);
@@ -825,8 +805,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == checkoutOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                 if(facade.getCurrentUser() == null){
@@ -860,8 +838,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == completedHotelBookingOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                     mainMenu();
@@ -883,10 +859,17 @@ public class UserInterface {
         printHeading(" Booking History ");
         System.out.println("You may view your booking history below or choose from one of the following options.\n");
 
-        ArrayList<FlightBooking> bookings = facade.getBookingHistory();
+        ArrayList<FlightBooking> flightBookings = facade.getBookingHistory();
+        ArrayList<HotelBooking> hotelBookings = facade.getHotelBookingHistory();
 
-        for (FlightBooking booking : bookings) {
-            System.out.println(booking);
+        System.out.println("\nFLIGHT BOOKING HISTORY\n");
+        for (FlightBooking booking : flightBookings) {
+            System.out.println(booking + "\n");
+        }
+
+        System.out.println("\nHOTEL BOOKING HISTORY\n");
+        for (HotelBooking booking : hotelBookings) {
+            System.out.println(booking + "\n");
         }
 
         for(int i=0;i<bookingHistoryptions.length;i++){
@@ -938,8 +921,6 @@ public class UserInterface {
 				continue;
             }
 
-            //if(userCommand == guestErrorOptions.length -1) break;
-
             switch(userCommand) {
                 case(0):
                         redirectGuestToCheckout = true;
@@ -982,15 +963,14 @@ public class UserInterface {
     private void exit(){
         printHeading(" Canoe Booking ");
         
-        System.out.println("Thank you for choosing Canoe Booking! Happy travels!");
-
         try {
             facade.logOut();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         
+        System.out.println("Thank you for choosing Canoe Booking! Happy travels!\n");
+
         System.exit(0);
     }
     

@@ -57,7 +57,7 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
-    public void loadUserFlightBookings(RegisteredUser user) {
+    public static void loadUserFlightBookings(RegisteredUser user) {
         ArrayList<FlightBooking> bookings = new ArrayList<FlightBooking>();
         
         JSONArray flightBookingArray = user.getFlightBookingJSON();
@@ -159,7 +159,7 @@ public class DataLoader extends DataConstants{
         flight.setConnections(connections);
     }
 
-    public void loadUserHotelBookings(RegisteredUser user) {
+    public static void loadUserHotelBookings(RegisteredUser user) {
         ArrayList<HotelBooking> bookings = new ArrayList<HotelBooking>();
         
         JSONArray hotelBookingArray = user.getHotelBookingJSON();

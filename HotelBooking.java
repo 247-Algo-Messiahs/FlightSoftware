@@ -44,7 +44,14 @@ public class HotelBooking {
     }
 
     public String toString(){
-        return "Hotel Booking:\n" + "Hotel ID: " + this.hotelID + "\nRoom ID: " + this.roomID + "\n Dates of Stay: \n" + getBookedDatesList();
+        Hotel hotel = HotelList.getHotelByUUID(this.hotelID);
+        HotelRoom hotelRoom = hotel.getRoomByID(this.roomID);
+
+        return "Hotel Booking:" + 
+        "\nHotel ID: " + this.hotelID + 
+        "\nRoom ID: " + this.roomID + 
+        "\nRoom Size: " + hotelRoom.getBedType().toString().toLowerCase() +
+        "\nDates of Stay: \n" + getBookedDatesList();
     }
 
     
