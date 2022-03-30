@@ -92,9 +92,9 @@ public class Flight {
 
     public int getDuration(){
         int duration = (int)Duration.between(this.departureTime, this.arrivalTime).toMinutes();
-        if (duration < 0) duration = 1440 - duration; //accounts for if flight leaves in p.m., and lands in a.m.
+        if (duration < 0) duration = 1440 + duration; //accounts for if flight leaves in p.m., and lands in a.m.
 
-        return (int)Duration.between(this.departureTime, this.arrivalTime).toMinutes();
+        return duration;
     }
 
     public int getNumAvailFirstSeats() {

@@ -18,7 +18,7 @@ public class UserInterface {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/uuuu");
 
     private String[] welcomeMenuOptions = {"Log In","Create an Account","Continue as Guest","Search for Flight","Search for a hotel","Exit"};
-    private String[] guestErrorOptions = {"Log in", "Create an Account", "Continue as Guest (you will not be able to create or view bookings"};
+    private String[] guestErrorOptions = {"Log in", "Create an Account", "Exit"};
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
     private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest)", "Departure Time (Earliest -> Latest)", "Back"};
@@ -34,6 +34,7 @@ public class UserInterface {
     private boolean roundTrip;
     private boolean chosenReturnFlight;
     private boolean chosenDepartureFlight;
+    private boolean redirectGuestToCheckout;
     private String departingCode;
     private String arrivalCode;
     private ArrayList<Guest> guests;
@@ -55,6 +56,7 @@ public class UserInterface {
         this.facade = Facade.getInstance();
         this.flightBookingsInCart = new ArrayList<FlightBooking>();
         chosenReturnFlight = false;
+        chosenDepartureFlight = false;
     }
 
     public static UserInterface getInstance() {
@@ -178,6 +180,9 @@ public class UserInterface {
             }
         }
         System.out.println("Now logged in as: " + facade.getCurrentUser().getUsername());
+
+        if (redirectGuestToCheckout) flightCheckout();
+
         mainMenu();
     }
 
@@ -206,6 +211,9 @@ public class UserInterface {
         boolean passport = passportInput.toLowerCase().equals("y");
         
         facade.createAccount(newUsername, newPassword, firstName, lastName, age, address, phoneNumber, emailAddress, passport);
+
+        if (redirectGuestToCheckout) flightCheckout();
+
         mainMenu();
         
 
@@ -934,13 +942,15 @@ public class UserInterface {
 
             switch(userCommand) {
                 case(0):
+                        redirectGuestToCheckout = true;
                         logIn();
                         break;
                 case(1):
+                        redirectGuestToCheckout = true;
                         createAccount();
                         break;
                 case(2):
-                        mainMenu();
+                        exit();
                         break;
               }
         }
