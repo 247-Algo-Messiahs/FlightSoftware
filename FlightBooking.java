@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 import java.io.PrintWriter;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.FileWriter;
 
 public class FlightBooking {
     private UUID flightID;
@@ -69,15 +68,15 @@ public class FlightBooking {
         
     }
 
-    public void printBooking() throws FileNotFoundException{
-        PrintWriter out = new PrintWriter("bookings.txt"); // Opens file
-
-        out.println("Flight ID: "+this.flightID);
-        out.println("Seat ID: "+this.seatID);
-        out.println("Guests: "+this.guests);
-        out.println("Checked Bags: "+this.numCheckedBags);
-
-        out.close(); //close the file
+    public void printBooking() {
+        PrintWriter out;
+        try {
+            out = new PrintWriter(new FileWriter("bookings.txt", true)); //Opens file
+            out.println(this.toString() + " \n");
+            out.close(); //close the file
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public String getListOfGuests(){
@@ -87,6 +86,7 @@ public class FlightBooking {
             Guest guest = guests.get(i);
             list += i+1 + ") " + guest.getFirstName() + " " + guest.getLastName() + "\nSeatID: " + guest.getSeatID() + "\n";
         }
+        if (list.length() == 0) return "None\n";
         return list;
     }
 

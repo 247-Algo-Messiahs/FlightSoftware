@@ -3,6 +3,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
+import java.io.File;
 import java.io.IOException;
 import java.time.*;
 
@@ -26,7 +27,7 @@ public class UserInterface {
     private String[] mainMenuOptions = {"Search for Flight", "Search for Hotel", "View Booking History", "Exit"};
     private String[] nextPageOptions = {"Next Page","Back"};
     private String[] flightFilterOptions = {"Price (Lowest -> Highest)","Duration (Shortest -> Longest)", "Departure Time (Earliest -> Latest)", "Back"};
-    private String[] bookingHistoryptions = {"Main Menu","Quit"};
+    private String[] bookingHistoryptions = {"Main Menu","Print Bookings","Quit"};
     private String[] hotelResultsOptions = {"Hotel 1","Hotel 2","Hotel 3", "Main Menu (No Selection)"};
     private String[] roomSizeOptions = {"King","Queen","Double"};
     private String[] checkoutOptions = {"Purchase ","Start a New Search"};
@@ -971,10 +972,12 @@ public class UserInterface {
             System.out.println(booking + "\n");
         }
 
-        for(int i=0;i<bookingHistoryptions.length;i++){
-            System.out.println((i+1) + ". " + bookingHistoryptions[i]);
-        }
+        
         while(true){
+            for(int i=0;i<bookingHistoryptions.length;i++){
+                System.out.println((i+1) + ". " + bookingHistoryptions[i]);
+            }
+
             int userCommand = getUserSelection(bookingHistoryptions.length);
 			
 			if(userCommand == -1) {
@@ -989,8 +992,18 @@ public class UserInterface {
                 
                    mainMenu();
                     break;
-         
                 case(1):
+                    File bookings = new File("bookings.txt");
+                    bookings.delete();
+                    for (FlightBooking booking : flightBookings) {
+                        booking.printBooking();
+                    }
+                    for (HotelBooking booking : hotelBookings) {
+                        booking.printBooking();
+                    }
+                    System.out.println("Your flight bookings and hotel bookings have been printed to bookings.txt.");
+                    continue;
+                case(2):
                     exit();
                     break;
             }

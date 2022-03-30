@@ -1,0 +1,29 @@
+Flight Booking
+ATL --> DFW
+Flight ID: 00b8ec49-0018-481a-864a-0ea05b6bd7e4
+Seat ID: 3
+Guests:
+1) Jane Brown
+SeatID: 1
+2) Ronald Johnson
+SeatID: 2
+Checked Bags: 1 
+
+Flight Booking
+ATL --> HND
+Flight ID: 53d907e9-5063-49e8-bd3d-6e09b9914973
+Seat ID: 12
+Guests:
+None
+Checked Bags: 1 
+
+Hotel Booking:
+Hotel ID: c636521d-d96b-4cfa-9eca-ae1c742ffeca
+Room ID: 1
+Address: Over Yonder Rd, Atlanta GA, 12345
+Room Size: queen
+Dates of Stay: 
+1) 2022-01-02
+2) 2022-01-03
+
+
