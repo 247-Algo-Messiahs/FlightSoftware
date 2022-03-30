@@ -499,7 +499,9 @@ public class UserInterface {
 
         // SHOW DEPARTING FLIGHT SEARCH RESULTS HERE
 
-        for (int i = 0; i < 3; i++) {
+        int iterationAmount = filteredFlights.size() < 4 ? filteredFlights.size() : 4;
+
+        for (int i = 0; i < iterationAmount; i++) {
             System.out.println("FLIGHT " + (i + 1));
             System.out.println(filteredFlights.get(i));
         }

@@ -8,6 +8,9 @@ public class FlightList {
 
     private FlightList(){
         flights = DataLoader.loadFlights();
+        for (Flight flight : flights) {
+            DataLoader.loadFlightConnections(flight);
+        }
     }
     
     public static FlightList getInstance(){
