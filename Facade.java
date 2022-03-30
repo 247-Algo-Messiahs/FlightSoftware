@@ -19,11 +19,12 @@ public class Facade {
 
 
     private Facade() {
-        this.userList = UserList.getInstance();
-        this.flightList = FlightList.getInstance();
-        this.hotelList = HotelList.getInstance();
         this.dataLoader = DataLoader.getInstance();
         this.flightFilter = new FlightFilter();
+        this.hotelFilter = new HotelFilter();
+        this.flightList = FlightList.getInstance();
+        this.hotelList = HotelList.getInstance();
+        this.userList = UserList.getInstance();
     }
 
     public static Facade getInstance() {
@@ -82,7 +83,7 @@ public class Facade {
     }
 
     public void logOut() throws IOException {
-        System.out.println("made it to logout in facade");
+        System.out.println(currentUser.getUsername() + " has been logged out.");
         currentUser = null;
         userList.saveUsers();
         hotelList.saveHotels();

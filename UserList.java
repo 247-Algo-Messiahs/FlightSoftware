@@ -8,6 +8,15 @@ public class UserList {
 
     private UserList(){
         users = DataLoader.loadUsers();
+        loadUserBookings();
+        
+    }
+
+    public static void loadUserBookings() {
+        for (RegisteredUser user : users) {
+            DataLoader.loadUserFlightBookings(user);
+            DataLoader.loadUserHotelBookings(user);
+        }
     }
 
     public static UserList getInstance(){

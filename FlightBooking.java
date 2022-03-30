@@ -92,7 +92,11 @@ public class FlightBooking {
 
     @Override
     public String toString() {
-        return "Flight Booking\nFlight ID: " + this.flightID + 
+        Flight flight = FlightList.getFlightByUUID(this.flightID);
+
+        return "Flight Booking\n" + 
+        flight.getDepartureCode() + " --> " + flight.getArrivalCode() +
+        "\nFlight ID: " + this.flightID + 
         "\nSeat ID: " + this.seatID +
         "\nGuests:\n" + getListOfGuests() +
         "Checked Bags: " + this.numCheckedBags;
