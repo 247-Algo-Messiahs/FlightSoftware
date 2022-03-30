@@ -1,3 +1,8 @@
+/**
+ * @author Peyton Tucker
+ * A class designed to load data regarding users, flights, and hotels from JSON files into objects stored in their respective list classes
+ */
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -11,15 +16,27 @@ import org.json.simple.parser.JSONParser;
 public class DataLoader extends DataConstants{
     private static DataLoader dataLoader;
 
+
+    /**
+     * Private constructor to follow singleton design pattern
+     */
     private DataLoader() {
         
     }
 
+    /**
+     * Gets the singleton instance of the DataLoader class
+     * @return the DataLoader singleton
+     */
     public static DataLoader getInstance() {
         if (dataLoader == null) dataLoader = new DataLoader();
         return dataLoader;
     }
     
+    /**
+     * Reads all user objects from a JSON file and then returns a list of all user objects
+     * @return an array of all RegisteredUsers loaded from JSON
+     */
     public static ArrayList<RegisteredUser> loadUsers() {
         ArrayList<RegisteredUser> users = new ArrayList<RegisteredUser>();
 
@@ -57,6 +74,10 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
+    /**
+     * Loads users flight bookings from JSON Arrays stored in the User class and populates each User object with their respective FlightBookings ArrayLists
+     * @param user the user object whose FlightBookings are to be read and converted to a FlightBooking object
+     */
     public static void loadUserFlightBookings(RegisteredUser user) {
         ArrayList<FlightBooking> bookings = new ArrayList<FlightBooking>();
         
@@ -94,7 +115,10 @@ public class DataLoader extends DataConstants{
     }
 
 
-
+/**
+ * Loads all flights from a JSON file and returns an ArrayList of all Flight objects
+ * @return an arraylist of all flight objects from flights.json
+ */
     public static ArrayList<Flight> loadFlights() {
         ArrayList<Flight> flights = new ArrayList<Flight>();
 
@@ -146,6 +170,10 @@ public class DataLoader extends DataConstants{
         return null;
     }
 
+    /**
+     * Loads connecting flight objects for flights with connections
+     * @param flight the flight to load connections for
+     */
     public static void loadFlightConnections(Flight flight) {
         ArrayList<Flight> connections = new ArrayList<Flight>();
 
@@ -159,6 +187,10 @@ public class DataLoader extends DataConstants{
         flight.setConnections(connections);
     }
 
+    /**
+     * Converts JSONArrays of hotel bookings stored in user objects to ArrayLists of HotelBookings
+     * @param user the user whose HotelBooking JSONArray is to be converted to an ArrayList and who will store the ArrayList
+     */
     public static void loadUserHotelBookings(RegisteredUser user) {
         ArrayList<HotelBooking> bookings = new ArrayList<HotelBooking>();
         
@@ -187,6 +219,10 @@ public class DataLoader extends DataConstants{
         user.setHotelBookings(bookings);
     }
 
+    /**
+     * Loads hotel objects from a hotels.json and adds them to an arraylist
+     * @return An array list of all hotel objects
+     */
     public static ArrayList<Hotel> loadHotels() {
         ArrayList<Hotel> hotels = new ArrayList<Hotel>();
 
