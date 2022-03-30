@@ -721,18 +721,18 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                     //king bed chosen
-                    this.bedType.equals(BedType.valueOf("KING"));
+                    this.bedType = BedType.valueOf("KING");
                     hotelCheckout();
                     break;
          
                 case(1):
                     //queen bed chosen
-                    this.bedType.equals(BedType.valueOf("QUEEN"));
+                    this.bedType = BedType.valueOf("QUEEN");
                     hotelCheckout();
                     break;
                 case(2):
                     //double bed chosen
-                    this.bedType.equals(BedType.valueOf("DOUBLE"));
+                    this.bedType = BedType.valueOf("DOUBLE");
                     hotelCheckout();
                     break;
             }
@@ -743,6 +743,8 @@ public class UserInterface {
         printHeading(" Hotel Search ");
         System.out.println("Please input your desired checkout date below");
         System.out.println("Check-out Date: (mm/dd/yyyy)");
+        this.hotelCode = this.arrivalCode;
+        this.checkIn = this.departureDate;
         this.checkOut = LocalDate.parse(scanner.nextLine(), FORMATTER);
         hotelSearchResults();
     }
@@ -755,7 +757,7 @@ public class UserInterface {
 
         ArrayList<Hotel> hotelResults = facade.searchForHotels(this.hotelCode);
 
-        for(int i=0;i<hotelResultsOptions.length;i++){
+        for(int i=0;i<hotelResults.size();i++){
             System.out.println((i+1) + ". " + hotelResultsOptions[i]);
             System.out.println(hotelResults.get(i));
         }
