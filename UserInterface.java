@@ -33,7 +33,7 @@ public class UserInterface {
     private String[] checkoutOptions = {"Purchase ","Start a New Search"};
     private String[] completedHotelBookingOptions = {"Main Menu","View Booking History","Exit"};
     private String[] completedFlightBookingOptions = {"Main Menu","View Booking History","Search for Hotel","Exit"};
-    private String[] chooseFlightOptions = {"Choose Flight 1","Choose Flight 2","Choose Flight 3","Filter Flights","Return to Flight Search"};
+    private String[] chooseFlightOptions = {"Choose Flight 1","Choose Flight 2","Choose Flight 3", "Choose Flight 4","Filter Flights","Return to Flight Search"};
 
  /**
  * Declaration of Variables
@@ -127,6 +127,7 @@ public class UserInterface {
 /**
 *  Terminal starts here with Welcome Message and Welcome page menu options. 
 */      
+        clear();
         System.out.println(WELCOME_MESSAGE);
 
         while (true) {
@@ -169,6 +170,7 @@ public class UserInterface {
 * @param heading
 */  
     public void printHeading(String heading) {
+        clear();
         System.out.println("\n\n**********" + heading + "**********\n");
     }
 
@@ -537,9 +539,14 @@ public class UserInterface {
                     chooseSeats(filteredFlights.get(2));
                     break;
                 case (3):
-                    flightFilter(unfilteredFlights);
+                    // Flight 4 chosen
+                    chosenDepartureFlight = true;
+                    chooseSeats(filteredFlights.get(3));
                     break;
                 case (4):
+                    flightFilter(unfilteredFlights);
+                    break;
+                case (5):
                     searchForFlight();
                     break;
                 default:
@@ -598,9 +605,14 @@ public class UserInterface {
                     chooseSeats(filteredReturnFlights.get(2));
                     break;
                 case (3):
-                    flightFilter(flightSearchResults);
+                    // Flight 4 chosen
+                    chosenReturnFlight = true;
+                    chooseSeats(filteredReturnFlights.get(3));
                     break;
                 case (4):
+                    flightFilter(flightSearchResults);
+                    break;
+                case (5):
                     searchForFlight();
                     break;
 
@@ -636,9 +648,10 @@ public class UserInterface {
                     && selectedFlight.equals(flightsToChooseSeatsFor.get(0))) {
                 flightPath = selectedFlight.getDepartureCode() + " --> "
                         + flightsToChooseSeatsFor.get(1).getDepartureCode();
-            } else
+            } else {
                 flightPath = selectedFlight.getDepartureCode() + " --> " + selectedFlight.getArrivalCode();
-
+                clear();
+            }
             System.out.println("\nFLIGHT: " + flightPath);
             ArrayList<Seat> availableSeats = selectedFlight.getAvailableSeats();
             int seatChoiceIterations;
@@ -650,10 +663,11 @@ public class UserInterface {
             int currentUserSeatID = 0;
 
             for (int i = 0; i < seatChoiceIterations; i++) {
-
-                if (i > 0)
+                if (i > 0) {
+                    clear();
                     System.out.println(
                             "\nPlease choose a seat for your guest, " + guests.get(i - 1).getFirstName() + ":");
+                }
 
                 System.out.println("\nFirst Class Seats:");
                 for (Seat seat : availableSeats) {
@@ -1098,6 +1112,7 @@ public class UserInterface {
  * Users are prompted to this page when they try to checkout as a guest. Then gives them the option to login, create an account, or exit the system
  */
     private void guestError(){
+        clear();
         printHeading(" Guest Error ");
         System.out.println("You are currently using a guest account and therefore don't have access to this feature.");
         System.out.println("Please choose from the following options:");
@@ -1159,6 +1174,7 @@ public class UserInterface {
  * User exits/quits the system.
  */
     private void exit(){
+        clear();
         printHeading(" Canoe Booking ");
 
         try {
@@ -1171,6 +1187,13 @@ public class UserInterface {
         System.out.println("Thank you for choosing Canoe Booking! Happy travels!\n");
 
         System.exit(0);
+    }
+
+    /**
+     * Clears the terminal of any text
+     */
+    private void clear() {
+        System.out.print("\033[H\033[2J");
     }
 
     public static void main(String[] args) {
