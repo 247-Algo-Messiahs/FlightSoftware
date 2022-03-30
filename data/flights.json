@@ -1,3083 +1,3544 @@
 [
     {
+        "departureTime": "06:26",
+        "firstSeats": 2,
         "flightID": "00b8ec49-0018-481a-864a-0ea05b6bd7e4",
-        "departureCode": "ATL",
-        "arrivalCode": "DFW",
-        "departureTime": "06:26",
-        "arrivalTime": "10:19",
-        "duration": "233",
-        "firstSeats": 2,
-        "businessSeats": 2,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
-        "price": 250,
-        "connections": ["cf259c58-1fa8-4126-92e1-7c44a234de12"],    
-        "seats": [{
-                "seatID": 1,
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": true,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
+        ],
+        "arrivalCode": "DFW",
+        "duration": 233,
+        "businessSeats": 2,
+        "isInternational": false,
+        "arrivalTime": "10:19",
+        "price": 250,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": [
+            "cf259c58-1fa8-4126-92e1-7c44a234de12"
         ]
-    },{
+    },
+    {
+        "departureTime": "06:26",
+        "firstSeats": 2,
         "flightID": "8fced5b2-3546-4ab5-a159-65babcb9c138",
-        "departureCode": "ATL",
-        "arrivalCode": "DFW",
-        "departureTime": "06:26",
-        "arrivalTime": "10:19",
-        "duration": "233",
-        "firstSeats": 2,
-        "businessSeats": 2,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
-        "price": 250,
-        "connections": ["80332354-dee0-4611-b2f9-14d63914ccc6"],    
-        "seats": [{
-                "seatID": 1,
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": true,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
+        ],
+        "arrivalCode": "DFW",
+        "duration": 233,
+        "businessSeats": 2,
+        "isInternational": false,
+        "arrivalTime": "10:19",
+        "price": 250,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": [
+            "80332354-dee0-4611-b2f9-14d63914ccc6"
         ]
-    },{
+    },
+    {
+        "departureTime": "06:26",
+        "firstSeats": 2,
         "flightID": "3e082b7b-5ed4-4ce2-9551-5905cd27fca5",
-        "departureCode": "ATL",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
         "arrivalCode": "DFW",
-        "departureTime": "06:26",
+        "duration": 233,
+        "businessSeats": 2,
+        "isInternational": false,
         "arrivalTime": "10:19",
-        "duration": "233",
-        "firstSeats": 2,
-        "businessSeats": 2,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
         "price": 250,
-        "connections": ["2841e2fe-0a55-49de-ac48-b1f9a34a7605", "80332354-dee0-4611-b2f9-14d63914ccc6"],    
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "e2d8f42e-6faf-4c6b-b539-99daa46d490a",
         "departureCode": "ATL",
-        "arrivalCode": "DFW",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": [
+            "2841e2fe-0a55-49de-ac48-b1f9a34a7605",
+            "80332354-dee0-4611-b2f9-14d63914ccc6"
+        ]
+    },
+    {
         "departureTime": "14:44",
+        "firstSeats": 2,
+        "flightID": "e2d8f42e-6faf-4c6b-b539-99daa46d490a",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "DFW",
+        "duration": 143,
+        "businessSeats": 1,
+        "isInternational": false,
         "arrivalTime": "17:07",
-        "duration": "143",
-        "firstSeats": 2,
-        "businessSeats": 1,
-        "economySeats": 4,
-        "isFull": false,
-        "isInternational": false,
         "price": 248,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "acff9d1d-82dc-4ae1-95cc-5a80c397a188",
         "departureCode": "ATL",
-        "arrivalCode": "DFW",
+        "isFull": false,
+        "economySeats": 4,
+        "connections": []
+    },
+    {
         "departureTime": "06:13",
+        "firstSeats": 2,
+        "flightID": "acff9d1d-82dc-4ae1-95cc-5a80c397a188",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "DFW",
+        "duration": 213,
+        "businessSeats": 1,
+        "isInternational": false,
         "arrivalTime": "09:46",
-        "duration": "213",
-        "firstSeats": 2,
-        "businessSeats": 1,
-        "economySeats": 4,
-        "isFull": false,
-        "isInternational": false,
         "price": 148,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            }
-        ]
-    },{
-        "flightID": "337576f2-469e-4a28-8b49-7bfbe86183a6",
         "departureCode": "ATL",
-        "arrivalCode": "LAX",
+        "isFull": false,
+        "economySeats": 4,
+        "connections": []
+    },
+    {
         "departureTime": "07:51",
+        "firstSeats": 2,
+        "flightID": "337576f2-469e-4a28-8b49-7bfbe86183a6",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "LAX",
+        "duration": 154,
+        "businessSeats": 1,
+        "isInternational": false,
         "arrivalTime": "10:25",
-        "duration": "154",
-        "firstSeats": 2,
-        "businessSeats": 1,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
         "price": 365,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            }
-        ]
-    },{
-        "flightID": "3f8f3944-214d-496f-ab3e-b852da6502cc",
         "departureCode": "ATL",
-        "arrivalCode": "LAX",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": []
+    },
+    {
         "departureTime": "22:55",
-        "arrivalTime": "02:34",
-        "duration": "219",
         "firstSeats": 0,
-        "businessSeats": 3,
-        "economySeats": 4,
-        "isFull": false,
-        "isInternational": false,
-        "price": 421,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "flightID": "3f8f3944-214d-496f-ab3e-b852da6502cc",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "95d373a6-193f-45cc-b90c-b9f026d71cc7",
-        "departureCode": "ATL",
+        ],
         "arrivalCode": "LAX",
+        "duration": -1221,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "02:34",
+        "price": 421,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 4,
+        "connections": []
+    },
+    {
         "departureTime": "21:25",
-        "arrivalTime": "23:30",
-        "duration": "125",
         "firstSeats": 1,
+        "flightID": "95d373a6-193f-45cc-b90c-b9f026d71cc7",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "LAX",
+        "duration": 125,
         "businessSeats": 1,
-        "economySeats": 4,
-        "isFull": false,
         "isInternational": false,
+        "arrivalTime": "23:30",
         "price": 124,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            }
-        ]
-    },{
-        "flightID": "f34763b8-15c1-401b-8ed0-69c47a7c167b",
         "departureCode": "ATL",
-        "arrivalCode": "JFK",
-        "departureTime": "15:27",
-        "arrivalTime": "17:04",
-        "duration": "97",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
         "isFull": false,
-        "isInternational": false,
-        "price": 122,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "eab4d3f2-ce10-46a9-ba77-ffffbaa2deee",
-        "departureCode": "ATL",
-        "arrivalCode": "JFK",
-        "departureTime": "02:35",
-        "arrivalTime": "04:19",
-        "duration": "104",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 184,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "4ed3762e-7079-44dc-83c2-1820f436a56d",
-        "departureCode": "ATL",
-        "arrivalCode": "JFK",
-        "departureTime": "08:16",
-        "arrivalTime": "11:30",
-        "duration": "194",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 526,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "d0688e37-0cc9-46d9-978a-f5b6cbd3c16d",
-        "departureCode": "ATL",
-        "arrivalCode": "HND",
-        "departureTime": "05:23",
-        "arrivalTime": "08:54",
-        "duration": "211",
-        "firstSeats": 1,
-        "businessSeats": 2,
         "economySeats": 4,
-        "isFull": false,
-        "isInternational": true,
-        "price": 264,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "connections": []
+    },
+    {
+        "departureTime": "15:27",
+        "firstSeats": 3,
+        "flightID": "f34763b8-15c1-401b-8ed0-69c47a7c167b",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "53719e26-af5f-4201-92e6-c39a526e6649",
+        ],
+        "arrivalCode": "JFK",
+        "duration": 97,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "17:04",
+        "price": 122,
         "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "02:35",
+        "firstSeats": 3,
+        "flightID": "eab4d3f2-ce10-46a9-ba77-ffffbaa2deee",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 104,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "04:19",
+        "price": 184,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "08:16",
+        "firstSeats": 3,
+        "flightID": "4ed3762e-7079-44dc-83c2-1820f436a56d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 194,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "11:30",
+        "price": 526,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "05:23",
+        "firstSeats": 1,
+        "flightID": "d0688e37-0cc9-46d9-978a-f5b6cbd3c16d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": true,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": true,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
         "arrivalCode": "HND",
-        "departureTime": "22:39",
-        "arrivalTime": "00:36",
-        "duration": "117",
-        "firstSeats": 2,
+        "duration": 211,
         "businessSeats": 2,
-        "economySeats": 3,
-        "isFull": false,
         "isInternational": true,
-        "price": 311,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "53d907e9-5063-49e8-bd3d-6e09b9914973",
-        "departureCode": "ATL",
-        "arrivalCode": "HND",
-        "departureTime": "18:54",
-        "arrivalTime": "22:03",
-        "duration": "189",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": true,
-        "price": 421,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "ce314e97-02cc-402f-a032-d39982c2489d",
-        "departureCode": "DFW",
-        "arrivalCode": "LAX",
-        "departureTime": "05:59",
-        "arrivalTime": "08:22",
-        "duration": "143",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
-        "price": 287,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "1ee337e5-14bd-4393-ab7e-a253b190575e",
-        "departureCode": "DFW",
-        "arrivalCode": "ATL",
-        "departureTime": "06:59",
-        "arrivalTime": "09:22",
-        "duration": "143",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 3,
-        "isFull": false,
-        "isInternational": false,
-        "price": 221,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "09f4edda-8c0e-4420-8752-8dc8a4af4c8d",
-        "departureCode": "DFW",
-        "arrivalCode": "LAX",
-        "departureTime": "13:30",
-        "arrivalTime": "15:58",
-        "duration": "148",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 99,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "05d03016-5662-4017-88a2-77f5598d7027",
-        "departureCode": "DFW",
-        "arrivalCode": "LAX",
-        "departureTime": "07:15",
-        "arrivalTime": "09:15",
-        "duration": "120",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 81,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "5ebf1e93-7f9e-4469-801c-ec669029a4ce",
-        "departureCode": "DFW",
-        "arrivalCode": "JFK",
-        "departureTime": "13:08",
-        "arrivalTime": "14:43",
-        "duration": "95",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 165,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "46cdc7e8-6a9f-4923-9c72-24aa3d52657d",
-        "departureCode": "DFW",
-        "arrivalCode": "JFK",
-        "departureTime": "11:07",
-        "arrivalTime": "13:24",
-        "duration": "137",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 401,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "443da41b-37da-486e-aa9e-84d401de403a",
-        "departureCode": "DFW",
-        "arrivalCode": "JFK",
-        "departureTime": "04:44",
-        "arrivalTime": "06:36",
-        "duration": "112",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 232,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "fc0ff566-c308-408d-b5ce-525661936fa3",
-        "departureCode": "DFW",
-        "arrivalCode": "HND",
-        "departureTime": "23:26",
-        "arrivalTime": "01:25",
-        "duration": "119",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": true,
-        "price": 604,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "575bfde9-e03e-4b85-a252-587e2969f9c8",
-        "departureCode": "DFW",
-        "arrivalCode": "HND",
-        "departureTime": "12:15",
-        "arrivalTime": "13:54",
-        "duration": "99",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": true,
-        "price": 68,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "d2005b01-a4c8-432e-853d-8a45d675fa37",
-        "departureCode": "DFW",
-        "arrivalCode": "HND",
-        "departureTime": "05:56",
         "arrivalTime": "08:54",
-        "duration": "178",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
+        "price": 264,
+        "departureCode": "ATL",
         "isFull": false,
-        "isInternational": true,
-        "price": 107,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "economySeats": 4,
+        "connections": []
+    },
+    {
+        "departureTime": "22:39",
+        "firstSeats": 2,
+        "flightID": "53719e26-af5f-4201-92e6-c39a526e6649",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "2841e2fe-0a55-49de-ac48-b1f9a34a7605",
-        "departureCode": "LAX",
-        "arrivalCode": "JFK",
-        "departureTime": "12:21",
-        "arrivalTime": "14:47",
-        "duration": "146",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 296,
-        "connections": [],
-        "seats": [{
                 "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "80332354-dee0-4611-b2f9-14d63914ccc6",
-        "departureCode": "LAX",
-        "arrivalCode": "DFW",
-        "departureTime": "15:20",
-        "arrivalTime": "17:46",
-        "duration": "146",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 296,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
                 "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "57459f45-1ec2-4c48-be8f-6bbf3a126dd4",
-        "departureCode": "LAX",
-        "arrivalCode": "JFK",
-        "departureTime": "17:16",
-        "arrivalTime": "20:08",
-        "duration": "172",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 367,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
                 "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "47264d1e-6a38-4695-a839-f232cb12d5c1",
-        "departureCode": "LAX",
-        "arrivalCode": "JFK",
-        "departureTime": "04:18",
-        "arrivalTime": "06:13",
-        "duration": "115",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": false,
-        "price": 336,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
                 "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": true,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "1b6fb5a2-7d61-4209-9e27-c7879e4e1017",
-        "departureCode": "LAX",
+        ],
         "arrivalCode": "HND",
-        "departureTime": "06:59",
-        "arrivalTime": "10:39",
-        "duration": "220",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
+        "duration": -1323,
+        "businessSeats": 2,
         "isInternational": true,
-        "price": 332,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "arrivalTime": "00:36",
+        "price": 311,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": []
+    },
+    {
+        "departureTime": "18:54",
+        "firstSeats": 3,
+        "flightID": "53d907e9-5063-49e8-bd3d-6e09b9914973",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "3426bff2-7b11-410c-8c1d-75fe7268e8b6",
-        "departureCode": "LAX",
+        ],
         "arrivalCode": "HND",
-        "departureTime": "00:35",
-        "arrivalTime": "03:19",
-        "duration": "164",
-        "firstSeats": 3,
+        "duration": 189,
         "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
         "isInternational": true,
+        "arrivalTime": "22:03",
+        "price": 421,
+        "departureCode": "ATL",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": []
+    },
+    {
+        "departureTime": "05:59",
+        "firstSeats": 3,
+        "flightID": "ce314e97-02cc-402f-a032-d39982c2489d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "LAX",
+        "duration": 143,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "08:22",
         "price": 287,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": []
+    },
+    {
+        "departureTime": "06:59",
+        "firstSeats": 3,
+        "flightID": "1ee337e5-14bd-4393-ab7e-a253b190575e",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "2cf37778-c590-410a-b705-d2b19f0917d2",
+        ],
+        "arrivalCode": "ATL",
+        "duration": 143,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "09:22",
+        "price": 221,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 3,
+        "connections": []
+    },
+    {
+        "departureTime": "13:30",
+        "firstSeats": 3,
+        "flightID": "09f4edda-8c0e-4420-8752-8dc8a4af4c8d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "LAX",
+        "duration": 148,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "15:58",
+        "price": 99,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "07:15",
+        "firstSeats": 3,
+        "flightID": "05d03016-5662-4017-88a2-77f5598d7027",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "LAX",
+        "duration": 120,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "09:15",
+        "price": 81,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "13:08",
+        "firstSeats": 3,
+        "flightID": "5ebf1e93-7f9e-4469-801c-ec669029a4ce",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 95,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "14:43",
+        "price": 165,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "11:07",
+        "firstSeats": 3,
+        "flightID": "46cdc7e8-6a9f-4923-9c72-24aa3d52657d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 137,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "13:24",
+        "price": 401,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "04:44",
+        "firstSeats": 3,
+        "flightID": "443da41b-37da-486e-aa9e-84d401de403a",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 112,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "06:36",
+        "price": 232,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "23:26",
+        "firstSeats": 3,
+        "flightID": "fc0ff566-c308-408d-b5ce-525661936fa3",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": -1321,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "01:25",
+        "price": 604,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "12:15",
+        "firstSeats": 3,
+        "flightID": "575bfde9-e03e-4b85-a252-587e2969f9c8",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 99,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "13:54",
+        "price": 68,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "05:56",
+        "firstSeats": 3,
+        "flightID": "d2005b01-a4c8-432e-853d-8a45d675fa37",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 178,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "08:54",
+        "price": 107,
+        "departureCode": "DFW",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "12:21",
+        "firstSeats": 3,
+        "flightID": "2841e2fe-0a55-49de-ac48-b1f9a34a7605",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 146,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "14:47",
+        "price": 296,
         "departureCode": "LAX",
-        "arrivalCode": "HND",
-        "departureTime": "06:22",
-        "arrivalTime": "09:38",
-        "duration": "196",
-        "firstSeats": 3,
-        "businessSeats": 3,
+        "isFull": false,
         "economySeats": 6,
-        "isFull": false,
-        "isInternational": true,
-        "price": 445,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "a04c42e8-4539-41c8-b743-d0ac6a8c871d",
-        "departureCode": "JFK",
-        "arrivalCode": "HND",
-        "departureTime": "10:16",
-        "arrivalTime": "12:25",
-        "duration": "129",
+        "connections": []
+    },
+    {
+        "departureTime": "15:20",
         "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,  
-        "isFull": false,
-        "isInternational": true,
-        "price": 226,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "flightID": "80332354-dee0-4611-b2f9-14d63914ccc6",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "cf259c58-1fa8-4126-92e1-7c44a234de12",
-        "departureCode": "JFK",
+        ],
         "arrivalCode": "DFW",
+        "duration": 146,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "17:46",
+        "price": 296,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "17:16",
+        "firstSeats": 3,
+        "flightID": "57459f45-1ec2-4c48-be8f-6bbf3a126dd4",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 172,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "20:08",
+        "price": 367,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "04:18",
+        "firstSeats": 3,
+        "flightID": "47264d1e-6a38-4695-a839-f232cb12d5c1",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "JFK",
+        "duration": 115,
+        "businessSeats": 3,
+        "isInternational": false,
+        "arrivalTime": "06:13",
+        "price": 336,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "06:59",
+        "firstSeats": 3,
+        "flightID": "1b6fb5a2-7d61-4209-9e27-c7879e4e1017",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 220,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "10:39",
+        "price": 332,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "00:35",
+        "firstSeats": 3,
+        "flightID": "3426bff2-7b11-410c-8c1d-75fe7268e8b6",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 164,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "03:19",
+        "price": 287,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "06:22",
+        "firstSeats": 3,
+        "flightID": "2cf37778-c590-410a-b705-d2b19f0917d2",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 196,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "09:38",
+        "price": 445,
+        "departureCode": "LAX",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "10:16",
+        "firstSeats": 3,
+        "flightID": "a04c42e8-4539-41c8-b743-d0ac6a8c871d",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "HND",
+        "duration": 129,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "12:25",
+        "price": 226,
+        "departureCode": "JFK",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
         "departureTime": "12:16",
+        "firstSeats": 3,
+        "flightID": "cf259c58-1fa8-4126-92e1-7c44a234de12",
+        "seats": [
+            {
+                "seatNum": "1A",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2A",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "4A",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "1B",
+                "booked": true,
+                "seatClass": "FIRST",
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "2B",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "3B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "4B",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
+                "seatNum": "1C",
+                "booked": false,
+                "seatClass": "FIRST",
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "2C",
+                "booked": false,
+                "seatClass": "BUSINESS",
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
+                "seatNum": "3C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
+                "seatNum": "4C",
+                "booked": false,
+                "seatClass": "ECONOMY",
+                "seatID": 12,
+                "type": "AISLE"
+            }
+        ],
+        "arrivalCode": "DFW",
+        "duration": 187,
+        "businessSeats": 3,
+        "isInternational": true,
         "arrivalTime": "15:23",
-        "duration": "187",
-        "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,  
-        "isFull": false,
-        "isInternational": true,
         "price": 223,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
-                "seatNum": "1A",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
-                "seatNum": "2A",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
-                "seatNum": "3A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
-                "seatNum": "4A",
-                "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
-                "seatNum": "1B",
-                "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
-                "seatNum": "2B",
-                "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
-                "seatNum": "3B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
-                "seatNum": "4B",
-                "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
-                "seatNum": "1C",
-                "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
-                "seatNum": "2C",
-                "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
-                "seatNum": "3C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
-                "seatNum": "4C",
-                "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            }
-        ]
-    },{
-        "flightID": "0c9e5d25-877d-4171-be90-627827007a7a",
         "departureCode": "JFK",
-        "arrivalCode": "HND",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
         "departureTime": "02:37",
-        "arrivalTime": "06:30",
-        "duration": "233",
         "firstSeats": 3,
-        "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
-        "isInternational": true,
-        "price": 117,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "flightID": "0c9e5d25-877d-4171-be90-627827007a7a",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
-    },{
-        "flightID": "b561b475-602c-4f41-8feb-88a2008010f2",
-        "departureCode": "JFK",
+        ],
         "arrivalCode": "HND",
-        "departureTime": "02:56",
-        "arrivalTime": "05:34",
-        "duration": "158",
-        "firstSeats": 3,
+        "duration": 233,
         "businessSeats": 3,
-        "economySeats": 6,
-        "isFull": false,
         "isInternational": true,
-        "price": 98,
-        "connections": [],
-        "seats": [{
-                "seatID": 1,
+        "arrivalTime": "06:30",
+        "price": 117,
+        "departureCode": "JFK",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
+    },
+    {
+        "departureTime": "02:56",
+        "firstSeats": 3,
+        "flightID": "b561b475-602c-4f41-8feb-88a2008010f2",
+        "seats": [
+            {
                 "seatNum": "1A",
+                "booked": true,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 2,
+                "seatID": 1,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2A",
+                "booked": true,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 3,
+                "seatID": 2,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3A",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": true
-            },{
-                "seatID": 4,
+                "seatID": 3,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "4A",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 5,
+                "seatID": 4,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "1B",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "AISLE",
-                "booked": false
-            },{
-                "seatID": 6,
+                "seatID": 5,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "2B",
+                "booked": true,
                 "seatClass": "BUSINESS",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 7,
+                "seatID": 6,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "3B",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": false
-            },{
-                "seatID": 8,
+                "seatID": 7,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "4B",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "MIDDLE",
-                "booked": true
-            },{
-                "seatID": 9,
+                "seatID": 8,
+                "type": "MIDDLE"
+            },
+            {
                 "seatNum": "1C",
+                "booked": false,
                 "seatClass": "FIRST",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 10,
+                "seatID": 9,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "2C",
+                "booked": false,
                 "seatClass": "BUSINESS",
-                "type": "WINDOW",
-                "booked": false
-            },{
-                "seatID": 11,
+                "seatID": 10,
+                "type": "WINDOW"
+            },
+            {
                 "seatNum": "3C",
+                "booked": true,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": true
-            },{
-                "seatID": 12,
+                "seatID": 11,
+                "type": "AISLE"
+            },
+            {
                 "seatNum": "4C",
+                "booked": false,
                 "seatClass": "ECONOMY",
-                "type": "AISLE",
-                "booked": false
+                "seatID": 12,
+                "type": "AISLE"
             }
-        ]
+        ],
+        "arrivalCode": "HND",
+        "duration": 158,
+        "businessSeats": 3,
+        "isInternational": true,
+        "arrivalTime": "05:34",
+        "price": 98,
+        "departureCode": "JFK",
+        "isFull": false,
+        "economySeats": 6,
+        "connections": []
     }
 ]

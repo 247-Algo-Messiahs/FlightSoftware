@@ -51,6 +51,8 @@ public class RegisteredUser extends User{
         this.passport = passport;
         this.age = age;
         this.emailAddress = emailAddress;
+        flightBookings = new ArrayList<FlightBooking>();
+        hotelBookings = new ArrayList<HotelBooking>();
     }
 
     public UUID getUserID(){

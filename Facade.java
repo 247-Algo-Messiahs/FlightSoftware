@@ -84,9 +84,9 @@ public class Facade {
     public void logOut() throws IOException {
         System.out.println("made it to logout in facade");
         currentUser = null;
-        // userList.saveUsers();
-        // hotelList.saveHotels();
-        // flightList.saveFlights();
+        userList.saveUsers();
+        hotelList.saveHotels();
+        flightList.saveFlights();
     }
 
     public ArrayList<FlightBooking> viewFlightBookings() {
@@ -164,22 +164,18 @@ public class Facade {
         return false;
     }
 
-    //returns true if flight was successfully booked; returns false if it was not, likely due to seat already being booked
-    public boolean bookFlight(ArrayList<Guest> guests, UUID flightID, int seatID, int numCheckedBags) {
-        Seat requestedSeat = FlightList.getFlightByUUID(flightID).getSeatByID(seatID);
-        
-        if (!requestedSeat.getIsBooked()) {
+    public void bookFlight(FlightBooking booking) {
             ArrayList<FlightBooking> currentUserBookings = currentUser.getFlightBookings();
-            
-            FlightBooking booking = new FlightBooking(guests, flightID, seatID, numCheckedBags);
             currentUserBookings.add(booking);
             
-            requestedSeat.setIsBooked(true);
+            Flight bookingFlight = FlightList.getFlightByUUID(booking.getFlightID());
+            bookingFlight.getSeatByID(booking.getSeats()).setIsBooked(true); //set user's flight seat to booked
+
+            ArrayList<Guest> guests = booking.getGuests(); //set each guest's seat to booked
+            for (Guest guest : guests) {
+                bookingFlight.getSeatByID(guest.getSeatID()).setIsBooked(true); 
+            }
 
             currentUser.setFlightBookings(currentUserBookings);
-
-            return true;
-        }
-        return false;
     }
 }
