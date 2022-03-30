@@ -51,6 +51,7 @@ public class UserInterface {
     private HotelRoom chosenHotelRoom;
     private ArrayList<Flight> unfilteredFlights;
     private ArrayList<FlightBooking> flightBookingsInCart;
+    //test
 
 
     private UserInterface() {
@@ -814,8 +815,8 @@ public class UserInterface {
             switch(userCommand) {
                 case(0):
                 if(facade.getCurrentUser() == null){
-                    guestError();
                     redirectGuestToHotelCheckout = true;
+                    guestError();
                     break;
                 }
                 else{
