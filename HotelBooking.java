@@ -4,37 +4,69 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.UUID;
 
+/**
+ * @author Nicolas Becker, Peyton Tucker, Avery Slomnicki, Austin Hanson
+ */
 public class HotelBooking {
     private UUID hotelID;
     private int roomID;
     private ArrayList<LocalDate> dates;
 
+    /**
+     * Defines HotelBooking object
+     * @param hotelID
+     * @param roomID
+     * @param dates
+     */
     public HotelBooking(UUID hotelID, int roomID, ArrayList<LocalDate> dates){
         this.hotelID = hotelID;
         this.roomID = roomID;
         this.dates = new ArrayList<LocalDate>(dates);
     }
 
+    /**
+     * 
+     * @return UUID of hotelID
+     */
     public UUID getHotelID(){
         return this.hotelID;
     }
     
+    /**
+     * 
+     * @return int of roomID
+     */
     public int getRoomID(){
         return this.roomID;
     }
 
+    /**
+     * 
+     * @return ArrayList of LocalDate for dates that a hotel booking occupies
+     */
     public ArrayList<LocalDate> getDates(){
         return this.dates;
     }
 
+    /**
+     * Sets list of dates for HotelBooking
+     * @param dates
+     */
     public void setDates(ArrayList<LocalDate> dates){
         this.dates = dates;
     }
 
+    /**
+     * 
+     */
     public void confirmBooking(){
 
     }
 
+    /**
+     * 
+     * @return String of booked dates
+     */
     private String getBookedDatesList() {
         String list = "";
         
@@ -45,6 +77,9 @@ public class HotelBooking {
         return list;
     }
 
+    /**
+     * Saves booking to bookings.txt
+     */
     public void printBooking() {
         PrintWriter out;
         try {
@@ -60,6 +95,9 @@ public class HotelBooking {
         }
     }
 
+    /**
+     * @return String of HotelBooking
+     */
     public String toString(){
         Hotel hotel = HotelList.getHotelByUUID(this.hotelID);
         HotelRoom hotelRoom = hotel.getRoomByID(this.roomID);
@@ -71,7 +109,4 @@ public class HotelBooking {
         "\nRoom Size: " + hotelRoom.getBedType().toString().toLowerCase() +
         "\nDates of Stay: \n" + getBookedDatesList();
     }
-
-    
-    
 }

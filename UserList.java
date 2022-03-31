@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
+/**
+ * UserList object full of RegisteredUser objects
+ */
 public class UserList {
     private static UserList userList;
     private static ArrayList<RegisteredUser> users;

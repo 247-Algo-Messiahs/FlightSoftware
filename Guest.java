@@ -3,6 +3,11 @@
  * A class to keep track of guests who are accompanying user objects of the RegisteredUser class on flights
  */
 
+/**
+ * @author Avery Slomnicki, Peyton Tucker, Austin Hanson
+ * 
+ * Guest user object defined and saved within a RegisteredUser
+ */
 public class Guest extends User{
     private int seatID;
     private boolean needSeat;
@@ -53,7 +58,11 @@ public class Guest extends User{
         this.seatID = seatID;
     }
 
-
- 
-
+    /**
+     * Sets a boolean for if the Guest needs a seat
+     * @param needSeat
+     */
+    public void setNeedSeat(boolean needSeat){
+        this.needSeat = needSeat;
+    }
 }
