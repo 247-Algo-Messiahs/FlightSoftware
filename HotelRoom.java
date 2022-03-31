@@ -1,10 +1,5 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.UUID;
-
-import javax.lang.model.type.NoType;
-
-import org.w3c.dom.Notation;
 
 public class HotelRoom {
     private int roomID;

@@ -1,10 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class HotelFilter {
-    private ArrayList<HotelRoom> unfilteredHotels;
-    private ArrayList<HotelRoom> filteredHotels;
-    private ArrayList<BedType> filterParams;
 
     public ArrayList<Hotel> searchFoHotels(String airportCode){
         ArrayList<Hotel> hotels = HotelList.getHotelsByAirportCode(airportCode);
