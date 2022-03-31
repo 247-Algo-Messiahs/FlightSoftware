@@ -1,3 +1,8 @@
+/**
+ * @author Peyton Tucker
+ * A class to search a list of flights and filter the results of the search
+ */
+
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -7,6 +12,12 @@ public class FlightFilter {
     private Flight bestFlight;
     private RegisteredUser user;
 
+    /**
+     * Searches through the FlightList singleton's list of flights for flights whose departure codes and arrival codes match those passed in
+     * @param departureCode the departure code of flights to find
+     * @param arrivalCode the arrival code of flights to find
+     * @return the flights whose airport codes match those passed in
+     */
     public ArrayList<Flight> searchForFlights(String departureCode, String arrivalCode) {
         ArrayList<Flight> allFlights = FlightList.getFlights();
         ArrayList<Flight> unfilteredFlights = new ArrayList<Flight>();
@@ -20,6 +31,12 @@ public class FlightFilter {
         return unfilteredFlights;
     }
 
+    /**
+     * Filters the flights passed in by a specific flight trait and returns them
+     * @param flightTrait the flight trait to filter by
+     * @param flights the flights to filter
+     * @return an ArrayList of filtered Flight objects
+     */
     public ArrayList<Flight> filterFlights(FlightTrait flightTrait, ArrayList<Flight> flights){
 
         //sort by duration, low to high

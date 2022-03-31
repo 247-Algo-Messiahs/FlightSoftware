@@ -595,6 +595,8 @@ public class UserInterface {
                     flightFilter(flightSearchResults);
                     break;
                 case (5):
+                    chosenDepartureFlight = false;
+                    chosenReturnFlight = false;
                     searchForFlight();
                     break;
 
