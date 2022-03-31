@@ -637,7 +637,6 @@ public class UserInterface {
                         + flightsToChooseSeatsFor.get(1).getDepartureCode();
             } else {
                 flightPath = selectedFlight.getDepartureCode() + " --> " + selectedFlight.getArrivalCode();
-                clear();
             }
             System.out.println("\nFLIGHT: " + flightPath);
             ArrayList<Seat> availableSeats = selectedFlight.getAvailableSeats();
