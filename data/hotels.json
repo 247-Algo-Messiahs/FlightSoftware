@@ -1,1 +1,723 @@
-[{"rooms":[{"hasPulloutCouch":true,"price":100,"hasBalcony":true,"roomID":1,"notAvail":["01-01-2023","01-04-2023","01-02-2023","01-03-2023"],"bedType":"DOUBLE","isSmoking":false}],"hotelRating":5,"location":"543 Hotel Blvd","hotelID":"9e68a93a-2e0d-485a-887e-de4fb8bdf12f","airportCode":"ATL","hotelName":"Test Hotel Deluxe","capacity":12}]
+[
+    {
+        "hotelID": "c636521d-d96b-4cfa-9eca-ae1c742ffeca",
+        "hotelRating": 5,
+        "capacity": 5,
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Rd, Atlanta GA, 12345",
+        "airportCode": "ATL",
+        "rooms": [{
+            "roomID": 1,
+            "price": 120,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 90,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 80,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 83,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 120,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c6a8b332-2d21-4fbe-b793-e503cbd8e1d4",
+        "hotelRating": 3,
+        "capacity": 5,
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Banana Rd, Atlanta GA, 12345",
+        "airportCode": "ATL",
+        "rooms": [{
+            "roomID": 1,
+            "price": 45,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 54,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 58,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 96,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 112,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "847b6bae-eda9-434d-bad4-6d18c00d2dd3",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Bouncing Boulevard, Atlanta GA, 12345",
+        "airportCode": "ATL",
+        "rooms": [{
+            "roomID": 1,
+            "price": 111,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 37,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 87,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 94,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 48,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "27df4f15-0b1d-4502-b9a0-6a7bb49c48a8",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Rd, Los Angeles CA, 12345",
+        "airportCode": "LAX",
+        "rooms": [{
+            "roomID": 1,
+            "price": 56,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 78,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 110,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 117,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 119,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "6c45cb05-4d89-4a19-8c34-587df350ced6",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Right There Blvd, Los Angeles CA, 12345",
+        "airportCode": "LAX",
+        "rooms": [{
+            "roomID": 1,
+            "price": 134,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 68,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 98,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 99,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 85,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c4559f0c-71d2-4b61-b6ab-1baa224c4d4c",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Somewhere Dr, Los Angeles CA, 12345",
+        "airportCode": "LAX",
+        "rooms": [{
+            "roomID": 1,
+            "price": 54,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 51,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 46,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 95,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 47,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "2e7aca93-f184-4e4e-b4f1-cafe6e7a1cbe",
+        "hotelRating": 3,
+        "capacity": 5,
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Hotel Ct, Dallas TX, 54321",
+        "airportCode": "DFW",
+        "rooms": [{
+            "roomID": 1,
+            "price": 74,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 77,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 79,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 99,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 83,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "ee249563-8ac3-4c94-9fd3-b6ea0a4b8f53",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Hotel Rd, Dallas TX, 54321",
+        "airportCode": "DFW",
+        "rooms": [{
+            "roomID": 1,
+            "price": 81,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 90,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 43,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 23,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 80,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "50b38dc8-d94a-472f-8b39-603229b0a00f",
+        "hotelRating": 5,
+        "capacity": 5,
+        "hotelName": "Motel 5",
+        "location": "Behind Rd, Dallas TX, 54321",
+        "airportCode": "DFW",
+        "rooms": [{
+            "roomID": 1,
+            "price": 90,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 100,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 110,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 113,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 89,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c3f6c596-2aad-4f52-8591-422f8e0a006d",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Hotel Ct, New York NY, 54321",
+        "airportCode": "JFK",
+        "rooms": [{
+            "roomID": 1,
+            "price": 97,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 100,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 46,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 62,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 64,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "c13abee5-756b-4865-9e88-2084ef657d30",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Motel 5",
+        "location": "Over Yonder Dr, New York NY, 54321",
+        "airportCode": "JFK",
+        "rooms": [{
+            "roomID": 1,
+            "price": 67,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 77,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 75,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 36,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 48,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "0d7b3a6b-d4f8-4d1f-b965-cfe88bd479d0",
+        "hotelRating": 1,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Banana Rd, New York NY, 54321",
+        "airportCode": "JFK",
+        "rooms": [{
+            "roomID": 1,
+            "price": 49,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 75,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 95,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 37,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 56,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Hilton Guardian Inn",
+        "location": "Hotel Ct, Tokya Japan, 54321",
+        "airportCode": "HND",
+        "rooms": [{
+            "roomID": 1,
+            "price": 95,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 59,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 119,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 29,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 53,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Motel 5",
+        "location": "First Dr, Tokyo Japan, 54321",
+        "airportCode": "HND",
+        "rooms": [{
+            "roomID": 1,
+            "price": 35,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 55,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 90,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 78,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 89,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    },{
+        "hotelID": "4483643d-757b-40b7-a0f4-1dcb5db97ef2",
+        "hotelRating": 4,
+        "capacity": 5,
+        "hotelName": "Maryacht Suites",
+        "location": "Over Yonder Ct, Tokyo Japan, 54321",
+        "airportCode": "HND",
+        "rooms": [{
+            "roomID": 1,
+            "price": 67,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 2,
+            "price": 76,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "KING",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 3,
+            "price": 65,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": false
+        },{
+            "roomID": 4,
+            "price": 59,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "DOUBLE",
+            "isSmoking": false,
+            "hasBalcony": false,
+            "hasPulloutCouch": true
+        },{
+            "roomID": 5,
+            "price": 98,
+            "notAvail": ["12-17-2022", "12-18-2022"],
+            "bedType": "QUEEN",
+            "isSmoking": false,
+            "hasBalcony": true,
+            "hasPulloutCouch": false
+        }]
+    }
+]
