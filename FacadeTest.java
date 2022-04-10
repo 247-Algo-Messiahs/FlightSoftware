@@ -4,7 +4,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,8 +21,24 @@ public class FacadeTest {
     public HotelList hotelList = HotelList.getInstance();
     public ArrayList<Hotel> allHotels = HotelList.getHotels();
 
+    /*since facade.logOut is called, if previous (actual) json files are not preserved (through the below three ArrayLists), 
+    they will be overwritten by any test code generated here.
+    */
+    private ArrayList<RegisteredUser> preservedUsers = new ArrayList<RegisteredUser>();
+    private ArrayList<Flight> preservedFlights = new ArrayList<Flight>();
+    private ArrayList<Hotel> preservedHotels = new ArrayList<Hotel>();
+
     @BeforeEach
     public void setup() {
+        DataLoader.loadFlights();
+        preservedFlights = FlightList.getFlights();
+        
+        DataLoader.loadHotels();
+        preservedHotels = HotelList.getHotels();
+
+        DataLoader.loadUsers();
+        preservedUsers = userList.getUsers();
+
         ArrayList<RegisteredUser> blankUsers = new ArrayList<RegisteredUser>();
         userList.setUsers(blankUsers);
         
@@ -34,17 +50,18 @@ public class FacadeTest {
     }
 
     @AfterEach
-    public void tearDown() {
-        allUsers.clear();
-        allFlights.clear();
-        allHotels.clear();
+    public void tearDown() throws IOException {
+        flightList.setFlights(preservedFlights);
+        hotelList.setHotels(preservedHotels);
+        userList.setUsers(preservedUsers);
+
+        DataWriter.saveFlights();
+        DataWriter.saveHotels();
+        DataWriter.saveUsers();
     }
 
     @Test
     public void testCreateNewAccount() {
-        ArrayList<RegisteredUser> blankUsers = new ArrayList<RegisteredUser>();
-        userList.setUsers(blankUsers);
-
         facade.createAccount("billygreen", "billyg123", "Billy", "Green", 35, "120 Stockhead Drive", "555-123-1234", "billyg@gmail.com", true);
 
         assertEquals("billygreen", userList.getUsers().get(0).getUsername());
