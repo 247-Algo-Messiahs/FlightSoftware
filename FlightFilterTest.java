@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -6,7 +8,6 @@ import java.util.UUID;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 
@@ -29,13 +30,14 @@ public void setup(){
     DataLoader.loadFlights();
     preservedFlights = FlightList.getFlights();
 
-    ArrayList<Flight> blankFlights = new ArrayList<Flight>();
-    flightList.setFlights(blankFlights);
+    flightList.getInstance().getFlights().clear();
 }
-
 @AfterEach
 public void tearDown(){
     flightList.setFlights(preservedFlights);
+
+    allFlights = DataLoader.loadFlights();
+    assertEquals(34, allFlights.size());
 
 }
 @Test 
@@ -100,5 +102,36 @@ void testTakeoffFilter(){
 
         assertEquals(randomTakeoffFilter,f.filterFlights(FlightTrait.TAKEOFF_TIME, randomTakeoffFilterTest));
 
+}
+@Test
+void testPriceFilter(){
+    FlightFilter f = new FlightFilter();
+
+    UUID flightID = UUID.randomUUID();
+
+    ArrayList<Seat> oneSeat = new ArrayList<Seat>();
+        int seatID = 3;
+        Seat seat = new Seat(seatID, "AISLE", "BUSINESS", "1A", flightID, false);
+        oneSeat.add(seat);
+
+    ArrayList<Flight> randomPriceFilter = new ArrayList<Flight>();
+        Flight flight1 = new Flight(flightID, "DFW", "JFK", LocalTime.parse("07:00"), LocalTime.parse("09:00"), 3, 3, 3, false, false, oneSeat, 85, null);
+        randomPriceFilter.add(flight1);
+        Flight flight2 = new Flight(flightID, "DFW", "JFK", LocalTime.parse("07:00"), LocalTime.parse("09:00"), 3, 3, 3, false, false, oneSeat, 100, null);
+        randomPriceFilter.add(flight2);
+        Flight flight3 = new Flight(flightID, "DFW", "JFK", LocalTime.parse("07:00"), LocalTime.parse("09:00"), 3, 3, 3, false, false, oneSeat, 125, null);
+        randomPriceFilter.add(flight3);
+        Flight flight4 = new Flight(flightID, "DFW", "JFK", LocalTime.parse("07:00"), LocalTime.parse("09:00"), 3, 3, 3, false, false, oneSeat, 200, null);
+        randomPriceFilter.add(flight4);
+
+        flightList.setFlights(randomPriceFilter);
+
+        ArrayList<Flight> randomPriceFilterTest = new ArrayList<Flight>();
+        randomPriceFilterTest.add(flight2);
+        randomPriceFilterTest.add(flight4);
+        randomPriceFilterTest.add(flight1);
+        randomPriceFilterTest.add(flight3);
+
+        assertEquals(randomPriceFilter,f.filterFlights(FlightTrait.PRICE, randomPriceFilterTest));
 }
 }
